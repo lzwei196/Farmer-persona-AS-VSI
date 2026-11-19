@@ -4,7 +4,6 @@
 
 Qi Wei, Yirong Zhang, Junzeng Xu, Ruiqi Wu, Huijun Qi, Man Liu, Wenbo Xue, Yuchen Liu, Zhiming Qi and Ziwei Li.
 
-This repository combines the African components of Paper 1 and Paper 2 for the Agricultural Systems special-issue manuscript. The earlier [Farmer-persona repository](https://github.com/lzwei196/Farmer-persona) is retained separately.
 
 Repository: https://github.com/lzwei196/Farmer-persona-AS-VSI
 
