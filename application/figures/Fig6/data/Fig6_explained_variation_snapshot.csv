@@ -1,0 +1,5 @@
+outcome,source,percent_variation_explained
+Adoption,Survey,3.33499906197424
+Adoption,LLM ensemble,39.191815440723346
+N rate,Survey,3.04425714897136
+N rate,LLM ensemble,39.17438759143991

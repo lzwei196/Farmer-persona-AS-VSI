@@ -1,0 +1,126 @@
+[
+  {
+    "path": "src/paper1_metrics.py",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/src/paper1_metrics.py",
+    "sha256": "f9a4af618265925d521032311a95805ecfb06290f266cf411d5e38ef1405ff01",
+    "method": "African-only extraction or adaptation of archived source; retained African numeric values unchanged.",
+    "original_sha256": "60eb3303862ff2a926f2ab8b1b260cb65b88426d3c35304a21db0413c93646b3"
+  },
+  {
+    "path": "src/paper1_multioutcome.py",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/src/paper1_multioutcome.py",
+    "sha256": "a5460b29dd7723d0c441763f22993b837bbe94e1b824bb8930c1ef670065aa17",
+    "method": "African-only extraction or adaptation of archived source; retained African numeric values unchanged.",
+    "original_sha256": "34ae39444193b05467e0355603d49163c98b8ac0355097c7ab52a6a6def80522"
+  },
+  {
+    "path": "src/run_lsms_full.py",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/src/run_lsms_full.py",
+    "sha256": "bd997e14cbfbc30ae1deea8ee4b9fc6ec9d8ce0cba608fb98b076ae6e1c071bb",
+    "method": "African-only extraction or adaptation of archived source; retained African numeric values unchanged.",
+    "original_sha256": "78b33ad2078257c5e0edf5ae6605101806d4df282044a961146e5efb347601e0"
+  },
+  {
+    "path": "src/run_lsms_4country.py",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/src/run_lsms_4country.py",
+    "sha256": "51b25536cde1d17f19e90bdcc0705b7f7506c9974e96cf2c89cbee7479f0d570",
+    "method": "African-only extraction or adaptation of archived source; retained African numeric values unchanged.",
+    "original_sha256": "a5d4f8370ba8f525248f39dbc0fb2a862e5048ab4a9f7c018fb855ace4c3ad57"
+  },
+  {
+    "path": "src/paths.py",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/src/paths.py",
+    "sha256": "85126035aca07d70e3bbc4f3481e887cc618f3f44e0fe3e541de0b013d7830aa",
+    "method": "African-only extraction or adaptation of archived source; retained African numeric values unchanged.",
+    "original_sha256": "687f4663a75898a322487d009c4b20e386577fd21e2ac121d1f71c39e9c3935d"
+  },
+  {
+    "path": "src/lsms_utils.py",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/src/lsms_utils.py",
+    "sha256": "7b82296fe4e10928c8263e4fb065d7f03065878c2a9feecd80b7de8292e45bac",
+    "method": "byte-identical archival source copy"
+  },
+  {
+    "path": "prompts/lsms_4country_tier1_template.txt",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/prompts/lsms_4country_tier1_template.txt",
+    "sha256": "c395310556844301f392a2ff59b72db9898ae239792465761bcdb1e5fa65d928",
+    "method": "byte-identical archival source copy"
+  },
+  {
+    "path": "prompts/lsms_tier2_template.txt",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/prompts/lsms_tier2_template.txt",
+    "sha256": "a68a497d6483437567ca6de60e19d3ed5f41776788f988872cc927c8e75c6fd4",
+    "method": "byte-identical archival source copy"
+  },
+  {
+    "path": "prompts/lsms_tier3_template.txt",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/prompts/lsms_tier3_template.txt",
+    "sha256": "f84ccd2de205faecea9290998fda82bc861fdc560a6fc933416d33a480e90afc",
+    "method": "byte-identical archival source copy"
+  },
+  {
+    "path": "prompts/lsms_tier3_cognitive_grounding.txt",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/prompts/lsms_tier3_cognitive_grounding.txt",
+    "sha256": "931e35350d5be99e31a88480ba03f5672ea784cf14d39f255b4d402ce7e94e35",
+    "method": "byte-identical archival source copy"
+  },
+  {
+    "path": "prompts/lsms_tier4_template.txt",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/prompts/lsms_tier4_template.txt",
+    "sha256": "5eb8ed72dc5afb3c6b151ccdfb2e9b72198e47b35e82505aa1d3ed7f162ec960",
+    "method": "byte-identical archival source copy"
+  },
+  {
+    "path": "results/analysis/paper1_metrics.json",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/results/analysis/paper1_metrics.json",
+    "sha256": "71ad6233598d564d20de9c85942959ab8b817efb3e58a1aa93d7cde3397e502d",
+    "method": "African-only extraction or adaptation of archived source; retained African numeric values unchanged.",
+    "original_sha256": "16418d97ef6f5963de199ea8e77a24e30dc198e484bbafe983adf6472ca16351"
+  },
+  {
+    "path": "results/analysis/paper1_metrics.md",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/results/analysis/paper1_metrics.md",
+    "sha256": "9a409441ca11581f3e243e060dd3fce5a4d92fd162063555ac99b97646515c70",
+    "method": "African-only extraction or adaptation of archived source; retained African numeric values unchanged.",
+    "original_sha256": "adb37a63d0e43b9a3e1f1910ad2bc2350bf01766a639cd3ba8efef9e7ca0e571"
+  },
+  {
+    "path": "results/analysis/paper1_multioutcome.json",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/results/analysis/paper1_multioutcome.json",
+    "sha256": "62aaf497788ace85e8cd2883a074646e020b575692719ccb48a4deaa0e1a078f",
+    "method": "byte-identical archival source copy"
+  },
+  {
+    "path": "results/analysis/paper1_multioutcome.md",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/results/analysis/paper1_multioutcome.md",
+    "sha256": "ebd4d5968a2056c0983197bb12ee0fa46638208f4cb4713addce245e914a4bf4",
+    "method": "byte-identical archival source copy"
+  },
+  {
+    "path": "results/analysis/3prov_metrics.json",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/results/analysis/3prov_metrics.json",
+    "sha256": "8f263b655e6dd1df113ef368e4aa084d927d7fe03cc13ad9aeec24c7946519d6",
+    "method": "African-only extraction or adaptation of archived source; retained African numeric values unchanged.",
+    "original_sha256": "57217a2293b7902d5f380a21092c663e33dc2a661fbd734e3bf10f3691720c03"
+  },
+  {
+    "path": "data/lsms/lsms_4country_full.csv",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/data/lsms/lsms_4country_full.csv",
+    "sha256": "f758925ad5d9b5e10204e81f565673856c4115ccc59935fdd006fff431a439d9",
+    "method": "removed hh_id_merge and plot_id_merge only; same ordered 280 records/unchanged other values"
+  },
+  {
+    "path": "results/full/lsms/archived_T2_T3_T4.jsonl.gz",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/Submission materials-AS/GitHub_Repo_LLM_Farmers_Country_Labels_20261020/data/model_outputs/prompt_variant_raw_responses.jsonl.gz",
+    "sha256": "02b8adc33d8b51802ce44a4df6038d4132ba38df1f347661a0a3403a65d5abfb",
+    "records": 2520,
+    "method": "filtered pre-existing pseudonymized JSONL; per-response fields independently matched against original individual JSON files in results/full/lsms"
+  },
+  {
+    "path": "results/full/lsms/archived_T3_numeric_not_primary.jsonl.gz",
+    "source": "PAPER2_COMPLETE_BUNDLE_20260827/Submission materials-AS/GitHub_Repo_LLM_Farmers_Country_Labels_20261020/data/model_outputs/prompt_variant_raw_responses.jsonl.gz",
+    "sha256": "1f4594a41d8ab4de439ebc8a63a676f8fcc8bf2002db8c2fa2a670337afd3143",
+    "records": 840,
+    "method": "filtered pre-existing pseudonymized JSONL; per-response fields independently matched against original individual JSON files in results/full/lsms"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "file": "paper2_uncertainty_decomposition.py",
+    "historical_source_sha256": "94b41a7766297da700ddd0bebf485b78e40643a7b0f963483983f35089ac43fc",
+    "packaging_edits": "Repository-root inference, output directory and sibling historical import path only; statistical expressions unchanged."
+  },
+  {
+    "file": "paper2_rival_test.py",
+    "historical_source_sha256": "8171caf9d55e0964cc1814b3dd31483ba284518c8a6210e9063dd6c222de1fa2",
+    "packaging_edits": "Repository-root inference, output directory and sibling historical import path only; statistical expressions unchanged."
+  },
+  {
+    "file": "paper2_rival_test_v2.py",
+    "historical_source_sha256": "d42b0feb2c4ab91d5275f56c60a3720299585aa328aec140b1eac11900462560",
+    "packaging_edits": "Repository-root inference, output directory and sibling historical import path only; statistical expressions unchanged."
+  },
+  {
+    "file": "paper2_rival_test_confirmatory.py",
+    "historical_source_sha256": "d5dd177f42f9b77b897e76f980ea824bd8efd13e7a1989568e2c5adf30e6417c",
+    "packaging_edits": "Repository-root inference, output directory and sibling historical import path only; statistical expressions unchanged."
+  },
+  {
+    "file": "paper2_extension_transfer.py",
+    "historical_source_sha256": "8844fdf7588939524e5058f9ae29ff71000dc402344e1dfb9cd802adac1587ef",
+    "packaging_edits": "Repository-root inference, output directory and sibling historical import path only; statistical expressions unchanged."
+  },
+  {
+    "file": "paper2_extension_score.py",
+    "historical_source_sha256": "06b298102dc8ca9c14ec3d27a4bf05fc81e7a0ab81f7bbf1152f51147f0256ab",
+    "packaging_edits": "Repository-root inference, output directory and sibling historical import path only; statistical expressions unchanged."
+  },
+  {
+    "file": "paper2_label_effect_diagnostics.py",
+    "historical_source_sha256": "258e6535e2788df11237c9415f64b395405334228c1a07541f18eb2da9a68382",
+    "packaging_edits": "Repository-root inference, output directory and sibling historical import path only; statistical expressions unchanged."
+  }
+]

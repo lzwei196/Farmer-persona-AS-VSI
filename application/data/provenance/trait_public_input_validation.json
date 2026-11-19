@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "scope": "Default deidentified public analysis CSV reproduces source-DTA October 17 corrected coefficients, 45,500 bootstrap coefficient draws and CV summary; anonymous grouping order retained.",
+  "checks": [
+    {
+      "file": "trait_coefficients_full_precision.csv",
+      "rows": 344,
+      "max_numeric_delta": 7.105427357601002e-14,
+      "numeric_columns": [
+        "n",
+        "clusters",
+        "point",
+        "ci_low",
+        "ci_high"
+      ]
+    },
+    {
+      "file": "trait_summary.csv",
+      "rows": 3,
+      "max_numeric_delta": 1.7763568394002505e-15,
+      "numeric_columns": [
+        "survey_n",
+        "survey_clusters",
+        "survey_cv_r2",
+        "ensemble_n",
+        "ensemble_cv_r2",
+        "absolute_coefficient_ratio",
+        "predicted_coefficients_outside_survey_ci",
+        "country_trait_survey_clearly_nonzero",
+        "country_trait_same_sign_among_survey_nonzero",
+        "country_trait_all_same_sign",
+        "stress_test_cv_r2"
+      ]
+    },
+    {
+      "file": "trait_bootstrap_coefficient_draws.csv",
+      "rows": 45500,
+      "max_numeric_delta": 4.707345624410664e-13,
+      "numeric_columns": [
+        "draw",
+        "age10",
+        "female",
+        "education",
+        "log2plot",
+        "log2farm",
+        "owned",
+        "intercropped",
+        "maize"
+      ]
+    }
+  ]
+}

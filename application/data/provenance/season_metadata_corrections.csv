@@ -1,0 +1,8 @@
+profile_key,country,archived_season,source_verified_season,source_verified_profile_signature_matches,original_household_and_plot_keys_match,old_season_source_candidates,old_season_candidate_mismatch_fields
+extension_177,Uganda,2,1,True,True,1,"harvest_kg, total_family_labor_days"
+extension_181,Uganda,2,1,True,True,1,"intercropped, harvest_kg, total_family_labor_days"
+extension_186,Uganda,2,1,True,True,1,"harvest_kg, total_family_labor_days, total_hired_labor_days"
+extension_190,Uganda,1,2,True,True,1,"intercropped, harvest_kg, total_family_labor_days, total_hired_labor_days"
+extension_207,Uganda,1,2,True,True,1,"harvest_kg, total_family_labor_days, total_hired_labor_days"
+extension_208,Uganda,2,1,True,True,1,"harvest_kg, total_family_labor_days"
+extension_209,Uganda,2,1,True,True,1,"harvest_kg, total_family_labor_days, total_hired_labor_days"

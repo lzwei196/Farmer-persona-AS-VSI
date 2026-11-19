@@ -1,0 +1,25 @@
+﻿Outcome,Trait,Survey (95% CI),LLM ensemble (95% CI),Predicted coefficient outside survey CI
+Adoption,Age (+10 years),−0.005 (−0.014 to 0.004),−0.021 (−0.039 to −0.003),yes
+Adoption,Female manager,−0.027 (−0.056 to 0.000),−0.086 (−0.139 to −0.032),yes
+Adoption,Formal education,0.025 (−0.019 to 0.069),0.158 (0.103 to 0.214),yes
+Adoption,Plot area (×2),0.036 (0.026 to 0.047),0.051 (0.030 to 0.071),yes
+Adoption,Farm size (×2),−0.004 (−0.015 to 0.008),0.000 (−0.025 to 0.025),no
+Adoption,Plot owned,0.020 (−0.009 to 0.047),0.024 (−0.039 to 0.089),no
+Adoption,Intercropped,−0.000 (−0.030 to 0.034),−0.099 (−0.155 to −0.040),yes
+Adoption,Maize main crop,0.183 (0.146 to 0.217),0.465 (0.410 to 0.522),yes
+N rate,Age (+10 years),−0.93 (−1.73 to −0.12),−1.18 (−1.95 to −0.35),no
+N rate,Female manager,−4.90 (−7.18 to −2.52),−2.78 (−5.14 to −0.51),no
+N rate,Formal education,−0.55 (−4.90 to 3.61),5.90 (3.39 to 8.32),yes
+N rate,Plot area (×2),−0.57 (−1.46 to 0.67),1.50 (0.61 to 2.36),yes
+N rate,Farm size (×2),−0.25 (−1.31 to 0.65),0.35 (−0.78 to 1.50),no
+N rate,Plot owned,2.09 (−0.75 to 4.94),0.75 (−1.90 to 3.53),no
+N rate,Intercropped,−4.06 (−6.33 to −1.54),−5.75 (−8.23 to −3.20),no
+N rate,Maize main crop,20.30 (15.29 to 24.73),21.24 (18.73 to 23.80),no
+"N rate, capped",Age (+10 years),−0.57 (−1.82 to 0.68),−1.18 (−1.95 to −0.35),no
+"N rate, capped",Female manager,−6.63 (−9.65 to −3.40),−2.78 (−5.14 to −0.51),yes
+"N rate, capped",Formal education,1.88 (−3.50 to 6.55),5.90 (3.39 to 8.32),no
+"N rate, capped",Plot area (×2),−2.71 (−3.92 to −1.48),1.50 (0.61 to 2.36),yes
+"N rate, capped",Farm size (×2),0.02 (−1.33 to 1.39),0.35 (−0.78 to 1.50),no
+"N rate, capped",Plot owned,1.59 (−2.27 to 5.73),0.75 (−1.90 to 3.53),no
+"N rate, capped",Intercropped,−5.51 (−9.19 to −1.68),−5.75 (−8.23 to −3.20),no
+"N rate, capped",Maize main crop,29.86 (22.63 to 37.29),21.24 (18.73 to 23.80),yes

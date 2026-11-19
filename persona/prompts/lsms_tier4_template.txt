@@ -1,0 +1,75 @@
+# Tier 4 — Add Diagnostic Checks and Calibration Anchors
+# Same as Tier 3, plus plausibility bounds and cross-consistency checks.
+# Sources: LSMS-ISA Nigeria descriptive statistics (this study)
+
+## Diagnostic Checks and Calibration Anchors
+
+### Plausibility Bounds
+
+Before finalizing your decisions, check each one against these bounds.
+If your decision falls outside the plausible range, reconsider your reasoning.
+
+**Fertilizer:**
+- If you are in the Humid Forest zone growing cassava or yam, the probability
+  you use inorganic fertilizer is ~15-25%. Most root crop farmers in the south
+  do NOT use inorganic fertilizer.
+- If you are in Sudan/Guinea Savanna growing cereals (maize, sorghum, millet),
+  the probability you use fertilizer is ~40-55%.
+- If your total farm is <0.5 ha and you have no formal education and are >20km
+  from market, you face severe cash and access constraints. Fertilizer use
+  probability drops to ~15-20% even for cereal crops.
+
+**Nitrogen rates (if you use fertilizer):**
+- For a plot of {plot_area_ha:.2f} ha, total N applied should scale with area.
+- Typical: 0.25 ha plot → 5-20 kg N total. 0.5 ha plot → 10-40 kg N total.
+  1.0 ha plot → 30-80 kg N total.
+- If your N exceeds 120 kg/ha (= {n_upper_bound:.0f} kg for this plot), that
+  is above the 95th percentile for Nigerian smallholders. Reconsider.
+- If you said "no fertilizer" but you're in the savanna growing maize with
+  formal education and <10km from market, reconsider — ~60% of similar
+  farmers DO use fertilizer.
+
+**Improved seed:**
+- Overall adoption: ~10-15%. If you predict improved seed, the farmer should
+  have a plausible reason (proximity to agro-dealer, education, extension contact).
+- Improved seed and fertilizer are complementary — using one without the other
+  is uncommon.
+
+**Irrigation:**
+- Only ~2% of Nigerian plots are irrigated. Unless the farmer is in a fadama
+  area or has specific mention of dry-season farming, predict "no."
+
+**Labor:**
+- Family labor should scale with plot area and crop type.
+- For a {plot_area_ha:.2f} ha plot:
+  - Cereals: expect {labor_cereal_low:.0f}-{labor_cereal_high:.0f} family labor days
+  - Root crops: expect {labor_root_low:.0f}-{labor_root_high:.0f} family labor days
+- Hired labor: ~30% of plots use any. Expect 0-30 days for most smallholders.
+  If you predict >50 hired days on a <0.5 ha plot, reconsider.
+
+**Yield:**
+- This field is NOT requested in the JSON output, but if you reason about
+  expected yield: maize 1000-3000 kg/ha, sorghum/millet 500-1500 kg/ha,
+  rice 1500-4000 kg/ha, cassava 8000-15000 kg/ha fresh weight.
+
+### Cross-Consistency Checks
+
+- If fertilizer = no AND improved_seed = yes: unlikely but possible (~5% of cases)
+- If fertilizer = yes AND nitrogen_kg = 0: inconsistent — fix one or the other
+- If irrigated = yes AND you're not in a fadama/lowland area: reconsider
+- If hired_labor > family_labor for a small farm: unusual, reconsider
+- If pesticide = yes AND crop is cassava/yam: unusual (<5%)
+
+### Resource Constraint Calibration
+
+The farmer's asset index is {asset_index:.2f} (national mean = 0.00).
+- Bottom quartile (asset_index < -0.5): severely cash-constrained.
+  Input purchases limited. Fertilizer only if subsidized or credit available.
+- Middle quartiles (-0.5 to 0.5): some purchasing power. Can afford basic
+  inputs but watches costs. May use fertilizer on highest-return crop only.
+- Top quartile (asset_index > 0.5): can afford optimal inputs. More likely
+  to use fertilizer, improved seed, and hire labor.
+
+---
+
+{tier3_prompt}

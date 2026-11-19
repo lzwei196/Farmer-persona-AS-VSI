@@ -1,0 +1,48 @@
+{
+  "influence": {
+    "point": {
+      "rate_difference_kg_per_ha": 19.40283576064919,
+      "adoption_difference": 0.3595424362208352,
+      "quantity_difference_kg_per_plot": 19.459027251172994,
+      "expanded_difference_tonnes": 226464.34772335505
+    },
+    "leave_one_out_min_tonnes": 191141.02564131145,
+    "leave_one_out_max_tonnes": 238683.19466099297,
+    "leave_one_out_all_positive": true,
+    "maximum_absolute_leave_one_out_change_tonnes": 35323.322082043596,
+    "top_10_net_share": 0.7497588575454064,
+    "top_10_absolute_share": 0.7496584260823225
+  },
+  "semantic_audit": {
+    "analysis_records": 3570,
+    "distinct_accepted_responses": 3150,
+    "reused_analysis_records": 420,
+    "accepted_responses_with_retries": 4,
+    "additional_call_attempts": 5,
+    "total_model_call_attempts": 3155,
+    "experiment_counts": {
+      "benchmark_original": 840,
+      "benchmark_extension": 630,
+      "country_label_ablation": 630,
+      "country_prior_matrix": 1470
+    },
+    "provider_counts": {
+      "claude": 1190,
+      "codex": 1190,
+      "kimi": 1190
+    },
+    "overall": {
+      "scope": "overall",
+      "experiment": "all",
+      "provider": "all",
+      "responses": 3570,
+      "valid_structured_decision": 3570,
+      "nonfinite_or_missing_rate": 0,
+      "negative_rate": 0,
+      "rate_above_300": 0,
+      "adoption_false_with_positive_rate": 0,
+      "adoption_true_with_zero_rate": 0,
+      "multiple_attempts": 5
+    }
+  }
+}

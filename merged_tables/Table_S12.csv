@@ -1,0 +1,14 @@
+﻿Sample,Configuration,Pairs,MAE,Median-null MAE,Skill vs median null,Share ≥ obs. p90 (%),Share ≥ obs. p95 (%)
+LSMS-ISA panel,Observed population,275,—,26.2,—,10.2,5.1
+LSMS-ISA panel,Claude T1,275,26.3,26.2,−0.005,0.0,0.0
+LSMS-ISA panel,Claude T2,275,25.4,26.2,+0.030,0.4,0.0
+LSMS-ISA panel,Claude T3,275,26.8,26.2,−0.023,0.0,0.0
+LSMS-ISA panel,Claude T4,275,25.0,26.2,+0.046,0.0,0.0
+LSMS-ISA panel,Codex T1,275,27.7,26.2,−0.058,0.0,0.0
+LSMS-ISA panel,Codex T2,275,25.5,26.2,+0.027,0.0,0.0
+LSMS-ISA panel,Codex T3,275,25.0,26.2,+0.045,0.0,0.0
+LSMS-ISA panel,Codex T4,275,25.9,26.2,+0.008,0.0,0.0
+LSMS-ISA panel,Kimi T1,275,26.5,26.2,−0.011,0.0,0.0
+LSMS-ISA panel,Kimi T2,275,27.4,26.2,−0.048,0.0,0.0
+LSMS-ISA panel,Kimi T3,275,26.1,26.2,+0.000,0.4,0.0
+LSMS-ISA panel,Kimi T4,275,27.0,26.2,−0.031,0.0,0.0

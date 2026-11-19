@@ -1,0 +1,69 @@
+# Tier 3 — Add Decision Rules and Typical Practice Ranges
+# Same as Tier 2, plus explicit decision heuristics and practice norms.
+# Sources: LSMS-ISA Nigeria publications, Liverpool-Stoko et al. (2017),
+# Sheahan & Barrett (2017), FAO fertilizer use statistics
+
+## Decision Rules and Typical Practice Ranges: Nigeria
+
+### Fertilizer Use Decision
+
+Who uses inorganic fertilizer and who doesn't:
+- ~35% of Nigerian plots receive inorganic fertilizer
+- Fertilizer use is highest in the north (Sudan/Guinea Savanna): ~45-55%
+  for cereals, driven by government subsidy programs
+- Fertilizer use is lowest in the south (Humid Forest): ~15-25%,
+  because root crops (cassava, yam) respond less visibly to inorganic N
+- Farmers closer to markets (<15 km) are more likely to use fertilizer
+- Farmers with formal education are more likely to use fertilizer
+- Female-managed plots have ~5-10 percentage points lower fertilizer use
+- Farmers who experienced drought shock are slightly LESS likely to invest
+  in fertilizer (cash constraint from lost harvest)
+
+### Nitrogen Application Rates (for those who use fertilizer)
+
+| Crop | Typical N rate (kg/ha) | Range | Notes |
+|------|----------------------|-------|-------|
+| Maize | 40-80 | 20-120 | Higher in Guinea Savanna |
+| Sorghum | 30-60 | 15-80 | Often from NPK compound only |
+| Millet | 20-40 | 10-60 | Lowest cereal rates |
+| Rice | 50-80 | 30-120 | Upland vs. lowland varies |
+| Cassava | 0-20 | 0-40 | Most farmers apply zero N |
+| Yam | 10-30 | 0-50 | Organic matter preferred |
+| Cowpea/beans | 0-15 | 0-30 | N-fixing; little fertilizer |
+
+IMPORTANT: These are per-hectare rates. For a 0.25 ha plot, actual kg
+applied would be roughly one-quarter of these values. Many smallholders
+apply one or two 50kg bags of NPK regardless of plot size, so small plots
+often receive higher effective kg/ha rates than large plots.
+
+### Seed Choice
+
+- Improved maize varieties: adopted by ~35-40% of maize farmers nationally
+  (higher in Guinea Savanna ~50%, lower in Humid Forest ~20%)
+- Improved rice varieties: ~25-30% adoption
+- Improved sorghum/millet: <15% adoption
+- Root crop varieties are mostly local; improved cassava ~20% adoption
+- Farmers who use fertilizer are 2-3x more likely to also use improved seed
+- Seed saving is widespread — many farmers replant from last harvest
+
+### Labor Norms
+
+- Typical family labor: 50-150 person-days per hectare for cereals,
+  100-250 for root crops (more labor-intensive)
+- Hired labor: ~30% of plots use some hired labor
+- Female-managed plots use slightly less hired labor (cost constraint)
+- Larger farms (>2 ha) almost always hire some labor
+- Peak labor demands: land preparation, weeding, harvest
+
+### Pesticide Use
+
+- ~15% of plots nationally
+- Higher for cowpea (~40% — pod borer is a major pest)
+- Higher for vegetables and cash crops
+- Very low for cassava and yam (<5%)
+- Access constraint: many farmers know pesticides would help but can't
+  afford them or can't get them locally
+
+---
+
+{tier2_prompt}

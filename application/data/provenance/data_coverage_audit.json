@@ -1,0 +1,20 @@
+{
+  "main_tables": 3,
+  "supplementary_tables": 13,
+  "supplementary_csv_files": 14,
+  "principal_analysis_records": 3570,
+  "principal_distinct_responses": 3150,
+  "profiles": 490,
+  "trait_input_records": 64917,
+  "population_poststrata": 55,
+  "license_verified": "cc-zero (CC0) for exact v2.0 study files",
+  "missing_or_limited": [
+    "Exact annual full-precision FAO/WDI input series and precise original year-selection mapping for the national-statistics benchmark were not archived. Published Table S8 is preserved as an archival snapshot; new rounded-input refits are not represented as exact reproductions.",
+    "Original four-country per-call dates and prompt hashes were not recorded; null retained.",
+    "Unknown EA IDs remain unknown; anonymous household fallback is documented, not claimed to recover missing EAs."
+  ],
+  "actual_source_doi": "10.5281/zenodo.15774761",
+  "previous_acquisition_link_corrected": "10.5281/zenodo.14016696 v1.1 does not match exact study file checksums",
+  "adoption_indicator_missing": 398,
+  "complete_case_adoption_records": 64519
+}

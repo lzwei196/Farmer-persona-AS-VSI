@@ -1,0 +1,18 @@
+Component,Matched-input specification,Rich-input specification
+Shared predictors,"Manager age, sex, formal education; GPS plot area; total farm size; main crop; plot ownership; intercropping","Manager age, sex, formal education; GPS plot area; total farm size; main crop; plot ownership; intercropping"
+Country and administrative location,Included,Not included
+Additional manager characteristic,Not included,Primary education indicator and marital status
+Additional location measures,Not included,Distance to population center and elevation
+Additional management and labor,Not included,Irrigation; total family labor; total hired labor; family labor per hectare
+Shock indicators,Not included,"Drought, pests, flood and crop shock"
+Candidate algorithms,Hurdle and constrained random forest,Hurdle and constrained random forest
+Selected model: Ethiopia,Hurdle,Random forest
+Selected model: Malawi,Hurdle,Random forest
+Selected model: Mali,Hurdle,Hurdle
+Selected model: Niger,Hurdle,Hurdle
+Selected model: Nigeria,Hurdle,Random forest
+Selected model: Tanzania,Hurdle,Random forest
+Selected model: Uganda,Hurdle,Random forest
+Numeric preprocessing,Median imputation and standardization fitted on each training split,Median imputation and standardization fitted on each training split
+Categorical preprocessing,Most-frequent imputation and one-hot encoding fitted on each training split; unseen categories ignored,Most-frequent imputation and one-hot encoding fitted on each training split; unseen categories ignored
+Target-country protection,"Target outcomes excluded from model selection, preprocessing and fitting","Target outcomes excluded from model selection, preprocessing and fitting"

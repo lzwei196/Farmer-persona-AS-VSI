@@ -1,0 +1,8 @@
+country,profiles,fertilizer_indicator_yes,nitrogen_rate_gt_zero,zero_nitrogen_among_indicator_yes,missing_nitrogen_among_indicator_yes,positive_nitrogen_among_indicator_no,missing_nitrogen_among_indicator_no
+Ethiopia,70,35,32,0,3,0,0
+Malawi,70,35,35,0,0,0,0
+Mali,70,35,29,6,0,0,0
+Niger,70,35,35,0,0,0,0
+Nigeria,70,35,33,0,2,0,0
+Tanzania,70,35,35,0,0,0,0
+Uganda,70,35,34,1,0,0,0

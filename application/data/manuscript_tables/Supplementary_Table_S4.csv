@@ -1,0 +1,7 @@
+Phase,Conditions,Analysis records,New accepted,Reused,Retries (conditions / extra attempts),UTC collection window,Recorded CLI versions
+Original benchmark,Four countries; one prompt per profile,840,840,0,2 / 3,April 2026; per-call times unavailable,Claude/Codex/Kimi; versions unavailable
+Three-country extension,"Mali, Niger and Uganda",630,630,0,0 / 0,2026-08-27 06:52-07:39 UTC,Claude 2.1.247; Codex 0.149.1; Kimi 0.30.0
+Three-arm label ablation,Tanzania; East Africa only; Nigeria,630,630,0,2 / 2,2026-08-26 12:52-14:24 UTC,Claude 2.1.246; Codex 0.149.1; Kimi 0.30.0
+Seven-label matrix: new cells,"Ethiopia, Malawi, Mali, Niger and Uganda",1050,1050,0,0 / 0,2026-08-27 06:53-08:40 UTC,Claude 2.1.247; Codex 0.149.1; Kimi 0.30.0
+Seven-label matrix: reused cells,Tanzania and Nigeria,420,0,420,1 / 1; counted in ablation,2026-08-26 12:52-14:24 UTC,Same archived responses as ablation
+Total,All experiment-tagged records,3570,3150,420,4 / 5,April and 26-27 August 2026,See phase rows

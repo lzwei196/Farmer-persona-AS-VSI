@@ -1,0 +1,92 @@
+{
+  "scope": "African-only New main Figures1–2 for AS-focused merged draft",
+  "figures": {
+    "Fig_1": {
+      "type": "coded study route",
+      "sources": [
+        "application/docs/PROMPT_AND_MODEL_PROVENANCE.md",
+        "African prompt response archive",
+        "Merged response accounting"
+      ],
+      "response_count": 5670,
+      "count_components": [
+        3360,
+        630,
+        1470,
+        210
+      ],
+      "shared_T1_responses_counted_once": 840,
+      "reused_label_records_within_1470": 420,
+      "drawing_source": "draw_study_design.py",
+      "style": "Rounded panels and functional line icons adapted from the supplied original figure; experimental content retained."
+    },
+    "Fig_2": [
+      "african_configurations.csv",
+      "african_nitrogen_reference.csv"
+    ]
+  },
+  "data": {
+    "african_configurations.csv": {
+      "source_paths_relative_to_combined_code_data_root": [
+        "persona/results/analysis/african_prompt_design_metrics_recomputed.json"
+      ],
+      "rows": 36,
+      "sha256": "e77489ce3083ca5679e905fd39a6f4d2d8b99dd4443b5c43c32bade1140f6720",
+      "precision": "full source numeric precision"
+    },
+    "african_country_configurations.csv": {
+      "source_paths_relative_to_combined_code_data_root": [
+        "persona/results/analysis/paper1_metrics.json"
+      ],
+      "rows": 48,
+      "sha256": "4685def8ba4cd382047e2ce986c1c910d0e82ea006bbd3e7cf76cf4dae20c8a9",
+      "precision": "full source numeric precision"
+    },
+    "african_nitrogen_reference.csv": {
+      "source_paths_relative_to_combined_code_data_root": [
+        "persona/results/analysis/paper1_metrics.json"
+      ],
+      "rows": 1,
+      "sha256": "5ac84fac62151c41d679b2ff61ff5a43ad9e2127109fe6890f879009448a3229",
+      "precision": "full source numeric precision"
+    },
+    "african_percentile_ratios.csv": {
+      "source_paths_relative_to_combined_code_data_root": [
+        "persona/data/lsms/lsms_4country_full.csv",
+        "application/data/model_outputs/raw_model_responses.jsonl.gz",
+        "persona/results/full/lsms/archived_T2_T3_T4.jsonl.gz"
+      ],
+      "rows": 3420,
+      "sha256": "9e8a5c6116122aa8d69d184fa88743626885c3700e66f7c3db34b5451960c37d",
+      "precision": "full source numeric precision"
+    },
+    "african_nitrogen_ecdf.csv": {
+      "source_paths_relative_to_combined_code_data_root": [
+        "persona/data/lsms/lsms_4country_full.csv",
+        "application/data/model_outputs/raw_model_responses.jsonl.gz",
+        "persona/results/full/lsms/archived_T2_T3_T4.jsonl.gz"
+      ],
+      "rows": 3575,
+      "sha256": "f6759c4e5220d74403c53c1b6f78a65f95580587d52cc977e2966e1ca9214c82",
+      "precision": "full source numeric precision"
+    }
+  },
+  "statistics": "Source summaries and descriptive empirical distributions; no new significance claims",
+  "unit_notes": {
+    "nitrogen": "kg N ha−1",
+    "labor": "days",
+    "correlation_and_ratios": "dimensionless",
+    "tail_coverage": "percentage"
+  },
+  "exports": {
+    "width_mm": 180,
+    "PNG_dpi": 600,
+    "formats": [
+      "PDF",
+      "SVG",
+      "PNG"
+    ],
+    "font": "Times New Roman",
+    "figure_1_height_mm": 153
+  }
+}

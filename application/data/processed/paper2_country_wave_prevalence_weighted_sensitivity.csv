@@ -1,0 +1,8 @@
+country,wave,area_filtered_plots,weighted_nonmissing_inorganic_fertilizer,unweighted_fertilizer_prevalence_check,survey_weighted_fertilizer_prevalence,definition
+Nigeria,4,6902,6902,0.36090988119385686,0.3820992899585816,inorganic_fertilizer Yes among nonmissing plots with GPS area 0.05-20 ha; weighted by household survey weight pw
+Ethiopia,3,11448,11385,0.5148880105401844,0.5740842192717613,inorganic_fertilizer Yes among nonmissing plots with GPS area 0.05-20 ha; weighted by household survey weight pw
+Tanzania,3,6190,5771,0.11228556575983364,0.1170258873759874,inorganic_fertilizer Yes among nonmissing plots with GPS area 0.05-20 ha; weighted by household survey weight pw
+Malawi,4,5715,4658,0.5354229282954057,0.5383927603026847,inorganic_fertilizer Yes among nonmissing plots with GPS area 0.05-20 ha; weighted by household survey weight pw
+Mali,2,23618,23274,0.29066769786027324,0.3035858250255955,inorganic_fertilizer Yes among nonmissing plots with GPS area 0.05-20 ha; weighted by household survey weight pw
+Niger,1,5665,5564,0.12473040977713874,0.1127111764627752,inorganic_fertilizer Yes among nonmissing plots with GPS area 0.05-20 ha; weighted by household survey weight pw
+Uganda,8,8271,8259,0.0369294103402349,0.03193950223697169,inorganic_fertilizer Yes among nonmissing plots with GPS area 0.05-20 ha; weighted by household survey weight pw

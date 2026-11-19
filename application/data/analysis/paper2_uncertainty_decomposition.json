@@ -1,0 +1,654 @@
+{
+  "method": {
+    "analysis": "paired adoption-stratified percentile bootstrap",
+    "n_bootstrap": 10000,
+    "cluster_sensitivity": "household cluster percentile bootstrap",
+    "n_cluster_bootstrap": 5000,
+    "seed": 20260826,
+    "agent_estimand": "median metric across 3 providers x 4 tiers",
+    "overall_transfer_estimand": "v2-selected leave-country-out model, selection fixed",
+    "decomposition_transfer_estimand": "leave-country-out hurdle components",
+    "sample_sha256": "84adaf4244814030dee1f88f8eb43368f09d6664ba69e6ffc824492adb577341",
+    "n_agent_result_files_used": 3300
+  },
+  "countries": {
+    "Ethiopia": {
+      "n_plots": 67,
+      "n_households": 65,
+      "n_adopters": 32,
+      "n_nonadopters": 35,
+      "transfer_model_for_overall_r": "rf",
+      "candidate_transfer_r": {
+        "hurdle": 0.18984336664200957,
+        "rf": 0.389197358666343
+      },
+      "overall_r": {
+        "transfer": {
+          "estimate": 0.389197358666343,
+          "ci_low": 0.24355941283013754,
+          "ci_high": 0.5753127666899787,
+          "n_boot_valid": 10000
+        },
+        "agent_median": {
+          "estimate": 0.29495347615549494,
+          "ci_low": 0.14342161730679712,
+          "ci_high": 0.5033669368280472,
+          "n_boot_valid": 10000
+        },
+        "transfer_minus_agent": {
+          "estimate": 0.09424388251084803,
+          "ci_low": -0.1358194885171166,
+          "ci_high": 0.3216691883091383,
+          "n_boot_valid": 10000
+        },
+        "agent_cell_range": [
+          0.17461451585674345,
+          0.38596382007425917
+        ]
+      },
+      "adoption": {
+        "auc": {
+          "transfer_hurdle": {
+            "estimate": 0.68125,
+            "ci_low": 0.5490848214285715,
+            "ci_high": 0.8035714285714286,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.6227678571428572,
+            "ci_low": 0.5323660714285714,
+            "ci_high": 0.7107142857142856,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": 0.058482142857142816,
+            "ci_low": -0.07276785714285716,
+            "ci_high": 0.18527343749999986,
+            "n_boot_valid": 10000
+          }
+        },
+        "brier": {
+          "transfer_hurdle": {
+            "estimate": 0.22357314920837668,
+            "ci_low": 0.19156434056168387,
+            "ci_high": 0.25663572907494187,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.373134328358209,
+            "ci_low": 0.29104477611940294,
+            "ci_high": 0.4701492537313433,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": 0.1495611791498323,
+            "ci_low": 0.0673009002568715,
+            "ci_high": 0.23938360721705007,
+            "n_boot_valid": 10000
+          }
+        }
+      },
+      "conditional_intensity_on_observed_positive_plots": {
+        "spearman_rho": {
+          "transfer_hurdle": {
+            "estimate": -0.13599706744868034,
+            "ci_low": -0.5334684637590541,
+            "ci_high": 0.28426998189324404,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.2359850626592651,
+            "ci_low": -0.10979427369628929,
+            "ci_high": 0.5052369338847882,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": -0.37198213010794545,
+            "ci_low": -0.9623271083187381,
+            "ci_high": 0.3031732749720735,
+            "n_boot_valid": 10000
+          }
+        },
+        "mae_kg_per_ha": {
+          "transfer_hurdle": {
+            "estimate": 38.78130756451735,
+            "ci_low": 26.93733362566042,
+            "ci_high": 53.193875292993425,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 34.296611828015386,
+            "ci_low": 23.063939153323563,
+            "ci_high": 51.097613001122156,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": -4.484695736501962,
+            "ci_low": -15.030891377562025,
+            "ci_high": 6.503550135732836,
+            "n_boot_valid": 10000
+          }
+        }
+      },
+      "agent_adoption_rate_disagreement": {
+        "claude_T1": 0.0,
+        "claude_T2": 0.0,
+        "claude_T3": 0.0,
+        "claude_T4": 0.0,
+        "codex_T1": 0.0,
+        "codex_T2": 0.0,
+        "codex_T3": 0.0,
+        "codex_T4": 0.0,
+        "kimi_T1": 0.0,
+        "kimi_T2": 0.0,
+        "kimi_T3": 0.0,
+        "kimi_T4": 0.0
+      },
+      "cluster_sensitivity": {
+        "transfer": {
+          "estimate": 0.389197358666343,
+          "ci_low": 0.23926885592954722,
+          "ci_high": 0.5760514132542638,
+          "n_boot_valid": 5000
+        },
+        "agent_median": {
+          "estimate": 0.29495347615549494,
+          "ci_low": 0.13444527704736,
+          "ci_high": 0.5000199420768969,
+          "n_boot_valid": 5000
+        },
+        "transfer_minus_agent": {
+          "estimate": 0.09424388251084803,
+          "ci_low": -0.1399606673531454,
+          "ci_high": 0.3272285222764175,
+          "n_boot_valid": 5000
+        }
+      }
+    },
+    "Malawi": {
+      "n_plots": 70,
+      "n_households": 69,
+      "n_adopters": 35,
+      "n_nonadopters": 35,
+      "transfer_model_for_overall_r": "rf",
+      "candidate_transfer_r": {
+        "hurdle": 0.13349971408019462,
+        "rf": 0.15649129143178503
+      },
+      "overall_r": {
+        "transfer": {
+          "estimate": 0.15649129143178503,
+          "ci_low": -0.05127634307617519,
+          "ci_high": 0.36744311309735667,
+          "n_boot_valid": 10000
+        },
+        "agent_median": {
+          "estimate": 0.309332828095394,
+          "ci_low": 0.11259732081276563,
+          "ci_high": 0.48802049219759314,
+          "n_boot_valid": 10000
+        },
+        "transfer_minus_agent": {
+          "estimate": -0.15284153666360895,
+          "ci_low": -0.3030121802541015,
+          "ci_high": 0.0009849158351209906,
+          "n_boot_valid": 10000
+        },
+        "agent_cell_range": [
+          0.18211193145691815,
+          0.39771805456879555
+        ]
+      },
+      "adoption": {
+        "auc": {
+          "transfer_hurdle": {
+            "estimate": 0.6375510204081632,
+            "ci_low": 0.506938775510204,
+            "ci_high": 0.7648979591836734,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.6571428571428571,
+            "ci_low": 0.5428571428571429,
+            "ci_high": 0.75,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": -0.01959183673469389,
+            "ci_low": -0.11020918367346938,
+            "ci_high": 0.0806173469387754,
+            "n_boot_valid": 10000
+          }
+        },
+        "brier": {
+          "transfer_hurdle": {
+            "estimate": 0.23793612721930418,
+            "ci_low": 0.1985499435999803,
+            "ci_high": 0.2791554412749813,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.34285714285714286,
+            "ci_low": 0.25,
+            "ci_high": 0.45714285714285713,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": 0.10492101563783868,
+            "ci_low": 0.03230028522740982,
+            "ci_high": 0.19073565601533932,
+            "n_boot_valid": 10000
+          }
+        }
+      },
+      "conditional_intensity_on_observed_positive_plots": {
+        "spearman_rho": {
+          "transfer_hurdle": {
+            "estimate": 0.04243994687905992,
+            "ci_low": -0.3148294004997337,
+            "ci_high": 0.38907271856075726,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.22248952494912916,
+            "ci_low": -0.06583933833852836,
+            "ci_high": 0.4744966164295796,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": -0.18004957807006924,
+            "ci_low": -0.5465629266859101,
+            "ci_high": 0.1867033558347325,
+            "n_boot_valid": 10000
+          }
+        },
+        "mae_kg_per_ha": {
+          "transfer_hurdle": {
+            "estimate": 25.880957856583887,
+            "ci_low": 18.61047463675337,
+            "ci_high": 34.255795052885226,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 31.521043910209812,
+            "ci_low": 24.66644345918494,
+            "ci_high": 39.539462752903304,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": 5.640086053625925,
+            "ci_low": 0.2874916174960911,
+            "ci_high": 11.215879516390325,
+            "n_boot_valid": 10000
+          }
+        }
+      },
+      "agent_adoption_rate_disagreement": {
+        "claude_T1": 0.0,
+        "claude_T2": 0.0,
+        "claude_T3": 0.0,
+        "claude_T4": 0.0,
+        "codex_T1": 0.0,
+        "codex_T2": 0.0,
+        "codex_T3": 0.0,
+        "codex_T4": 0.0,
+        "kimi_T1": 0.0,
+        "kimi_T2": 0.0,
+        "kimi_T3": 0.0,
+        "kimi_T4": 0.0
+      },
+      "cluster_sensitivity": {
+        "transfer": {
+          "estimate": 0.15649129143178503,
+          "ci_low": -0.04862721146807782,
+          "ci_high": 0.35673868708493767,
+          "n_boot_valid": 5000
+        },
+        "agent_median": {
+          "estimate": 0.309332828095394,
+          "ci_low": 0.11084373537896598,
+          "ci_high": 0.4854260476757991,
+          "n_boot_valid": 5000
+        },
+        "transfer_minus_agent": {
+          "estimate": -0.15284153666360895,
+          "ci_low": -0.3081500129751164,
+          "ci_high": 0.007486540563006229,
+          "n_boot_valid": 5000
+        }
+      }
+    },
+    "Nigeria": {
+      "n_plots": 68,
+      "n_households": 67,
+      "n_adopters": 33,
+      "n_nonadopters": 35,
+      "transfer_model_for_overall_r": "rf",
+      "candidate_transfer_r": {
+        "hurdle": 0.30700484921032933,
+        "rf": 0.4209479559137165
+      },
+      "overall_r": {
+        "transfer": {
+          "estimate": 0.4209479559137165,
+          "ci_low": 0.19966548113782553,
+          "ci_high": 0.6099849695911158,
+          "n_boot_valid": 10000
+        },
+        "agent_median": {
+          "estimate": 0.35137465667508816,
+          "ci_low": 0.16109107042669177,
+          "ci_high": 0.5060990497267707,
+          "n_boot_valid": 10000
+        },
+        "transfer_minus_agent": {
+          "estimate": 0.06957329923862832,
+          "ci_low": -0.08889029282069186,
+          "ci_high": 0.2350176167649313,
+          "n_boot_valid": 10000
+        },
+        "agent_cell_range": [
+          0.14125728666459222,
+          0.46000794152987456
+        ]
+      },
+      "adoption": {
+        "auc": {
+          "transfer_hurdle": {
+            "estimate": 0.6683982683982684,
+            "ci_low": 0.5367965367965368,
+            "ci_high": 0.7904761904761904,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.6753246753246753,
+            "ci_low": 0.5891774891774892,
+            "ci_high": 0.7569372294372294,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": -0.006926406926406892,
+            "ci_low": -0.12641233766233756,
+            "ci_high": 0.10692640692640698,
+            "n_boot_valid": 10000
+          }
+        },
+        "brier": {
+          "transfer_hurdle": {
+            "estimate": 0.28747568219866154,
+            "ci_low": 0.21274138254392191,
+            "ci_high": 0.3663911134453318,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.3235294117647059,
+            "ci_low": 0.2426470588235294,
+            "ci_high": 0.4117647058823529,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": 0.03605372956604436,
+            "ci_low": -0.040042164169614695,
+            "ci_high": 0.11902175205981591,
+            "n_boot_valid": 10000
+          }
+        }
+      },
+      "conditional_intensity_on_observed_positive_plots": {
+        "spearman_rho": {
+          "transfer_hurdle": {
+            "estimate": 0.08489304812834225,
+            "ci_low": -0.2876710887959968,
+            "ci_high": 0.4390219378404597,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.12782224654721813,
+            "ci_low": -0.16776611418815973,
+            "ci_high": 0.4084114729014888,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": -0.04292919841887588,
+            "ci_low": -0.3889122999063827,
+            "ci_high": 0.3107478496625311,
+            "n_boot_valid": 10000
+          }
+        },
+        "mae_kg_per_ha": {
+          "transfer_hurdle": {
+            "estimate": 7091.517187537943,
+            "ci_low": 892.770265234379,
+            "ci_high": 17110.449574958595,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 54.7651199926519,
+            "ci_low": 38.018630383202435,
+            "ci_high": 73.57359062686432,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": -7036.752067545291,
+            "ci_low": -17047.78916856132,
+            "ci_high": -837.949271169945,
+            "n_boot_valid": 10000
+          }
+        }
+      },
+      "agent_adoption_rate_disagreement": {
+        "claude_T1": 0.0,
+        "claude_T2": 0.0,
+        "claude_T3": 0.0,
+        "claude_T4": 0.0,
+        "codex_T1": 0.0,
+        "codex_T2": 0.0,
+        "codex_T3": 0.0,
+        "codex_T4": 0.0,
+        "kimi_T1": 0.0,
+        "kimi_T2": 0.0,
+        "kimi_T3": 0.0,
+        "kimi_T4": 0.0
+      },
+      "cluster_sensitivity": {
+        "transfer": {
+          "estimate": 0.4209479559137165,
+          "ci_low": 0.20653174103666397,
+          "ci_high": 0.6083050633025134,
+          "n_boot_valid": 5000
+        },
+        "agent_median": {
+          "estimate": 0.35137465667508816,
+          "ci_low": 0.155895229758014,
+          "ci_high": 0.5078029190025698,
+          "n_boot_valid": 5000
+        },
+        "transfer_minus_agent": {
+          "estimate": 0.06957329923862832,
+          "ci_low": -0.09064053608545453,
+          "ci_high": 0.24388132945944574,
+          "n_boot_valid": 5000
+        }
+      }
+    },
+    "Tanzania": {
+      "n_plots": 70,
+      "n_households": 68,
+      "n_adopters": 35,
+      "n_nonadopters": 35,
+      "transfer_model_for_overall_r": "hurdle",
+      "candidate_transfer_r": {
+        "hurdle": 0.27461558658173796,
+        "rf": 0.008061165411311083
+      },
+      "overall_r": {
+        "transfer": {
+          "estimate": 0.27461558658173796,
+          "ci_low": 0.02897199215689766,
+          "ci_high": 0.5308987237012738,
+          "n_boot_valid": 10000
+        },
+        "agent_median": {
+          "estimate": 0.07624611970509468,
+          "ci_low": -0.11336308315089524,
+          "ci_high": 0.2652997555149787,
+          "n_boot_valid": 10000
+        },
+        "transfer_minus_agent": {
+          "estimate": 0.19836946687664328,
+          "ci_low": 0.003748270204609135,
+          "ci_high": 0.3678917154934845,
+          "n_boot_valid": 10000
+        },
+        "agent_cell_range": [
+          -0.15737728366630638,
+          0.2528907087029876
+        ]
+      },
+      "adoption": {
+        "auc": {
+          "transfer_hurdle": {
+            "estimate": 0.7061224489795919,
+            "ci_low": 0.5828367346938775,
+            "ci_high": 0.8212244897959183,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.5928571428571429,
+            "ci_low": 0.4857142857142857,
+            "ci_high": 0.6714285714285715,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": 0.113265306122449,
+            "ci_low": 0.007959183673469372,
+            "ci_high": 0.23571428571428577,
+            "n_boot_valid": 10000
+          }
+        },
+        "brier": {
+          "transfer_hurdle": {
+            "estimate": 0.21899209562364974,
+            "ci_low": 0.174616836032245,
+            "ci_high": 0.26594976133626286,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.40714285714285714,
+            "ci_low": 0.32857142857142857,
+            "ci_high": 0.5142857142857142,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": 0.1881507615192074,
+            "ci_low": 0.11641505070005699,
+            "ci_high": 0.28242790894186925,
+            "n_boot_valid": 10000
+          }
+        }
+      },
+      "conditional_intensity_on_observed_positive_plots": {
+        "spearman_rho": {
+          "transfer_hurdle": {
+            "estimate": 0.3563025210084034,
+            "ci_low": 0.02122455520351396,
+            "ci_high": 0.6268967850405971,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 0.02178581874845701,
+            "ci_low": -0.28507201466168236,
+            "ci_high": 0.26980182563386534,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": 0.33451670225994634,
+            "ci_low": 0.043571442986773526,
+            "ci_high": 0.6898733437651107,
+            "n_boot_valid": 10000
+          }
+        },
+        "mae_kg_per_ha": {
+          "transfer_hurdle": {
+            "estimate": 35.96782943689576,
+            "ci_low": 25.434946626707436,
+            "ci_high": 48.23210636460539,
+            "n_boot_valid": 10000
+          },
+          "agent_median": {
+            "estimate": 39.26960073891726,
+            "ci_low": 25.897350805843313,
+            "ci_high": 55.9028623611845,
+            "n_boot_valid": 10000
+          },
+          "transfer_advantage": {
+            "estimate": 3.3017713020215,
+            "ci_low": -4.638878142616006,
+            "ci_high": 11.064470287035737,
+            "n_boot_valid": 10000
+          }
+        }
+      },
+      "agent_adoption_rate_disagreement": {
+        "claude_T1": 0.0,
+        "claude_T2": 0.0,
+        "claude_T3": 0.0,
+        "claude_T4": 0.0,
+        "codex_T1": 0.0,
+        "codex_T2": 0.0,
+        "codex_T3": 0.0,
+        "codex_T4": 0.0,
+        "kimi_T1": 0.0,
+        "kimi_T2": 0.0,
+        "kimi_T3": 0.0,
+        "kimi_T4": 0.0
+      },
+      "cluster_sensitivity": {
+        "transfer": {
+          "estimate": 0.27461558658173796,
+          "ci_low": 0.024690788421023326,
+          "ci_high": 0.5349446291245074,
+          "n_boot_valid": 5000
+        },
+        "agent_median": {
+          "estimate": 0.07624611970509468,
+          "ci_low": -0.11533694599755893,
+          "ci_high": 0.26333335396664787,
+          "n_boot_valid": 5000
+        },
+        "transfer_minus_agent": {
+          "estimate": 0.19836946687664328,
+          "ci_low": 0.0021966686988162325,
+          "ci_high": 0.36997360452579053,
+          "n_boot_valid": 5000
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "other_three_transfer_r": {
+      "estimate": 0.3222122020039481,
+      "ci_low": 0.2153021582197563,
+      "ci_high": 0.43617893101890115,
+      "n_boot_valid": 10000
+    },
+    "other_three_agent_r": {
+      "estimate": 0.31855365364199234,
+      "ci_low": 0.21967965216378324,
+      "ci_high": 0.42492395561856516,
+      "n_boot_valid": 10000
+    },
+    "other_three_mean_gap": {
+      "estimate": 0.0036585483619557824,
+      "ci_low": -0.10000340729752383,
+      "ci_high": 0.109143861200779,
+      "n_boot_valid": 10000
+    },
+    "tanzania_gap_minus_other_three_gap": {
+      "estimate": 0.1947109185146875,
+      "ci_low": -0.025799246788426263,
+      "ci_high": 0.40361442825283933,
+      "n_boot_valid": 10000
+    }
+  }
+}

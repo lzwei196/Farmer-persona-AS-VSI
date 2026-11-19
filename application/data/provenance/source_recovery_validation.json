@@ -1,0 +1,112 @@
+{
+  "status": "analysis_values_match_with_7_season_metadata_differences",
+  "scope": "All 490 public frozen measured-field rows matched unambiguously to the cited source. Survey weights, post-strata and national targets reproduce archived analysis values. Original IDs differ from public pseudonyms.",
+  "checks": [
+    {
+      "file": "profile_survey_design.csv",
+      "rows": 490,
+      "all_analysis_numeric_columns_match": true,
+      "max_abs_analysis_numeric_delta": 4.656612873077393e-10
+    },
+    {
+      "file": "paper2_country_wave_population_targets.csv",
+      "rows": 7,
+      "all_analysis_numeric_columns_match": true,
+      "max_abs_analysis_numeric_delta": 0.0
+    },
+    {
+      "file": "paper2_country_wave_prevalence_weighted_sensitivity.csv",
+      "rows": 7,
+      "all_analysis_numeric_columns_match": true,
+      "max_abs_analysis_numeric_delta": 0.0
+    }
+  ],
+  "metadata_only_differences": [
+    {
+      "panel": "prospective_extension_v2",
+      "profile_index": 177,
+      "country": "Uganda",
+      "archived_season": 2.0,
+      "source_field_match_season": 1.0,
+      "source_match_household_matches_original_frozen_id": true,
+      "source_match_plot_matches_original_frozen_id": true,
+      "old_design_household_matches_original_frozen_id": true,
+      "old_design_plot_matches_original_frozen_id": true,
+      "private_archived_design_season": 2.0
+    },
+    {
+      "panel": "prospective_extension_v2",
+      "profile_index": 181,
+      "country": "Uganda",
+      "archived_season": 2.0,
+      "source_field_match_season": 1.0,
+      "source_match_household_matches_original_frozen_id": true,
+      "source_match_plot_matches_original_frozen_id": true,
+      "old_design_household_matches_original_frozen_id": true,
+      "old_design_plot_matches_original_frozen_id": true,
+      "private_archived_design_season": 2.0
+    },
+    {
+      "panel": "prospective_extension_v2",
+      "profile_index": 186,
+      "country": "Uganda",
+      "archived_season": 2.0,
+      "source_field_match_season": 1.0,
+      "source_match_household_matches_original_frozen_id": true,
+      "source_match_plot_matches_original_frozen_id": true,
+      "old_design_household_matches_original_frozen_id": true,
+      "old_design_plot_matches_original_frozen_id": true,
+      "private_archived_design_season": 2.0
+    },
+    {
+      "panel": "prospective_extension_v2",
+      "profile_index": 190,
+      "country": "Uganda",
+      "archived_season": 1.0,
+      "source_field_match_season": 2.0,
+      "source_match_household_matches_original_frozen_id": true,
+      "source_match_plot_matches_original_frozen_id": true,
+      "old_design_household_matches_original_frozen_id": true,
+      "old_design_plot_matches_original_frozen_id": true,
+      "private_archived_design_season": 1.0
+    },
+    {
+      "panel": "prospective_extension_v2",
+      "profile_index": 207,
+      "country": "Uganda",
+      "archived_season": 1.0,
+      "source_field_match_season": 2.0,
+      "source_match_household_matches_original_frozen_id": true,
+      "source_match_plot_matches_original_frozen_id": true,
+      "old_design_household_matches_original_frozen_id": true,
+      "old_design_plot_matches_original_frozen_id": true,
+      "private_archived_design_season": 1.0
+    },
+    {
+      "panel": "prospective_extension_v2",
+      "profile_index": 208,
+      "country": "Uganda",
+      "archived_season": 2.0,
+      "source_field_match_season": 1.0,
+      "source_match_household_matches_original_frozen_id": true,
+      "source_match_plot_matches_original_frozen_id": true,
+      "old_design_household_matches_original_frozen_id": true,
+      "old_design_plot_matches_original_frozen_id": true,
+      "private_archived_design_season": 2.0
+    },
+    {
+      "panel": "prospective_extension_v2",
+      "profile_index": 209,
+      "country": "Uganda",
+      "archived_season": 2.0,
+      "source_field_match_season": 1.0,
+      "source_match_household_matches_original_frozen_id": true,
+      "source_match_plot_matches_original_frozen_id": true,
+      "old_design_household_matches_original_frozen_id": true,
+      "old_design_plot_matches_original_frozen_id": true,
+      "private_archived_design_season": 2.0
+    }
+  ],
+  "action": "Original archive not overwritten; season metadata not used by current analyses. Source recovery exposes the discrepancy for review.",
+  "metadata_followup": "All seven current-source measured-field matches have the same original household and plot keys as the private frozen extension. Every source candidate with the archived old season has at least one measured-field mismatch with the frozen profile; the newly recovered season uniquely matches all 14 frozen measured fields. The mismatch exists in the old private design table, predating public packaging. This verifies a season-only metadata correction for the cited v2.0 source; current statistical models do not use season. No private keys are exported."
+}

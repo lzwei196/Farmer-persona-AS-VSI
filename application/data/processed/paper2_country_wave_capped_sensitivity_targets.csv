@@ -1,0 +1,8 @@
+country,wave,eligible_plots,eligible_weight_total,survey_weighted_mean_capped_n_kg_per_ha,survey_weighted_mean_capped_n_kg_per_plot,pool_definition
+Ethiopia,3,11275,60253409.86886978,26.118697746995903,6.33045022410858,area 0.05-20 ha; observed N and sampling covariates; positive finite pw; all rates above 300 retained and clipped at 300
+Malawi,4,4607,6390209.086156758,36.30515434822247,11.705418741640917,area 0.05-20 ha; observed N and sampling covariates; positive finite pw; all rates above 300 retained and clipped at 300
+Mali,2,23205,4266750.902456284,23.838166596958537,37.60063901286589,area 0.05-20 ha; observed N and sampling covariates; positive finite pw; all rates above 300 retained and clipped at 300
+Niger,1,5049,4722111.0,1.10998570183907,0.5848814115921883,area 0.05-20 ha; observed N and sampling covariates; positive finite pw; all rates above 300 retained and clipped at 300
+Nigeria,4,6846,38143669.567108154,40.78464207641775,15.350933880204096,area 0.05-20 ha; observed N and sampling covariates; positive finite pw; all rates above 300 retained and clipped at 300
+Tanzania,3,5690,11638009.690834045,6.061134715673536,3.6220494653507083,area 0.05-20 ha; observed N and sampling covariates; positive finite pw; all rates above 300 retained and clipped at 300
+Uganda,8,8111,19549370.66647231,0.7421615316264666,0.31724580852634854,area 0.05-20 ha; observed N and sampling covariates; positive finite pw; all rates above 300 retained and clipped at 300

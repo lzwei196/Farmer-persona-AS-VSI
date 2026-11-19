@@ -1,0 +1,135 @@
+{
+  "current_analysis_coverage": [
+    {
+      "analysis": "Individual N rates and adoption accuracy; Table S5",
+      "entry": "src/paper2_extension_confirmatory_analysis.py",
+      "inputs": [
+        "data/model_outputs/benchmark_predictions.csv",
+        "data/processed/profile_survey_design.csv"
+      ],
+      "status": "portable public-input analysis; corrected ensemble adoption denominator"
+    },
+    {
+      "analysis": "Matched-input target-blind country transfer",
+      "entry": "src/paper2_matched_baseline_analysis.py",
+      "inputs": [
+        "data/processed/frozen_profiles.csv",
+        "data/model_outputs/rival_test_predictions.csv"
+      ],
+      "status": "portable public-input analysis"
+    },
+    {
+      "analysis": "Rich-input target-blind country transfer",
+      "entry": "src/paper2_rich_baseline_analysis.py",
+      "inputs": [
+        "data/profiles/lsms_4country_full.csv",
+        "data/profiles/lsms_extension_3country.csv",
+        "data/model_outputs/benchmark_predictions.csv"
+      ],
+      "status": "portable public-input analysis"
+    },
+    {
+      "analysis": "National post-stratified predictions and quantities",
+      "entry": "src/paper2_population_consequence.py",
+      "inputs": [
+        "data/model_outputs/benchmark_predictions.csv",
+        "data/processed/profile_survey_design.csv",
+        "data/processed/paper2_country_wave_population_targets.csv"
+      ],
+      "status": "portable public-input analysis"
+    },
+    {
+      "analysis": "Three-arm Tanzania / East Africa / Nigeria experiment",
+      "entry": "src/paper2_country_label_ablation_analysis.py",
+      "inputs": [
+        "data/model_outputs/country_label_ablation_predictions.csv"
+      ],
+      "status": "portable public-input analysis"
+    },
+    {
+      "analysis": "Seven-label paired contrasts, exact ordering, variance and ranking",
+      "entry": "src/paper2_country_prior_matrix_analysis.py",
+      "inputs": [
+        "data/model_outputs/country_prior_matrix_predictions.csv",
+        "data/processed/profile_survey_design.csv",
+        "data/processed/paper2_country_wave_prevalence.csv"
+      ],
+      "status": "portable public-input analysis"
+    },
+    {
+      "analysis": "Recalibrated weights, LOO influence, bootstrap and semantic consistency",
+      "entry": "src/paper2_review_sensitivity_analysis.py",
+      "inputs": [
+        "data/model_outputs/country_prior_matrix_predictions.csv",
+        "data/model_outputs/raw_model_responses.jsonl.gz",
+        "data/processed/profile_survey_design.csv",
+        "data/processed/frozen_profiles.csv"
+      ],
+      "status": "portable public-input analysis"
+    },
+    {
+      "analysis": "Trait coefficients, CIs and CV; Table S9 and Figure 6",
+      "entry": "src/paper2_trait_models.py",
+      "inputs": [
+        "data/processed/trait_survey_analysis_input.csv.gz",
+        "data/processed/frozen_profiles.csv",
+        "data/model_outputs/benchmark_predictions.csv"
+      ],
+      "status": "default offline analysis reproduces corrected source-DTA coefficients, bootstrap coefficient draws and CV results"
+    },
+    {
+      "analysis": "Missing-indicator complete-case sensitivity; Table S10",
+      "entry": "src/paper2_trait_models.py",
+      "inputs": [
+        "data/processed/trait_survey_analysis_input.csv.gz"
+      ],
+      "status": "64917 primary and 64519 complete cases; all 24 displayed coefficient cells verified"
+    },
+    {
+      "analysis": "55-cell weight reconstruction and Kish diagnostics; Table S11",
+      "entry": "src/paper2_weight_validation.py",
+      "inputs": [
+        "data/processed/profile_survey_design.csv",
+        "data/processed/paper2_population_poststrata.csv"
+      ],
+      "status": "all 490 weights, cell totals and current Table S11 display values verified"
+    },
+    {
+      "analysis": "National-statistics benchmark; Table S8",
+      "entry": "src/paper2_national_statistics_audit.py",
+      "inputs": [
+        "data/manuscript_tables/Supplementary_Table_S8a.csv",
+        "data/analysis/paper2_population_consequence.csv",
+        "data/processed/paper2_country_wave_capped_sensitivity_targets.csv"
+      ],
+      "status": "rounded-input audit only; original annual full-precision series, exact year mapping and original conditional-bootstrap implementation were not retained"
+    }
+  ],
+  "source_preparation": [
+    {
+      "entry": "src/prepare_survey_analysis_inputs.py",
+      "purpose": "Verified v2.0 Plot source to compact deidentified trait table, 55 post-strata and primary/capped sensitivity aggregate targets",
+      "external_input": "Plot_dataset.dta from DOI 10.5281/zenodo.15774761"
+    },
+    {
+      "entry": "src/paper2_recover_survey_design.py",
+      "purpose": "Match public frozen measured fields to source survey, recover base weights and targets",
+      "external_input": "Plot_dataset.dta from DOI 10.5281/zenodo.15774761",
+      "verified": "All analysis quantities match; seven old Uganda season metadata values differ and are explicitly reported without overwriting archived design"
+    },
+    {
+      "entry": "src/build_lsms_extension_sample.py",
+      "purpose": "Deterministic three-country extension sample construction",
+      "external_input": "Plot_dataset.dta"
+    }
+  ],
+  "model_collection": [
+    "src/run_lsms_full.py",
+    "src/lsms_prompt_contexts.py",
+    "src/paper2_extension_confirmatory.py",
+    "src/paper2_country_label_ablation.py",
+    "src/paper2_country_prior_matrix.py"
+  ],
+  "historical_sources": "src/historical/ retains seven original earlier analysis programs and source hashes; these are not run as current-manuscript analyses.",
+  "not_recovered": "Exact historical original 280-profile sample builder was not retained; frozen original profiles remain canonical. No missing source was invented."
+}

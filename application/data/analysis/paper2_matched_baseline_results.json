@@ -1,0 +1,618 @@
+[
+  {
+    "country": "Ethiopia",
+    "n": 67,
+    "matched_selected_model": "hurdle",
+    "matched_r": -0.07173220821786672,
+    "rich_r": 0.3360325261228392,
+    "agent_r": 0.3350891046236505,
+    "selection_audit": {
+      "mean_source_validation_r": {
+        "hurdle": 0.2654338838283485,
+        "random_forest": 0.11511930767871391
+      },
+      "folds": [
+        {
+          "validation_country": "Malawi",
+          "model": "hurdle",
+          "r": 0.23422907390084136
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "random_forest",
+          "r": -0.11691281084753101
+        },
+        {
+          "validation_country": "Mali",
+          "model": "hurdle",
+          "r": 0.1272803241246686
+        },
+        {
+          "validation_country": "Mali",
+          "model": "random_forest",
+          "r": 0.07286691406537667
+        },
+        {
+          "validation_country": "Niger",
+          "model": "hurdle",
+          "r": 0.3454916500398226
+        },
+        {
+          "validation_country": "Niger",
+          "model": "random_forest",
+          "r": 0.08110506645166249
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "hurdle",
+          "r": 0.4774609667807417
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "random_forest",
+          "r": 0.5579704576849478
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "hurdle",
+          "r": 0.19650466081184517
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "random_forest",
+          "r": -0.00034398415383794724
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "hurdle",
+          "r": 0.21163662731217117
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "random_forest",
+          "r": 0.09603020287166544
+        }
+      ]
+    },
+    "matched_minus_agent": -0.40682131284151724,
+    "matched_minus_rich": -0.4077647343407059,
+    "matched_r_lo": -0.2594210080476086,
+    "matched_r_hi": 0.11707152534865575,
+    "rich_r_lo": 0.20994533735004844,
+    "rich_r_hi": 0.5433934891967319,
+    "agent_r_lo": 0.10967976034766876,
+    "agent_r_hi": 0.5618862557396739,
+    "matched_minus_agent_lo": -0.6498251339045658,
+    "matched_minus_agent_hi": -0.2076537821611215,
+    "matched_minus_rich_lo": -0.6920081487007075,
+    "matched_minus_rich_hi": -0.2023617877354836
+  },
+  {
+    "country": "Malawi",
+    "n": 70,
+    "matched_selected_model": "hurdle",
+    "matched_r": 0.2542849482158963,
+    "rich_r": 0.25455083062676226,
+    "agent_r": 0.3116306156432105,
+    "selection_audit": {
+      "mean_source_validation_r": {
+        "hurdle": 0.22192635310619066,
+        "random_forest": 0.18490567161231866
+      },
+      "folds": [
+        {
+          "validation_country": "Ethiopia",
+          "model": "hurdle",
+          "r": -0.08922236466100532
+        },
+        {
+          "validation_country": "Ethiopia",
+          "model": "random_forest",
+          "r": 0.14568761821755447
+        },
+        {
+          "validation_country": "Mali",
+          "model": "hurdle",
+          "r": 0.1732025743779301
+        },
+        {
+          "validation_country": "Mali",
+          "model": "random_forest",
+          "r": 0.0598995985750644
+        },
+        {
+          "validation_country": "Niger",
+          "model": "hurdle",
+          "r": 0.41726306869325835
+        },
+        {
+          "validation_country": "Niger",
+          "model": "random_forest",
+          "r": 0.2214831564508698
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "hurdle",
+          "r": 0.493396548425037
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "random_forest",
+          "r": 0.48801047223441535
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "hurdle",
+          "r": 0.2232520973980454
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "random_forest",
+          "r": 0.1085993113669742
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "hurdle",
+          "r": 0.11366619440387829
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "random_forest",
+          "r": 0.0857538728290339
+        }
+      ]
+    },
+    "matched_minus_agent": -0.05734566742731417,
+    "matched_minus_rich": -0.00026588241086594744,
+    "matched_r_lo": -0.0037377325080374694,
+    "matched_r_hi": 0.49722921638164275,
+    "rich_r_lo": 0.06169368184257834,
+    "rich_r_hi": 0.454238332013884,
+    "agent_r_lo": 0.09151819725461577,
+    "agent_r_hi": 0.5067380344762419,
+    "matched_minus_agent_lo": -0.2674305380238116,
+    "matched_minus_agent_hi": 0.14044119235234656,
+    "matched_minus_rich_lo": -0.22083736317005112,
+    "matched_minus_rich_hi": 0.209450914138863
+  },
+  {
+    "country": "Mali",
+    "n": 70,
+    "matched_selected_model": "hurdle",
+    "matched_r": 0.16421406366410984,
+    "rich_r": 0.304707883996781,
+    "agent_r": 0.30643215614664815,
+    "selection_audit": {
+      "mean_source_validation_r": {
+        "hurdle": 0.232047320958958,
+        "random_forest": 0.18214154564639054
+      },
+      "folds": [
+        {
+          "validation_country": "Ethiopia",
+          "model": "hurdle",
+          "r": -0.07082686546742117
+        },
+        {
+          "validation_country": "Ethiopia",
+          "model": "random_forest",
+          "r": 0.21500353641858577
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "hurdle",
+          "r": 0.2596759748170171
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "random_forest",
+          "r": 0.03725914140277705
+        },
+        {
+          "validation_country": "Niger",
+          "model": "hurdle",
+          "r": 0.3286071942439101
+        },
+        {
+          "validation_country": "Niger",
+          "model": "random_forest",
+          "r": 0.1848948934987718
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "hurdle",
+          "r": 0.5633920989366077
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "random_forest",
+          "r": 0.568380159301492
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "hurdle",
+          "r": 0.22882152920060728
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "random_forest",
+          "r": 0.051324005180568635
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "hurdle",
+          "r": 0.08261399402302708
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "random_forest",
+          "r": 0.03598753807614804
+        }
+      ]
+    },
+    "matched_minus_agent": -0.1422180924825383,
+    "matched_minus_rich": -0.14049382033267116,
+    "matched_r_lo": -0.08259549970232136,
+    "matched_r_hi": 0.42508689595268356,
+    "rich_r_lo": -0.0192021478405673,
+    "rich_r_hi": 0.582995475833705,
+    "agent_r_lo": 0.06977400630006181,
+    "agent_r_hi": 0.5280879914181686,
+    "matched_minus_agent_lo": -0.3799827016087346,
+    "matched_minus_agent_hi": 0.07369969633229422,
+    "matched_minus_rich_lo": -0.4131992835648919,
+    "matched_minus_rich_hi": 0.16206587036839346
+  },
+  {
+    "country": "Niger",
+    "n": 70,
+    "matched_selected_model": "hurdle",
+    "matched_r": 0.41408625255479403,
+    "rich_r": 0.27091161296283267,
+    "agent_r": 0.2122536566361008,
+    "selection_audit": {
+      "mean_source_validation_r": {
+        "hurdle": 0.16615917645715295,
+        "random_forest": 0.14389781815585656
+      },
+      "folds": [
+        {
+          "validation_country": "Ethiopia",
+          "model": "hurdle",
+          "r": -0.07939171157549267
+        },
+        {
+          "validation_country": "Ethiopia",
+          "model": "random_forest",
+          "r": 0.21852361438406862
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "hurdle",
+          "r": 0.22736461618893722
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "random_forest",
+          "r": 0.11600453870948157
+        },
+        {
+          "validation_country": "Mali",
+          "model": "hurdle",
+          "r": 0.07567578146335352
+        },
+        {
+          "validation_country": "Mali",
+          "model": "random_forest",
+          "r": -0.025639572099575313
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "hurdle",
+          "r": 0.48812419851654903
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "random_forest",
+          "r": 0.491542569676176
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "hurdle",
+          "r": 0.2544731567789376
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "random_forest",
+          "r": -0.02528088197795832
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "hurdle",
+          "r": 0.030709017370633085
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "random_forest",
+          "r": 0.08823664024294671
+        }
+      ]
+    },
+    "matched_minus_agent": 0.20183259591869324,
+    "matched_minus_rich": 0.14317463959196136,
+    "matched_r_lo": 0.26058018255643467,
+    "matched_r_hi": 0.7559481975916772,
+    "rich_r_lo": 0.18067749998296664,
+    "rich_r_hi": 0.5492346093966605,
+    "agent_r_lo": 0.10590706806639222,
+    "agent_r_hi": 0.4375360270358207,
+    "matched_minus_agent_lo": -0.028581209550959406,
+    "matched_minus_agent_hi": 0.5032724447635665,
+    "matched_minus_rich_lo": -0.07918061203657649,
+    "matched_minus_rich_hi": 0.3316242372115039
+  },
+  {
+    "country": "Nigeria",
+    "n": 68,
+    "matched_selected_model": "hurdle",
+    "matched_r": 0.5315691870497197,
+    "rich_r": 0.3159104766226181,
+    "agent_r": 0.34071037363341633,
+    "selection_audit": {
+      "mean_source_validation_r": {
+        "hurdle": 0.17901527092162495,
+        "random_forest": 0.05164088114028267
+      },
+      "folds": [
+        {
+          "validation_country": "Ethiopia",
+          "model": "hurdle",
+          "r": -0.06404996289744952
+        },
+        {
+          "validation_country": "Ethiopia",
+          "model": "random_forest",
+          "r": 0.1267435982320018
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "hurdle",
+          "r": 0.20581566896892967
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "random_forest",
+          "r": 0.007188295594053483
+        },
+        {
+          "validation_country": "Mali",
+          "model": "hurdle",
+          "r": 0.2208546124617214
+        },
+        {
+          "validation_country": "Mali",
+          "model": "random_forest",
+          "r": 0.05662581939977103
+        },
+        {
+          "validation_country": "Niger",
+          "model": "hurdle",
+          "r": 0.4252372584051335
+        },
+        {
+          "validation_country": "Niger",
+          "model": "random_forest",
+          "r": 0.06325626735812756
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "hurdle",
+          "r": 0.24562133801849914
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "random_forest",
+          "r": 0.007052240082437328
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "hurdle",
+          "r": 0.04061271057291545
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "random_forest",
+          "r": 0.048979066175304765
+        }
+      ]
+    },
+    "matched_minus_agent": 0.19085881341630334,
+    "matched_minus_rich": 0.21565871042710155,
+    "matched_r_lo": 0.22547279336179946,
+    "matched_r_hi": 0.7382697469773476,
+    "rich_r_lo": 0.11617744066875295,
+    "rich_r_hi": 0.49126928283184107,
+    "agent_r_lo": 0.08399600906727807,
+    "agent_r_hi": 0.5593997677371242,
+    "matched_minus_agent_lo": 0.04157152798125355,
+    "matched_minus_agent_hi": 0.3014182722059502,
+    "matched_minus_rich_lo": -0.02876651061897499,
+    "matched_minus_rich_hi": 0.4108263603348706
+  },
+  {
+    "country": "Tanzania",
+    "n": 70,
+    "matched_selected_model": "hurdle",
+    "matched_r": 0.23613781798057823,
+    "rich_r": 0.04305316978941678,
+    "agent_r": 0.03218411552261238,
+    "selection_audit": {
+      "mean_source_validation_r": {
+        "hurdle": 0.24740194886633352,
+        "random_forest": 0.21765219943774097
+      },
+      "folds": [
+        {
+          "validation_country": "Ethiopia",
+          "model": "hurdle",
+          "r": -0.06024170276546296
+        },
+        {
+          "validation_country": "Ethiopia",
+          "model": "random_forest",
+          "r": 0.28314811406207196
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "hurdle",
+          "r": 0.23250745797752895
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "random_forest",
+          "r": 0.26496255002560376
+        },
+        {
+          "validation_country": "Mali",
+          "model": "hurdle",
+          "r": 0.13259972180119647
+        },
+        {
+          "validation_country": "Mali",
+          "model": "random_forest",
+          "r": 0.18653856423648296
+        },
+        {
+          "validation_country": "Niger",
+          "model": "hurdle",
+          "r": 0.5099196217327011
+        },
+        {
+          "validation_country": "Niger",
+          "model": "random_forest",
+          "r": 0.11904205829025122
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "hurdle",
+          "r": 0.5462418083401102
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "random_forest",
+          "r": 0.44350878507319497
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "hurdle",
+          "r": 0.12338478611192749
+        },
+        {
+          "validation_country": "Uganda",
+          "model": "random_forest",
+          "r": 0.008713124938841074
+        }
+      ]
+    },
+    "matched_minus_agent": 0.20395370245796585,
+    "matched_minus_rich": 0.19308464819116145,
+    "matched_r_lo": 0.050170513449708805,
+    "matched_r_hi": 0.40690416210028035,
+    "rich_r_lo": -0.1536561537300888,
+    "rich_r_hi": 0.2829061560157894,
+    "agent_r_lo": -0.19349853485848667,
+    "agent_r_hi": 0.28408989549629166,
+    "matched_minus_agent_lo": -0.08938808775271213,
+    "matched_minus_agent_hi": 0.49224654103634985,
+    "matched_minus_rich_lo": -0.12831235488098558,
+    "matched_minus_rich_hi": 0.48187265524187906
+  },
+  {
+    "country": "Uganda",
+    "n": 70,
+    "matched_selected_model": "hurdle",
+    "matched_r": 0.1121480733620698,
+    "rich_r": 0.0975976005230716,
+    "agent_r": 0.11928488419253537,
+    "selection_audit": {
+      "mean_source_validation_r": {
+        "hurdle": 0.2741589785460045,
+        "random_forest": 0.20473204974488576
+      },
+      "folds": [
+        {
+          "validation_country": "Ethiopia",
+          "model": "hurdle",
+          "r": 0.14058201966224215
+        },
+        {
+          "validation_country": "Ethiopia",
+          "model": "random_forest",
+          "r": 0.20671772960110027
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "hurdle",
+          "r": 0.27624737920409015
+        },
+        {
+          "validation_country": "Malawi",
+          "model": "random_forest",
+          "r": 0.12033929240701992
+        },
+        {
+          "validation_country": "Mali",
+          "model": "hurdle",
+          "r": 0.15471381875613896
+        },
+        {
+          "validation_country": "Mali",
+          "model": "random_forest",
+          "r": 0.12428667679814763
+        },
+        {
+          "validation_country": "Niger",
+          "model": "hurdle",
+          "r": 0.4078536248538396
+        },
+        {
+          "validation_country": "Niger",
+          "model": "random_forest",
+          "r": 0.2318132929621827
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "hurdle",
+          "r": 0.4581397704189013
+        },
+        {
+          "validation_country": "Nigeria",
+          "model": "random_forest",
+          "r": 0.534859972309001
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "hurdle",
+          "r": 0.20741725838081507
+        },
+        {
+          "validation_country": "Tanzania",
+          "model": "random_forest",
+          "r": 0.01037533439186289
+        }
+      ]
+    },
+    "matched_minus_agent": -0.007136810830465565,
+    "matched_minus_rich": 0.014550472838998199,
+    "matched_r_lo": -0.08688894289432411,
+    "matched_r_hi": 0.3693757120820297,
+    "rich_r_lo": -0.05184919473363809,
+    "rich_r_hi": 0.28987922030995006,
+    "agent_r_lo": -0.06557757335229136,
+    "agent_r_hi": 0.341779386486318,
+    "matched_minus_agent_lo": -0.30786498008404706,
+    "matched_minus_agent_hi": 0.2822501221678689,
+    "matched_minus_rich_lo": -0.21625207861877743,
+    "matched_minus_rich_hi": 0.27379355724173315
+  }
+]

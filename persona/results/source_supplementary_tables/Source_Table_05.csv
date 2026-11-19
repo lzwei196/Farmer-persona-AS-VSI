@@ -1,0 +1,8 @@
+﻿Sample,Outcome,Resampling ceiling (95% interval),Distribution-only reference,Median null,Mean null
+LSMS-ISA panel,Nitrogen,0.957 (0.922–0.979),0.943,0.509,0.309
+ Nigeria,Nitrogen,0.919 (0.846–0.961),0.899,0.515,0.309
+ Ethiopia,Nitrogen,0.919 (0.845–0.966),0.902,0.522,0.328
+ Malawi,Nitrogen,0.916 (0.843–0.957),0.890,0.500,0.386
+ Tanzania,Nitrogen,0.917 (0.843–0.957),0.895,0.500,0.257
+LSMS-ISA panel,Family labour,0.951,0.910,0.504,—
+LSMS-ISA panel,Hired labour,0.964,0.951,0.647,—

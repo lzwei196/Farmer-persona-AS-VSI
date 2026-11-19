@@ -1,0 +1,114 @@
+{
+  "scope": "African prompt-design tabulations",
+  "numbering": "Source numbers are historical identifiers. The current manuscript numbering is provided in the combined display map.",
+  "tables": [
+    {
+      "source_table": 1,
+      "file": "Source_Table_01.csv",
+      "rows_excluding_header": 7,
+      "columns": 8,
+      "sha256": "b6616468fb722c4725e0c9a4202f364f992b561c817fe2e7c77b0008219ca261",
+      "source_sha256": "0cd5da48524d3c7df8917d4768881d51908c4fd4605abb01d7372d0374d9a73a",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 2,
+      "file": "Source_Table_02.csv",
+      "rows_excluding_header": 4,
+      "columns": 5,
+      "sha256": "35ca7aab931c7f4525d579ecc76b989e28a6ea44dc3b2841ee3fcc1bf26f3f87",
+      "source_sha256": "e991a3182557075c6331dbbbc6fac7152eb476e1cc6e8c213e27cb64bcf27721",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 3,
+      "file": "Source_Table_03.csv",
+      "rows_excluding_header": 8,
+      "columns": 6,
+      "sha256": "9537e31a2ad774af0d41d245da674c08cdae949edee157a1e0d16291255189c4",
+      "source_sha256": "913b7fc5f204a889383b6b55f41c4b51bdf0913acfe7c754bf7696ee1e4b43d5",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 4,
+      "file": "Source_Table_04.csv",
+      "rows_excluding_header": 12,
+      "columns": 7,
+      "sha256": "851b741af4d53492efabfcf35436b138c6ef12a202bd9cc5e281645842c3ba9b",
+      "source_sha256": "d82e78e2a79e584e7fa651b62bf14c5bf1f51a2f6410ecd207841fa52da0f051",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 5,
+      "file": "Source_Table_05.csv",
+      "rows_excluding_header": 7,
+      "columns": 6,
+      "sha256": "e4f0c67906ffa29af867a9a24b6511a5ac2106b2894d0880f6b12d5c7cd4eb28",
+      "source_sha256": "ddae9c84db5fe2b1b7aaa7371c4f04cbe89ca85a275ebd71f892a8cf5f685fdd",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 6,
+      "file": "Source_Table_06.csv",
+      "rows_excluding_header": 14,
+      "columns": 8,
+      "sha256": "35303ee3447f88c2cd90336fb90681b3c1bd9ea5c0a081e6a29970df9a181c34",
+      "source_sha256": "35303ee3447f88c2cd90336fb90681b3c1bd9ea5c0a081e6a29970df9a181c34",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 7,
+      "file": "Source_Table_07.csv",
+      "rows_excluding_header": 4,
+      "columns": 8,
+      "sha256": "f7a3f23f179e43915fc2fed78fca903a892353dd8454babfdd7aafee588069b7",
+      "source_sha256": "f7a3f23f179e43915fc2fed78fca903a892353dd8454babfdd7aafee588069b7",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 8,
+      "file": "Source_Table_08.csv",
+      "rows_excluding_header": 36,
+      "columns": 8,
+      "sha256": "01d0c74a6d89e42be6eef0b54a2e93198999c4d0821e60706cbd9fc8f586a8f9",
+      "source_sha256": "01d0c74a6d89e42be6eef0b54a2e93198999c4d0821e60706cbd9fc8f586a8f9",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 9,
+      "file": "Source_Table_09.csv",
+      "rows_excluding_header": 4,
+      "columns": 6,
+      "sha256": "6bdc84380d00abad27bc92523638e84fb0cde501788e562ff7af2a5a44aa6e91",
+      "source_sha256": "6bdc84380d00abad27bc92523638e84fb0cde501788e562ff7af2a5a44aa6e91",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 10,
+      "file": "Source_Table_10.csv",
+      "rows_excluding_header": 48,
+      "columns": 7,
+      "sha256": "54a415c7fd2e7e8ea8202c72b40acf226cde61f5e4b0549aa8924138a14423e4",
+      "source_sha256": "54a415c7fd2e7e8ea8202c72b40acf226cde61f5e4b0549aa8924138a14423e4",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 12,
+      "file": "Source_Table_12.csv",
+      "rows_excluding_header": 12,
+      "columns": 3,
+      "sha256": "b6e2d01796cf52c48e28628e9ec5d2abbe68539bb09b82fbfc01333aa63d32dc",
+      "source_sha256": "1572d7a5418ff752a3913ceb0a6b4781c9a5dc74f5e74eb36d2c0013627f02cb",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    },
+    {
+      "source_table": 13,
+      "file": "Source_Table_13.csv",
+      "rows_excluding_header": 13,
+      "columns": 8,
+      "sha256": "a277f1d9544ee5f236a202f40ced6157ee70363d7dfdcf9a720ea23f7091e445",
+      "source_sha256": "2602e91b2cdd3e8ac5ba5c37df253b54d9396628f0f24d2fc4a25f60bfffeeb5",
+      "method": "African rows and columns retained from the supplied source tabulation; source rounding retained."
+    }
+  ]
+}

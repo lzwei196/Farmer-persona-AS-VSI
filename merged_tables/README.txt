@@ -1,0 +1,1 @@
+These 29 CSVs transcribe the four main tables and 24 numbered supplementary tables. Supplementary Table S20 has two physical parts. Source files with full-precision values remain in persona/ and application/.

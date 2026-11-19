@@ -1,0 +1,9 @@
+﻿Dataset,Requested decision,Format,Unit as requested,Survey ground truth,Reported in this study
+LSMS-ISA,Inorganic fertiliser adoption,Boolean,—,Available,Adoption match (Table S11)
+LSMS-ISA,Nitrogen application rate,Numeric,kg ha⁻¹,Available,Primary outcome
+LSMS-ISA,Organic fertiliser use,Boolean,—,Not available,—
+LSMS-ISA,Improved versus local seed,Boolean,—,Not available,—
+LSMS-ISA,Pesticide or herbicide use,Boolean,—,Not available,—
+LSMS-ISA,Irrigation,Boolean,—,Available,Adoption match (Table S11)
+LSMS-ISA,Family labour,Numeric,days per plot-season,Available,Dispersion and tail (Table S8)
+LSMS-ISA,Hired labour,Numeric,days per plot-season,Available,Dispersion and tail (Table S8)

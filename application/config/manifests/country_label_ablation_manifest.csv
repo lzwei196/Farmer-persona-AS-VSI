@@ -1,0 +1,211 @@
+profile_key,run_order,block_order,within_block_order,actual_country,arm,location_line,prompt_sha256
+original_170,0,0,0,Tanzania,swapped_country,- Country: Nigeria,0c1c910a53eeb2d2c1aea0442b1f72f8ffca8fccf5db9b079a50a944ca5be4e4
+original_170,1,0,1,Tanzania,true_country,- Country: Tanzania,b84c4a93319c2d4f3c66379f2ce4b72d9df26ec96b8a3db76691f7e4ab8802d8
+original_170,2,0,2,Tanzania,region_only,- Broad region: East Africa,bb1d3047fa734a366010271447ddce073ae3d0ddfed94f46b51a9786c5d83104
+original_187,3,1,0,Tanzania,swapped_country,- Country: Nigeria,d45770ef250d686bf9f03e6cdeea8455d0e2bfcde487c545eda3c600923c6f93
+original_187,4,1,1,Tanzania,region_only,- Broad region: East Africa,b6b7f4e90dab0470318c308687917a23e05caf893ca83ed15dfa800258ed6cb1
+original_187,5,1,2,Tanzania,true_country,- Country: Tanzania,ef8c52a5620c3795593ea5c20ea200adeabdd74e8c4ff45de2ace61849e002a6
+original_158,6,2,0,Tanzania,true_country,- Country: Tanzania,2b14e2ef1d07bd7a8c9550d7429e0703881a86521edf014ecfe0613a38b407d4
+original_158,7,2,1,Tanzania,region_only,- Broad region: East Africa,8840d514361c56cf4955bf71f90e6bdae44520a063318cffe0d1ec60c1ade296
+original_158,8,2,2,Tanzania,swapped_country,- Country: Nigeria,47ce88bee40cda2ab9d06a07cfa319970f1971706be4f6bec05fbfca97de8762
+original_174,9,3,0,Tanzania,true_country,- Country: Tanzania,6d94251e02285c3074617bef6075640a12a059f3920a7bbff71c606a5f925c0a
+original_174,10,3,1,Tanzania,swapped_country,- Country: Nigeria,cb73b6ca46c04b8a4e91c58c1945b15d45aff57ea88e315ca1909ac0a8e28b38
+original_174,11,3,2,Tanzania,region_only,- Broad region: East Africa,308cb83be735e087cf5ce3c8e2237548d6e37e93b556377d07766e6c034ea25e
+original_165,12,4,0,Tanzania,true_country,- Country: Tanzania,b1f9fe0bc80b7b7e8d0a9038e5ee38362e75ea73c20b31542acafb838a149916
+original_165,13,4,1,Tanzania,region_only,- Broad region: East Africa,fee99538d298bb4648026aa46500395b033264a91b1554af519cdf5c45825926
+original_165,14,4,2,Tanzania,swapped_country,- Country: Nigeria,eac49d60647e63593139f25e517379c25033541ed94325983dd1db592d5cc4a4
+original_176,15,5,0,Tanzania,true_country,- Country: Tanzania,5f6f664d4f929c94f9ac543201bebaed623391f3a57f3c90ea9fb5962ec0ca9a
+original_176,16,5,1,Tanzania,swapped_country,- Country: Nigeria,eda664b4f0a08c8478c30067c21a5921dabb88943c7fe62e0fad0c019bc42ee3
+original_176,17,5,2,Tanzania,region_only,- Broad region: East Africa,bc867e3201892fcc99830406ecd87817c9738a1cc9e24c2dfb3fcc71206d444c
+original_171,18,6,0,Tanzania,swapped_country,- Country: Nigeria,4ef0500169f43cb009ede0b453d81934905c4e7b251919e83cff9ae1e2169d0d
+original_171,19,6,1,Tanzania,true_country,- Country: Tanzania,0d6836d772d6e47b7278f954b69dec790a41bcc784912a247f3e53a3205db773
+original_171,20,6,2,Tanzania,region_only,- Broad region: East Africa,a09dd75f3a7fd0ad3087e5b9b402b1f6bac6f066043730242aa46d6450da5160
+original_150,21,7,0,Tanzania,region_only,- Broad region: East Africa,ad1ddd0dac5b44df40f09ec76f048ec4ee01466d88432e880db5ca6f1658993f
+original_150,22,7,1,Tanzania,true_country,- Country: Tanzania,115428355c948699b9e1fa1ae122391d483e18fc12dc91bcc08ae5fab7382da5
+original_150,23,7,2,Tanzania,swapped_country,- Country: Nigeria,eff5d8160ec4c31e8945366bd286b65e1b4485c267685912b0a04d37d7ffc774
+original_188,24,8,0,Tanzania,swapped_country,- Country: Nigeria,38cb4c76d28f051dc77ce3665fd33ee30393ecb9358b119694a4674d177e320f
+original_188,25,8,1,Tanzania,region_only,- Broad region: East Africa,898abe8e5be16d43cfff37ba264a46175009bd570d4e3553c7e536213a9e64bf
+original_188,26,8,2,Tanzania,true_country,- Country: Tanzania,7d965dab60f112facb03da2b55cf67550cfd7b3d32f47f23b95fafe2a001332e
+original_168,27,9,0,Tanzania,swapped_country,- Country: Nigeria,bd407289b405e048d834af48d5166504261209534d5fa468e8754d7426971cc9
+original_168,28,9,1,Tanzania,region_only,- Broad region: East Africa,a1936646db66d59cc50a8a3745f4f27e7f185a49ecb39a1de6fd2cd604192dad
+original_168,29,9,2,Tanzania,true_country,- Country: Tanzania,2d9a33f65b96c54684a431aa002cf73be6179a9390b48c666ad1e86dc7e6abdb
+original_193,30,10,0,Tanzania,region_only,- Broad region: East Africa,3e7debd87805b7c2bb318a106b4e8eecac5aa06878a5da5cb9688ea520ff1167
+original_193,31,10,1,Tanzania,swapped_country,- Country: Nigeria,22d06bb5a5acd0b01d959c3ece10e51bbcc351ec82d46d42176db7d531a4ec8d
+original_193,32,10,2,Tanzania,true_country,- Country: Tanzania,d6fe0864a02efd1ce38065663195791c8c85c0601eabf8873f676dbd118de79c
+original_190,33,11,0,Tanzania,true_country,- Country: Tanzania,a4633d2dfbf6734f5c1c1d27c05c2114d8852c5d290f773a0b6b95c2d87f08a1
+original_190,34,11,1,Tanzania,swapped_country,- Country: Nigeria,3a671627726a0cba3ecec68cad0d9116921b346b0a5a26ef21ea103f6c7d29bf
+original_190,35,11,2,Tanzania,region_only,- Broad region: East Africa,ec9242adcc527cc6521530a9f590d5d81f60256b5b167128adb67aa8f70b094f
+original_205,36,12,0,Tanzania,swapped_country,- Country: Nigeria,584498f7128d116bf1a80d3534955df130034dbdf0152647a474c193f5b6f219
+original_205,37,12,1,Tanzania,true_country,- Country: Tanzania,6fe0efac18df3608937e62ec88a78e634f74c26def4ada036b5ba96ab239ffc6
+original_205,38,12,2,Tanzania,region_only,- Broad region: East Africa,b392d6635ea0f53e873571f459b51b4ffae16a0ffd9bd0a3204cc93ff39c7411
+original_160,39,13,0,Tanzania,true_country,- Country: Tanzania,4de855d1c77c15d1e198583f7bb928330f6e0f7fd80f2a3426aa470701bc9d9a
+original_160,40,13,1,Tanzania,swapped_country,- Country: Nigeria,5e3570adafbbe7ce8425acd1cb5bef2e3e70df6764b15c1d65494cce7ef5d34f
+original_160,41,13,2,Tanzania,region_only,- Broad region: East Africa,8c3bf8822dd29172dff3faef21e65a7766b33f3d0285a64df846b7a9715da0e6
+original_155,42,14,0,Tanzania,swapped_country,- Country: Nigeria,8437d7839c206bba4c6d022b0dc76d46e3dceb52b1cdd85135114d5fe71411a6
+original_155,43,14,1,Tanzania,region_only,- Broad region: East Africa,d22eeff22a83466a5fe79e1ac4fb5ca2ce981ad9fb56b238051ef64a233a53a8
+original_155,44,14,2,Tanzania,true_country,- Country: Tanzania,e33749b4fa50a0ee613d749dbdb8a11135673b376cc7ba98bb6a4b33722ed9d6
+original_142,45,15,0,Tanzania,region_only,- Broad region: East Africa,d96dc2c3f1e18d19ba5ad3d278d05cba3865acd1319e6a5bd068765715b41b15
+original_142,46,15,1,Tanzania,true_country,- Country: Tanzania,20f622a5ac81526f23bd83b6b162240d8666abd51a8a2cb900239cef0735fe51
+original_142,47,15,2,Tanzania,swapped_country,- Country: Nigeria,2f4c7e9a7261dd595a19b628ec185250a2c6c9be362d7515b00d40f03e03d6b6
+original_177,48,16,0,Tanzania,true_country,- Country: Tanzania,9d900580de39ce809e6fe05d3bbafaa6fcd234bd8061a17f37746fdf38707ec0
+original_177,49,16,1,Tanzania,swapped_country,- Country: Nigeria,986849e1044e09d1f4305823755b993422348aeabe7034a129fd6c3213ea9a26
+original_177,50,16,2,Tanzania,region_only,- Broad region: East Africa,83443fed32860db669d3f8b2342cb6290d474bca0f1fa572ef5f8b946733808b
+original_204,51,17,0,Tanzania,swapped_country,- Country: Nigeria,2c9e159039ed15c1fe6483c19035f1d6f9317b3feee01b1935012906be3161f5
+original_204,52,17,1,Tanzania,region_only,- Broad region: East Africa,8fb89dbdfafae7064a63b6cef84e931bea1d9aa0ddb35779abd13abbc6fdb523
+original_204,53,17,2,Tanzania,true_country,- Country: Tanzania,4a7b85453c6708154c36b5057e4b87ff536f3a321ac94d4b82296b330d4f263d
+original_198,54,18,0,Tanzania,region_only,- Broad region: East Africa,fd0a4b9b806519c24e4da24c86722a0bb1e2ac5d29f6fcb847b2c52d1fbfc922
+original_198,55,18,1,Tanzania,swapped_country,- Country: Nigeria,5f4eac2081206449a5207633a2f5db91064d5100ae7d3e6dae1635970a5dac50
+original_198,56,18,2,Tanzania,true_country,- Country: Tanzania,3eddc7cbd3ea13ac618bb102d31ebc07dedf93dd9bfbfda290e19f18c1a8e897
+original_201,57,19,0,Tanzania,true_country,- Country: Tanzania,3f95ce49e28a6f9051ee1fb2a8a80ea365dc1f6b3e183687fd2160177cfbfb95
+original_201,58,19,1,Tanzania,region_only,- Broad region: East Africa,36c70acdfcc537983756c1ee8710d12bd85ebcd8da7af96f85a97b9e09f61856
+original_201,59,19,2,Tanzania,swapped_country,- Country: Nigeria,6cc769be950ea512c3598b81f07bc82e6209e376c7749546e55b06bb04e04e71
+original_179,60,20,0,Tanzania,swapped_country,- Country: Nigeria,50955d07abd87832705d8736600ae2264602f7d87166e313ea142268e8183a8f
+original_179,61,20,1,Tanzania,true_country,- Country: Tanzania,094f0097eaec71103be022d5fd84460b9ae5885351050472178c0d3e1dc005d6
+original_179,62,20,2,Tanzania,region_only,- Broad region: East Africa,7d182d7f9314a8eb69c24f539871097524d1ecd643716dbfab781879a70608fa
+original_147,63,21,0,Tanzania,swapped_country,- Country: Nigeria,9917d722c30dcd00e48f2a53e857167ebe17d4f7bce091ee21caecaa648a0e24
+original_147,64,21,1,Tanzania,true_country,- Country: Tanzania,5bd797fe1e0d37e07fd7985911ee5c020d7232a870e3019d8eb26e9bd3a940cc
+original_147,65,21,2,Tanzania,region_only,- Broad region: East Africa,303971ebef2695754e9c22cc80059d6fbd462a195c47e8972b51447020c2b2ff
+original_172,66,22,0,Tanzania,swapped_country,- Country: Nigeria,6ab6ee658f75a67158455d5588b9842f5624d24241b0507697046908c1124560
+original_172,67,22,1,Tanzania,region_only,- Broad region: East Africa,acc67e5e39970a653e96ab1649cdc24b97cc589af07486c13b9331696fdceae9
+original_172,68,22,2,Tanzania,true_country,- Country: Tanzania,697a439f4c452e90a9fd467199e332ca1aabdc5433d07139914551b056a0c600
+original_156,69,23,0,Tanzania,region_only,- Broad region: East Africa,b9e1d9068d35e07a8b51a09b657fa95b1e5d9b48a136c9ab54f435c5d148b1fc
+original_156,70,23,1,Tanzania,true_country,- Country: Tanzania,b881dd868f407d9720f72e1e5bf14344bde70db260980372b5b1a4cd7ae849e2
+original_156,71,23,2,Tanzania,swapped_country,- Country: Nigeria,dc6b9107c9aa8f9fcd4c26c5e6c3fa2c465d864ce08b1ab3cbbb215f30360cab
+original_197,72,24,0,Tanzania,swapped_country,- Country: Nigeria,4159ba6b23a63c29d9efaaece4218c52b00c8d073f52b9e518a0703b0edf5f98
+original_197,73,24,1,Tanzania,region_only,- Broad region: East Africa,c29e20ba545d8acd79791d786b00af8bdaa510f5a4a3ba7dc89a03c0cc48ef21
+original_197,74,24,2,Tanzania,true_country,- Country: Tanzania,0c005acef280d1b9843ce1a3f404dbb085f9d422b29c7b092f47e01bbc43f1b2
+original_192,75,25,0,Tanzania,true_country,- Country: Tanzania,e3d24d2476e476ed0028462b43f46d5c42219347ea674f3ea3081adfa1513357
+original_192,76,25,1,Tanzania,swapped_country,- Country: Nigeria,90d3bcb8fcea4ebede66154df4d6a87bb8ef91aacf94d3c5928c8b3fa67aea20
+original_192,77,25,2,Tanzania,region_only,- Broad region: East Africa,6935318651a863bf3c72b459d7028d6ee61a654c41fea611a2a97c2bfc31dc2e
+original_191,78,26,0,Tanzania,swapped_country,- Country: Nigeria,c62d495412391cb4807d80f2676c064d3f71651c5637918dfe0428edb27f71d4
+original_191,79,26,1,Tanzania,true_country,- Country: Tanzania,4a5e3aa09de0efb3dd279dd20ed0b69d4d644b31270a242f27eb6cb61e5f2563
+original_191,80,26,2,Tanzania,region_only,- Broad region: East Africa,79a3dbb93616042d47981fd09a06c57b3517994e64870239c9115cf11612408e
+original_206,81,27,0,Tanzania,region_only,- Broad region: East Africa,32876d908d01c9eeb35dd22c12c9af0ecbb4247001a2cf24da683f31c2656629
+original_206,82,27,1,Tanzania,swapped_country,- Country: Nigeria,f14769e9c54cbac78416778213957b2a52a86990a696535844002bf7ac3c4789
+original_206,83,27,2,Tanzania,true_country,- Country: Tanzania,4ec14b259d62f28a1d9738cbd76aff1411889ecf156cf45dd8b95af9cfc9639f
+original_194,84,28,0,Tanzania,swapped_country,- Country: Nigeria,26aeac8c18fa02a11bace90161cf8b40c40b60136bc4e1eb0e4a9ef143105c67
+original_194,85,28,1,Tanzania,true_country,- Country: Tanzania,35aaf7bae6f53333175e2a1a4b79f71614a24322be20021c368c45028c1ec138
+original_194,86,28,2,Tanzania,region_only,- Broad region: East Africa,4897e0479272c632358fb8c0a61e31d19f78735cb548880a6671da6ec9a3b41b
+original_178,87,29,0,Tanzania,region_only,- Broad region: East Africa,db0dbc260d56515b5a19f90e50e38ef928c361f4b95b2e611d18af74e559f5c6
+original_178,88,29,1,Tanzania,swapped_country,- Country: Nigeria,fd1a27b024c9dd0a48f5d1a4ce07b894367db43b921b15799a0cf4b18a87cfee
+original_178,89,29,2,Tanzania,true_country,- Country: Tanzania,32a34aa4d7c7191fc9f76569019998061d9098feed0034a779d012bb9fd28772
+original_148,90,30,0,Tanzania,region_only,- Broad region: East Africa,105ca777bfb2eaa70a5223d8bea862ece25bc37a8bed0efd88ab57f67c6f81ab
+original_148,91,30,1,Tanzania,swapped_country,- Country: Nigeria,a1e55952ccc8707398116a6a382628d3779c4a010f178bccc58ee01d1bbfd56e
+original_148,92,30,2,Tanzania,true_country,- Country: Tanzania,6cc609f2c0bdb2d46bb213c67f614ca5b14e046ef0398435cba2b853ffa0ac4a
+original_153,93,31,0,Tanzania,true_country,- Country: Tanzania,562ea59b146baac5b4da3c837682d51cd06b9ef0d71f2718b0674cfb3312563d
+original_153,94,31,1,Tanzania,region_only,- Broad region: East Africa,98eeaefea68c2f7d3afc0654ec45e3102575e6828efc1489d09dea970d4c8f4a
+original_153,95,31,2,Tanzania,swapped_country,- Country: Nigeria,4164b83678c694a5e58f108cd3d46f14ef738b89904713c73da57ec993ead376
+original_199,96,32,0,Tanzania,true_country,- Country: Tanzania,efd9636595e0b22fe6f0a17a407040f471a9f1b1a9534dd5f8ce6e23e5d5f15c
+original_199,97,32,1,Tanzania,region_only,- Broad region: East Africa,dcfd593848d3bd6d3e94b10afe38d0c57ddd57420e6070f706635128bdcb7268
+original_199,98,32,2,Tanzania,swapped_country,- Country: Nigeria,396c043c5b4872b7381e0748a294ced31016096134d9f4f600aa8f6bddb3398d
+original_209,99,33,0,Tanzania,swapped_country,- Country: Nigeria,93203e3eaa61ef8a39a75b41731f800bf62d4f2f368e692ac16cdddbc76e1824
+original_209,100,33,1,Tanzania,true_country,- Country: Tanzania,c0f9890ae9b4a2a5646a9eaad329dcdf9b26922804aa8a64e13ae0f653955e5d
+original_209,101,33,2,Tanzania,region_only,- Broad region: East Africa,a8ffa9ba7a068da9b293dff454c3469b032d4e0ff5ea0da221f5e76fa7c17a11
+original_163,102,34,0,Tanzania,true_country,- Country: Tanzania,3dc7f215f1ce0355b7e62d495cecd5bd42f31c4e961e1b53ee043fc427530154
+original_163,103,34,1,Tanzania,swapped_country,- Country: Nigeria,edf7f6810a50235fc4132cee469a68c9c494dfb9c3972d4423ea441da7133695
+original_163,104,34,2,Tanzania,region_only,- Broad region: East Africa,e026c82fb5069e0f79355a402949ece86dc14e8462530247227d091064c1262d
+original_181,105,35,0,Tanzania,region_only,- Broad region: East Africa,18c7b46a86eefce3d3042cea789d8f29c3e770072a0b8e090fbdab666bd74957
+original_181,106,35,1,Tanzania,swapped_country,- Country: Nigeria,a7849316e68bea6a95429cc6de4e011719f81699190f64e600ca9226f345a6b5
+original_181,107,35,2,Tanzania,true_country,- Country: Tanzania,90d0d6b9944cc768e3c7dbf93d5962172a3ca7eba5a953a8e8b6d6bf37f91f24
+original_162,108,36,0,Tanzania,region_only,- Broad region: East Africa,72474a71dc6a778ca410ff2bdb0f09198183782161517095e80d356dfbee567d
+original_162,109,36,1,Tanzania,true_country,- Country: Tanzania,7bc71f036e86c62ef5dbb5cf1f8161ea1d1edb2482873cad20144f19c3fee47c
+original_162,110,36,2,Tanzania,swapped_country,- Country: Nigeria,98e3bad9e0cfb987a658562255149e29ae403dfe6803df138588802616b28251
+original_200,111,37,0,Tanzania,swapped_country,- Country: Nigeria,1a5a73476f60d86da81962e6472d829615d37e2c0e4c0a9133871556a69c892d
+original_200,112,37,1,Tanzania,true_country,- Country: Tanzania,6a2c63751e2416be2037b12be8880a925daffe187521afd07df6b3d391f3f181
+original_200,113,37,2,Tanzania,region_only,- Broad region: East Africa,5acf521b29561ee85637b9ba45d88590b60708c62a8b3c18e8c760650c5f619b
+original_154,114,38,0,Tanzania,region_only,- Broad region: East Africa,1531309932e30a6d08ecc56be230fd8d393d4c463e7b6f7d557b11dd2d7188f8
+original_154,115,38,1,Tanzania,true_country,- Country: Tanzania,230f907084ead6a2064247cddcab7d134f3dece8e398c9a2269259c27dae5986
+original_154,116,38,2,Tanzania,swapped_country,- Country: Nigeria,710e038df3b8739a869c6edc7d96b1fc78c6c956470f56bfada4701bb60e9d16
+original_202,117,39,0,Tanzania,swapped_country,- Country: Nigeria,b8af600ebef88fb2b0653c55594b848734ac4c0d7ef93b27a30cdbc4e40801b2
+original_202,118,39,1,Tanzania,true_country,- Country: Tanzania,34c466118802e42727fcf47442572960a93439ab2b2d441a0b85ce7df12ad827
+original_202,119,39,2,Tanzania,region_only,- Broad region: East Africa,0cb8b118d4fc5be929b6d78734970a98df06586cd62550dba6b082b486dd2386
+original_164,120,40,0,Tanzania,true_country,- Country: Tanzania,928e91c0cd46e382ebfd8a28a140654eeefec676f29d4ada5a2d3877b5198543
+original_164,121,40,1,Tanzania,swapped_country,- Country: Nigeria,a7c6062b59d6c19159114e4a06905daa24ff8f5d13aef310f59da90198e5e041
+original_164,122,40,2,Tanzania,region_only,- Broad region: East Africa,c2452b33da657b5985d448917343c8483883ec162e0f41658e832294a5c79f59
+original_186,123,41,0,Tanzania,swapped_country,- Country: Nigeria,fc35517ae07c8946303d0a0123eae7ff76eaa82fe65adf8da2b912a041f15979
+original_186,124,41,1,Tanzania,true_country,- Country: Tanzania,8b8f8cbbfa36a1b2d591419a7c12f37523413c1bb8c40c219163c813a7a36654
+original_186,125,41,2,Tanzania,region_only,- Broad region: East Africa,f86253b9b5a8b794b1d19e6a5191d701222bcecf717c9fe3274a25ff73182fe3
+original_146,126,42,0,Tanzania,region_only,- Broad region: East Africa,ce4cf813ed1ffd28e4ed71e68df3a00f73a344ff4f46967a4c84f6e11413fd63
+original_146,127,42,1,Tanzania,swapped_country,- Country: Nigeria,3817f47495a99d429cadea642bdf9c501bc90ebc3c879172a67f89a76095f9da
+original_146,128,42,2,Tanzania,true_country,- Country: Tanzania,930a67c4ea5bfbfa877fa2a31f5caeee82979aa6cf28a97975a8b74efd96909c
+original_208,129,43,0,Tanzania,true_country,- Country: Tanzania,420b65ef0c853f93abd752fa946c0ee5839eb4ff29a441fea681dbda88b1993e
+original_208,130,43,1,Tanzania,region_only,- Broad region: East Africa,de194bb8b2a0d6d96874495f38067ee30fb8929e9b967b64335f511b03c531d3
+original_208,131,43,2,Tanzania,swapped_country,- Country: Nigeria,4804fe9812c5f0c1274bf0388119338840204a67054bdda853b4d789d639aac8
+original_167,132,44,0,Tanzania,region_only,- Broad region: East Africa,181eb42f634130fa0c426346a14bcbc743620e3d3b9bf2fcc021f8b7a495d866
+original_167,133,44,1,Tanzania,true_country,- Country: Tanzania,2f32988d73778b40b25d614874b0b20fa123819eb6eefea21447f8f43aec57b3
+original_167,134,44,2,Tanzania,swapped_country,- Country: Nigeria,9cabd9ea9def22d3692c92059d65598dc153f9faf648c5e4f62d866e1e8da2a8
+original_159,135,45,0,Tanzania,true_country,- Country: Tanzania,9537779ddbc8f32184650aef327315551dbc4b905a51625c05f110bb4759d4fc
+original_159,136,45,1,Tanzania,region_only,- Broad region: East Africa,e3b39685668feada628db91871564f9727990b4caacc1145e2245a1ebe6c8cf2
+original_159,137,45,2,Tanzania,swapped_country,- Country: Nigeria,bb1611f3a80c93a041a420798308970f04c6169c83509895ea118a89f010d139
+original_207,138,46,0,Tanzania,swapped_country,- Country: Nigeria,5c02cc1d136a6cd4d9bdc94e667314ccece8c5bbb047fc116b249aed87763e8d
+original_207,139,46,1,Tanzania,true_country,- Country: Tanzania,e37f4945a348a9060dba17e7bc0d61cc9a103e7ee43b659de2aa0c2324517469
+original_207,140,46,2,Tanzania,region_only,- Broad region: East Africa,5b4d8075e17b6412584dd75cc5f22f9e48012696d7d5391851422602087531df
+original_173,141,47,0,Tanzania,region_only,- Broad region: East Africa,b4cbf8f7c194542798a0855aeebd00fc26cf9bbd5c314a60821d2c57909b9f4e
+original_173,142,47,1,Tanzania,swapped_country,- Country: Nigeria,ec558960a4c0499570cc34a13fb8d16b91ccd355fa6a86fd429f62af070cf658
+original_173,143,47,2,Tanzania,true_country,- Country: Tanzania,e0fa1b5c9a5ff66dd6c9b83d1d66b0367f88835cf3d7f3c972c1f6e9df5d0a9c
+original_175,144,48,0,Tanzania,region_only,- Broad region: East Africa,69590f9d6d48398e0a6d2c10a601fd5510abaa8136e8b87128da34ee4828dd8f
+original_175,145,48,1,Tanzania,swapped_country,- Country: Nigeria,896df76f72ea29644f330e47c3af01978fca43c65f24f113d410bc028ec18435
+original_175,146,48,2,Tanzania,true_country,- Country: Tanzania,5f61c169a511ad4940186d9401123c4227857dd157fb35f195671c42f9e2d71c
+original_143,147,49,0,Tanzania,swapped_country,- Country: Nigeria,cd14a23e81fd79d0f6b7f8b2670dedec30770d0540c31657908c2762aec9174f
+original_143,148,49,1,Tanzania,true_country,- Country: Tanzania,55d4cc58f0e9c4e20d1df3fa5b816c330b54904ddfea9e6a32cfec71c4612d68
+original_143,149,49,2,Tanzania,region_only,- Broad region: East Africa,8759b283e5cdfdea82e72507faec328394b239802110c5687b9a42e655c12dda
+original_166,150,50,0,Tanzania,true_country,- Country: Tanzania,d12b649038c553fb8a0824339998d3d955112ec51a36551fc37ef9bb890aaccc
+original_166,151,50,1,Tanzania,region_only,- Broad region: East Africa,9736a9d72b9f465d6ff31ec12e72c72ca22ee5b3f1167250bbdb25a7de76dda0
+original_166,152,50,2,Tanzania,swapped_country,- Country: Nigeria,e563572caec0f41d4c445ca5a573a61a4eff387e6f4211edfb8de8727b31cebb
+original_149,153,51,0,Tanzania,true_country,- Country: Tanzania,16ed96b8caf31783c4c85e723e984ca61a0c315c21c0ce96266f92ef50cbd182
+original_149,154,51,1,Tanzania,swapped_country,- Country: Nigeria,eddfb78d786806b2c35d70e55c8a17150d88f97a47d7acb730cf1e6753477e64
+original_149,155,51,2,Tanzania,region_only,- Broad region: East Africa,54c82d92b31b73abccc092974556f30998eec4c9db84f988a9229f4f7aced8aa
+original_144,156,52,0,Tanzania,true_country,- Country: Tanzania,9eb060bfb6ffea0d0c616127bb2e131a7de9549dc5d6aaf52318cf5b888cd13b
+original_144,157,52,1,Tanzania,swapped_country,- Country: Nigeria,d67cffcfdd3a3d475f27ba5f5b8320b7affd01ba8d407a5cd3c1d70c7b58f642
+original_144,158,52,2,Tanzania,region_only,- Broad region: East Africa,ee68d570c51b24366252850615cc37b18789e5a63bb21133aeec333f8af83fc9
+original_195,159,53,0,Tanzania,true_country,- Country: Tanzania,e2d101e7d230b01f013efd4e7bfba786223737dfd4bcdab9ca2bd74e437f4996
+original_195,160,53,1,Tanzania,region_only,- Broad region: East Africa,dc0e5bf4b3413ed7764233c3e1fb71722f706e82b6efb813bfa98dd135b1b9f9
+original_195,161,53,2,Tanzania,swapped_country,- Country: Nigeria,f0a2132a623776c05004305c5f0d0915944f534e415f884b80f4252e9911ff6d
+original_182,162,54,0,Tanzania,swapped_country,- Country: Nigeria,7cadecd2110bd217267d00d88bb74100d5800eb3880a5a31657766b25d766d3f
+original_182,163,54,1,Tanzania,region_only,- Broad region: East Africa,3850b50c114828011830f454dbe109e4204ca22a41b5261615a6e03d8fa7bbd7
+original_182,164,54,2,Tanzania,true_country,- Country: Tanzania,08fa7ab1631c3276c5b64d62b65e6d0e833ce7af947487d549cfdc699cc2d8df
+original_152,165,55,0,Tanzania,swapped_country,- Country: Nigeria,ebd948d01ba9493c5e798fc68d0551cfe615ab55c6095cbf22f0f9c95b999b39
+original_152,166,55,1,Tanzania,true_country,- Country: Tanzania,1eb303ac8b23709d87e0452fbb370cd843afc809caedacbe75d260e8cb2078ac
+original_152,167,55,2,Tanzania,region_only,- Broad region: East Africa,eafa59981d677e008a9ddd5373a97240f746e55b6ee8bf2f7af7e72d3e2b17a7
+original_151,168,56,0,Tanzania,true_country,- Country: Tanzania,0d86e04524cf22929e704c3afd15039b23c8e2597200c20473d904a1a8096148
+original_151,169,56,1,Tanzania,region_only,- Broad region: East Africa,d72e57ea763405da48226f1c0c796198248ddd91769dcda760c74cdf022f1d19
+original_151,170,56,2,Tanzania,swapped_country,- Country: Nigeria,0b2ef04067571b749b8bf1d2222e188c0e3ae461082f2afa9fe23d1286ccddc4
+original_203,171,57,0,Tanzania,swapped_country,- Country: Nigeria,0a040e5b3e661eb5faed777b940105a72567027047c78fa92edada46d87e1b85
+original_203,172,57,1,Tanzania,true_country,- Country: Tanzania,b1243cdc67a3b29ce22fc765f061bc4aeb86244dc80e5df993c31c54cb047837
+original_203,173,57,2,Tanzania,region_only,- Broad region: East Africa,ba8e8ff9168883ea575999ae6d614d0afa794ef28ca1a023dc40abf569296e7b
+original_183,174,58,0,Tanzania,true_country,- Country: Tanzania,9289819a7293ac035a2420d079e2dc9adb90dda2afcb4be1840d7deb014c3ef1
+original_183,175,58,1,Tanzania,swapped_country,- Country: Nigeria,cd13d97422efaf6c76c698f735a604c4b5c331c32d3c06efd163e1fe8e093b97
+original_183,176,58,2,Tanzania,region_only,- Broad region: East Africa,5fa5c76710bdfd9e4986ebe4011a355047520d1fd2bde6458549db5eb15b1d6b
+original_157,177,59,0,Tanzania,region_only,- Broad region: East Africa,7a0a5dd248053403a6b95b2cea53c7ac495f4594bf4b1a53e58ab69cac04841f
+original_157,178,59,1,Tanzania,true_country,- Country: Tanzania,4027765f4a74296428e03064e759fe9f1a443a923582482e9e7fe79d6bd4d4e6
+original_157,179,59,2,Tanzania,swapped_country,- Country: Nigeria,ad3972bcec06a300639c8b64849ed9bcf5b10f5d9eb126460d5cbc22a444b56f
+original_180,180,60,0,Tanzania,region_only,- Broad region: East Africa,eb50a7bfa4690e7be1cf5070d0d16525d6ff589ccae53ef6c962b719d323348d
+original_180,181,60,1,Tanzania,swapped_country,- Country: Nigeria,d1cfddbba8dc1b93f4af30d23ca25cd3dce20b873ff3075f51748ff3019cc1b1
+original_180,182,60,2,Tanzania,true_country,- Country: Tanzania,4b1f0dcbec6a536f199e37632fcb3984c1d42aa29958310b5d357a7f682b58f1
+original_184,183,61,0,Tanzania,swapped_country,- Country: Nigeria,b963512ffc7feffce0c84b15fe8fb22695d57b36d96deaafa27505d9f689ee15
+original_184,184,61,1,Tanzania,region_only,- Broad region: East Africa,3ae0e2438db538585a5be1a1e5a5f39ce3a4ed364e04570feb4a27965cebabd5
+original_184,185,61,2,Tanzania,true_country,- Country: Tanzania,e76b420abca193f6dc13d256ce205c15c1ba4fa200fb8428c228e99f36c9ab02
+original_189,186,62,0,Tanzania,region_only,- Broad region: East Africa,8e8bb38041c018d064bea280c7232b5a96f4497857a43b751da9155c3149c7f4
+original_189,187,62,1,Tanzania,swapped_country,- Country: Nigeria,bd8fd3f7295edaa4cfa62fc28f66a282629362d61b6a4111cc8c019b324ebdf9
+original_189,188,62,2,Tanzania,true_country,- Country: Tanzania,9532833e44b16a1baf60357db7d9837e1f7d552e7bb8101d79388b910f881978
+original_196,189,63,0,Tanzania,swapped_country,- Country: Nigeria,f4d2881174d21c7ea105876cf6664bbb2b17834ed85997d017b657a292b54e27
+original_196,190,63,1,Tanzania,region_only,- Broad region: East Africa,9a14c082860988c65d5c364eedbaa8087ffc6c5dc3d8312807246a718837ea3e
+original_196,191,63,2,Tanzania,true_country,- Country: Tanzania,1eb0cc85eeb18296afda4f3be167fd4c5375cffe5a3a0c9cc1a63bf787d2b4e3
+original_141,192,64,0,Tanzania,swapped_country,- Country: Nigeria,a3a1c17c459e819d6e29443d687e01d9ed0ed3f7c55ba1aac5701836f5b6dafa
+original_141,193,64,1,Tanzania,true_country,- Country: Tanzania,a5a7b0b980ecdc3b0efbbe82f7ad1fb8475ced5513d017944c592b1650a15c1f
+original_141,194,64,2,Tanzania,region_only,- Broad region: East Africa,6a4e98c321524bbed68e973aff22d16daaf509d094d214a667671ff82e1896a8
+original_140,195,65,0,Tanzania,region_only,- Broad region: East Africa,13df5122975f54a79311cb7740eba514473496950a9841aad02b8ef02169667a
+original_140,196,65,1,Tanzania,true_country,- Country: Tanzania,04ac41cf5976c43beff18f55908860919f879262f162c93bec61f3cb2372a953
+original_140,197,65,2,Tanzania,swapped_country,- Country: Nigeria,157bac0c26ca659af031e41a29841e1dde177bf8c03757e03b76ca42bf65fad8
+original_169,198,66,0,Tanzania,true_country,- Country: Tanzania,751bb7fb2097c2a926c62c6b33d194eb4fd1b856e547dd27f979c156ca3878f6
+original_169,199,66,1,Tanzania,region_only,- Broad region: East Africa,f32e05c65fe12d5cc5020b89495d94bd2332415c617fd73b5907f9ab92f010da
+original_169,200,66,2,Tanzania,swapped_country,- Country: Nigeria,b292e2d35f892ab1e449424aa89408c15f9872f34450cf3b7c4736820be0b615
+original_161,201,67,0,Tanzania,true_country,- Country: Tanzania,e9fcfb43c8fc79091308e68de34c17e6a9c25bcd4e2ef557f168a131bd6ae3ec
+original_161,202,67,1,Tanzania,region_only,- Broad region: East Africa,8c6e3a2039a2a15b97af8bf5c2c3d802f6780c12272de4b31dda8ea6fec5ce0e
+original_161,203,67,2,Tanzania,swapped_country,- Country: Nigeria,1bebf557cc0a315b7c71dde58d4634dd0b1be9d6b82ee708543771b02e810a06
+original_145,204,68,0,Tanzania,true_country,- Country: Tanzania,a6639cbc5121076908761415ee6b83a00219df8b6f853409330f86d5a330fb40
+original_145,205,68,1,Tanzania,swapped_country,- Country: Nigeria,7b99099d201acb03185e65c42e6e832fd576668952e9454d64a4c4507a12de59
+original_145,206,68,2,Tanzania,region_only,- Broad region: East Africa,08ddfc69be4f3c5a3e040f82962095aa1cf51b0f167d99ef32fcee9b3578ab95
+original_185,207,69,0,Tanzania,true_country,- Country: Tanzania,23f1f2a5647d3f60c3387564499529f72caad62a6c9624321087360cbb6e8884
+original_185,208,69,1,Tanzania,swapped_country,- Country: Nigeria,4a80ef04a5ce4b91a587108d0e8ccd109ae8d69bd02690794aaedff81f8a4eff
+original_185,209,69,2,Tanzania,region_only,- Broad region: East Africa,cf2d896a689fde6a51c93b3145fce1671c90e1de3ebd52579059eceaf2868eaa

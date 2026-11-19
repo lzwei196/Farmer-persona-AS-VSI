@@ -1,0 +1,17 @@
+[
+  {
+    "path": "application/.gitattributes",
+    "source_sha256": "9cdcb61af7d91cc05d3f8220dd1b0b4124455cbb8c7b1c5fe07a783df01cd8e7",
+    "repository_sha256": "96759589436931cd6a554edb3caccb624f7c5eca836fe025c58d6871203acb30"
+  },
+  {
+    "path": "application/FILE_MANIFEST.csv",
+    "source_sha256": "9976ca8bcffd1127e770bdcb8861e4d096c432047a9f0003dee693e359abb7bf",
+    "repository_sha256": "ca06026376af34ebd81b28a278b744274f35e6b9473faaf3cf2ab4009bd018e3"
+  },
+  {
+    "path": "application/SHA256SUMS.txt",
+    "source_sha256": "7c76cffff50e0fe58c59e20173bfd1a5e977418603369824bde4bbb6afdd3037",
+    "repository_sha256": "506278aa427dc1c4ab7ad070624956149fba5861fd7cf5ea202218f7d7c636a7"
+  }
+]

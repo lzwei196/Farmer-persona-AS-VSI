@@ -1,0 +1,3 @@
+# Season metadata correction
+
+Seven Ugandan extension profiles carried a season label from an earlier narrow-key source match. The complete frozen measured fields plus original private household/plot keys identify a unique source record whose season differs. Only the public season metadata is corrected; the previous labels and the matching-field evidence are retained in season_metadata_corrections.csv. No provider response, prompt, model input, profile measurement, analysis weight, target or scientific result is changed. Season is not used by the current fitted models. Original source household/plot identifiers are not distributed.

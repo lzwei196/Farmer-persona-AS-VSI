@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-19",
+  "table": "Supplementary Table S5",
+  "provider": "codex",
+  "country": "Niger",
+  "metric": "ROC AUC 95% percentile bootstrap interval",
+  "auc_point_estimate": 0.5428571428571428,
+  "old_interval": [
+    0.5142857142857142,
+    0.5978571428571481
+  ],
+  "corrected_interval": [
+    0.5,
+    0.5857142857142857
+  ],
+  "bootstrap_repetitions": 10000,
+  "seed": 20261832,
+  "observed_adoption_strata": [
+    35,
+    35
+  ],
+  "constant_score_draws": 433,
+  "valid_auc_for_constant_scores": 0.5,
+  "cause": "The archived interval omitted valid all-zero score draws. Excluding the same 433 draws from the seeded rerun exactly reproduces the old interval. The current analysis code already returns the correct AUC of 0.5 for tied constant scores and requires no scientific-method change.",
+  "impact": "One supplementary interval changed. The AUC point estimate, all other estimates, main results and discussion conclusions are unchanged.",
+  "reproduction": "Run src/paper2_extension_confirmatory_analysis.py --bootstrap 10000. The corrected bounds are empirical percentiles of these 10000 draws, not an infinite-bootstrap analytical limit.",
+  "changed_public_files": [
+    "data/analysis/paper2_extension_confirmatory_metrics.csv",
+    "data/analysis/paper2_extension_confirmatory_metrics.json",
+    "data/manuscript_tables/Supplementary_Table_S5.csv"
+  ]
+}

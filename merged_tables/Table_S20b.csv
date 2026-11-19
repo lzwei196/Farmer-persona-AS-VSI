@@ -1,0 +1,8 @@
+﻿Comparison,Countries,LLM MAE (95% CI),Regression MAE,LLM − regression (95% CI),LLM closer in
+N rate (kg N ha-1),7,3.70 (2.42 to 6.12),4.69,−0.98 (−2.27 to 1.44),"Ethiopia, Mali, Nigeria, Uganda"
+"N rate, capped targets",7,6.85 (4.96 to 9.10),7.37,−0.52 (−2.41 to 1.73),"Ethiopia, Nigeria, Uganda"
+"N rate, excluding Niger",6,4.01 (2.50 to 6.78),5.49,−1.48 (−2.98 to 1.29),"Ethiopia, Mali, Nigeria, Uganda"
+"N rate, capped, excluding Niger",6,7.70 (5.52 to 10.27),9.36,−1.66 (−3.84 to 0.91),"Ethiopia, Nigeria, Uganda"
+"N rate, survey-year statistic",7,3.70 (2.42 to 6.12),5.71,−2.00 (−3.29 to 0.41),"Ethiopia, Mali, Nigeria, Uganda"
+Adoption,7,0.161 (0.123 to 0.217),0.049,0.113 (0.074 to 0.168),Uganda
+"Adoption, excluding Niger",6,0.178 (0.133 to 0.240),0.047,0.130 (0.085 to 0.192),Uganda

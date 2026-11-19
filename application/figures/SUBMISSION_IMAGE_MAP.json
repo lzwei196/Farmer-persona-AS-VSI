@@ -1,0 +1,60 @@
+{
+  "scope": "PNG images selected for the 11.09 as Word documents; no pixels changed",
+  "figures": {
+    "Fig1": {
+      "current_png": "Fig1/outputs/Fig1.png",
+      "sha256": "b3898a3d22b722ce659087afc0d7acba277e21c3f74394d6c9573e8978cd6198",
+      "original_figure_id": "Fig1",
+      "matching_submission_PDF": "Fig1/outputs/Fig1.pdf"
+    },
+    "Fig2": {
+      "current_png": "Fig2/word_image.png",
+      "sha256": "0b3e9c38f3cb58ea9635a6b7b39317a51a5dd48f1f5d2b83151499fe99f0a223",
+      "original_figure_id": "Fig3",
+      "matching_submission_PDF": null
+    },
+    "Fig3": {
+      "current_png": "Fig3/word_image.png",
+      "sha256": "3bb614629ee3fe296e16665dd9edceb222449a5f8117c4d34d14ece9650dc7dc",
+      "original_figure_id": "Fig2",
+      "matching_submission_PDF": "Fig3/outputs/Fig3.pdf"
+    },
+    "Fig4": {
+      "current_png": "Fig4/outputs/Fig4.png",
+      "sha256": "dfea958b3ba203500234bd2512b280abfe1e59ed227aa082989258255f7daa95",
+      "original_figure_id": "Fig4",
+      "matching_submission_PDF": "Fig4/outputs/Fig4.pdf"
+    },
+    "Fig5": {
+      "current_png": "Fig5/outputs/Fig5.png",
+      "sha256": "7279359a118705b105306e67c78abf70b23981efe590af86062626884f4171db",
+      "original_figure_id": "Fig5",
+      "matching_submission_PDF": "Fig5/outputs/Fig5.pdf"
+    },
+    "Fig6": {
+      "current_png": "Fig6/outputs/Fig6.png",
+      "sha256": "26fb83e8e6c78da31cec89b1d5c6f41eeb24abde1030a0a643ae02189ed5de16",
+      "original_figure_id": "Fig6",
+      "matching_submission_PDF": "Fig6/outputs/Fig6.pdf"
+    },
+    "Fig7": {
+      "current_png": "Fig7/outputs/Fig7.png",
+      "sha256": "816de36138acd78c8ea6c82acc820e15e90bcc31346c8a4aca70920747d286f4",
+      "original_figure_id": "Fig7",
+      "matching_submission_PDF": "Fig7/outputs/Fig7.pdf"
+    },
+    "Fig8": {
+      "current_png": "Fig8/outputs/Fig8.png",
+      "sha256": "102edd90ee0723806642678f1dc5246ff04d8391476e1025b69d6a17e8e69475",
+      "original_figure_id": "Fig8",
+      "matching_submission_PDF": "Fig8/outputs/Fig8.pdf"
+    },
+    "SuppFigS1": {
+      "current_png": "SuppFigS1/outputs/SuppFigS1.png",
+      "sha256": "ee927bd1636c3bdf8c1209f714006988db7124c022a0043009b89bb803d539d7",
+      "original_figure_id": "SuppFigS1",
+      "matching_submission_PDF": "SuppFigS1/outputs/SuppFigS1.pdf"
+    }
+  },
+  "Fig2_warning": "The accepted national-statistics PNG is word_image.png. outputs/Fig2.png and PDF/SVG remain the separately documented portable redraw."
+}

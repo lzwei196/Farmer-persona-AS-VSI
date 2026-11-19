@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript when using this research package."
+title: "Constructing large language model farmer personas: information layers, country context and fertilizer decisions"
+type: software
+repository-code: "https://github.com/lzwei196/Farmer-persona-AS-VSI"
+authors:
+  - family-names: Wei
+    given-names: Qi
+  - family-names: Zhang
+    given-names: Yirong
+  - family-names: Xu
+    given-names: Junzeng
+  - family-names: Wu
+    given-names: Ruiqi
+  - family-names: Qi
+    given-names: Huijun
+  - family-names: Liu
+    given-names: Man
+  - family-names: Xue
+    given-names: Wenbo
+  - family-names: Liu
+    given-names: Yuchen
+  - family-names: Qi
+    given-names: Zhiming
+  - family-names: Li
+    given-names: Ziwei

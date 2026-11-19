@@ -1,0 +1,8 @@
+Component,Unit and sample,Purpose,Figures and tables
+Seven-country LLM benchmark,490 profiles; 485 valid observed N rates; three providers,Tests agreement with observed individual nitrogen use and survey-weighted population targets.,Figs. 2–3; Table 1
+Matched-input conventional benchmark,Seven held-out target countries; source-only selection; LLM-profile fields only,Tests transfer performance using the same recorded profile fields shown to the LLMs.,Fig. 3; Table 1
+Rich-input conventional benchmark,Seven held-out target countries; source-only selection; additional survey covariates,Tests whether rich-input predictions show a country-level agreement pattern similar to the LLM benchmark.,Fig. 3; Table 1
+Country-label experiment,"70 Tanzanian profiles × 7 labels × 3 providers = 1,470 analysis records","Estimates country-label sensitivity with the remaining profile fixed, and separates variation from observed agreement.","Figs. 4, 5 and 7; Table 2"
+National-statistics benchmark,Seven countries; leave-one-country-out regression on FAO fertilizer use per ha of arable land,Tests whether post-stratified national predictions add information beyond published national statistics.,Fig. 2; Table S8
+Observed and predicted behavior models,"63,099–64,917 survey plots; ensemble predictions for 488 profiles",Compares trait associations implied by predictions with those estimated from the surveys.,Fig. 6; Table S9
+Survey-based scenario translation,Recovered household weights applied to eligible plot records,Translates predicted rate contrasts into weighted and expanded nitrogen quantities and tests influence.,Fig. 8; Supplementary Fig. S1; Tables 2–3

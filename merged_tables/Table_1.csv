@@ -1,0 +1,5 @@
+﻿Design,Information in the prompt
+T1,"Country and administrative region, manager age, sex and education, plot and farm size, main crop, ownership and intercropping, with a first-person farmer instruction."
+T2,"Adds agricultural context for the country and zone, including climate, cropping systems, soils and access to inputs."
+T3,"Adds an anchor-free reasoning guide on financial constraints, social learning, market access, shocks, ownership and farm size. It supplies no numerical adoption rates or practice ranges."
+T4,"Adds numerical population anchors, plot-scaled nitrogen and labor ranges, consistency checks and asset-index information."

@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "Please cite this software and the associated manuscript when using the package."
+title: "Data and code for: Large language model agents know the country, not the farmer: Simulating fertilizer use in data-scarce regions"
+type: software
+version: 0.3.1
+date-released: 2026-11-08
+license: MIT
+authors:
+  - family-names: Wei
+    given-names: Qi
+  - family-names: Zhang
+    given-names: Yirong
+  - family-names: Xu
+    given-names: Junzeng
+  - family-names: Wei
+    given-names: Qi
+  - family-names: Bai
+    given-names: Haiyang
+  - family-names: Wu
+    given-names: Ruiqi
+  - family-names: Qi
+    given-names: Huijun
+  - family-names: Liu
+    given-names: Man
+  - family-names: Xue
+    given-names: Wenbo
+  - family-names: Liu
+    given-names: Yuchen
+  - family-names: Qi
+    given-names: Zhiming
+  - family-names: Li
+    given-names: Ziwei
+# The two Qi Wei entries mirror the supplied manuscript; their identities remain to be confirmed before publication.
+keywords:
+  - large language models
+  - agriculture
+  - fertilizer
+  - country labels
+  - reproducibility

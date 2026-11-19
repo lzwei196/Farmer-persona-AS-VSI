@@ -1,0 +1,254 @@
+[
+ {
+  "destination": "data/model_outputs/benchmark_predictions.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Adoption/benchmark_predictions.corrected.csv",
+  "source_sha256": "d4eda41816057113fc563a6c953a432a1361e19c8399ffab728d94300a822e32",
+  "data_role": "analysis_source",
+  "note": "17 October ensemble adoption correction; rate outputs retained."
+ },
+ {
+  "destination": "data/analysis/paper2_extension_confirmatory_metrics.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Adoption/paper2_extension_confirmatory_metrics.corrected.csv",
+  "source_sha256": "853176bd5c8e11bcc7bd73691354dbb82569e727f98c22bb3114fa13eea62c9b",
+  "data_role": "analysis_source",
+  "note": "17 October ensemble adoption correction; rate outputs retained."
+ },
+ {
+  "destination": "data/analysis/paper2_extension_confirmatory_metrics.json",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Adoption/paper2_extension_confirmatory_metrics.corrected.json",
+  "source_sha256": "3efafc0a0e3f01db31bcea0dbfd614a1a9c342ec24736c07af408bd97d919fc2",
+  "data_role": "analysis_source",
+  "note": "17 October ensemble adoption correction; rate outputs retained."
+ },
+ {
+  "destination": "data/analysis/adoption_bootstrap/ensemble_nigeria_adoption_bootstrap_draws.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Adoption/ensemble_nigeria_adoption_bootstrap_draws.csv",
+  "source_sha256": "521ccdcf2f5b6fc5748fb9efddcb2909bdfc27be6ab96039639eb584898dc846",
+  "data_role": "bootstrap_draws",
+  "note": ""
+ },
+ {
+  "destination": "data/analysis/adoption_bootstrap/ensemble_ethiopia_adoption_bootstrap_draws.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Adoption/ensemble_ethiopia_adoption_bootstrap_draws.csv",
+  "source_sha256": "03a69da458705a5b14108ae1274f7b1f241c804b388d5f659b3a9aa678ae794c",
+  "data_role": "bootstrap_draws",
+  "note": ""
+ },
+ {
+  "destination": "data/manuscript_tables/Table_1.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Tables_AS_corrected_20261017.docx",
+  "source_sha256": "9c5d9dbad7efe6e9466e602a6b3394a6a3392bb7a3edf98cc23d2e10fc172504",
+  "data_role": "display_snapshot",
+  "note": "Current main Table 1."
+ },
+ {
+  "destination": "data/manuscript_tables/Table_2.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Tables_AS_corrected_20261017.docx",
+  "source_sha256": "9c5d9dbad7efe6e9466e602a6b3394a6a3392bb7a3edf98cc23d2e10fc172504",
+  "data_role": "display_snapshot",
+  "note": "Current main Table 2."
+ },
+ {
+  "destination": "data/manuscript_tables/Table_3.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Tables_AS_corrected_20261017.docx",
+  "source_sha256": "9c5d9dbad7efe6e9466e602a6b3394a6a3392bb7a3edf98cc23d2e10fc172504",
+  "data_role": "display_snapshot",
+  "note": "Current main Table 3."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S1.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S1."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S2.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S2."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S3.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S3."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S4.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S4."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S5.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S5."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S6.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S6."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S7.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S7."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S8a.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S8a."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S8b.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S8b."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S9.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S9."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S10.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S10."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S11.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S11."
+ },
+ {
+  "destination": "data/manuscript_tables/Supplementary_Table_S12.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Supplementary_AS_corrected_20261017.docx",
+  "source_sha256": "7937f8557c97692638be28c6635e7aab7ac6f1f751cc357be2ae4d81edf77105",
+  "data_role": "display_snapshot",
+  "note": "Current supplementary Table S12."
+ },
+ {
+  "destination": "data/analysis/traits/Table_S9_recomputed.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/Table_S9_recomputed.csv",
+  "source_sha256": "9fbbd9c6e6684efdd0476485f7e2ef7df7c16c6eea6c7e971c0f741d062935c9",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/country_trait_sign_comparison_rate_cap.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/country_trait_sign_comparison_rate_cap.csv",
+  "source_sha256": "13d178c40babc6b61e6016b3d8d9f28ba6bc02eace56040e02de79c568356528",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/trait_bootstrap_coefficient_draws.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/trait_bootstrap_coefficient_draws.csv",
+  "source_sha256": "414163f0d97ce6be2499c5fd0e70dc4901af38b1e926f81f9a10ea65d6e1e3f3",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/country_trait_sign_comparison_adoption.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/country_trait_sign_comparison_adoption.csv",
+  "source_sha256": "6faacfb981a167d523b0be38c27a4f159152d354b8f4bacb27048a6575c948b4",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/country_trait_sign_comparison_rate_excl.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/country_trait_sign_comparison_rate_excl.csv",
+  "source_sha256": "d5f3e37bd048115db404c08e5b7f9ac541403d1a9edcd41c914acb7e8b300a07",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/trait_coefficients_full_precision.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/trait_coefficients_full_precision.csv",
+  "source_sha256": "a7a6e67df7a6442537b132dbd4c2e9b7e66889e584037bf005b0a668011bbba2",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/trait_cv_fold_assignments.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/trait_cv_fold_assignments.csv",
+  "source_sha256": "1b658fe249d46d98313ad45c933b908b40d8667802eb8b95c28c10c9c08e6458",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/trait_correction_results.json",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/trait_correction_results.json",
+  "source_sha256": "b11b5efaa1a4a5aeb1f67b9fc36187c0937d0a83887fc133162de9c929067826",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/trait_summary.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/trait_summary.csv",
+  "source_sha256": "fd55fd8b4d7decadb04a1c6ca160200320a67b8b1962e943479d27dbf9959692",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/trait_design_rank_checks.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/trait_design_rank_checks.csv",
+  "source_sha256": "620544646c1e2a2d29d22b98927ae9f1486af555e91c96b77bcb06fd43293919",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/analysis/traits/artificial_unknown_EA_bucket_sensitivity.csv",
+  "source": "Submission materials-AS/AS_methods_corrected_20261017/Code_and_data_corrections_20261017/Traits/artificial_unknown_EA_bucket_sensitivity.csv",
+  "source_sha256": "2308d910817ccac7b20b33d6aa57818db816807ba171684a61d0250ae2c69dea",
+  "data_role": "analysis_source",
+  "note": "Current deterministic survey cluster/fold correction."
+ },
+ {
+  "destination": "data/processed/trait_survey_analysis_input.csv.gz",
+  "source": " LSMS-ISA data/Plot_dataset.dta",
+  "source_sha256": "32fbfc2925e1388ff944b4fed9808e1a4dc861c6832c1280f9d46e2db5f428a1",
+  "data_role": "deidentified_analysis_input",
+  "note": "64917 complete-trait survey rows. Anonymous order-preserving group labels; original IDs, raw row IDs, wave, season, and detailed crop labels omitted. Source DOI 10.5281/zenodo.15774761, v2.0, CC0."
+ },
+ {
+  "destination": "data/processed/paper2_population_poststrata.csv",
+  "source": " LSMS-ISA data/Plot_dataset.dta",
+  "source_sha256": "32fbfc2925e1388ff944b4fed9808e1a4dc861c6832c1280f9d46e2db5f428a1",
+  "data_role": "aggregate_population_source",
+  "note": "All 55 covered country x adoption x sex x education cells; sufficient to rebuild profile calibration weights."
+ },
+ {
+  "destination": "data/processed/paper2_country_wave_capped_rate_targets.csv",
+  "source": " LSMS-ISA data/Plot_dataset.dta",
+  "source_sha256": "32fbfc2925e1388ff944b4fed9808e1a4dc861c6832c1280f9d46e2db5f428a1",
+  "data_role": "aggregate_population_source",
+  "note": "Full-precision capped N-rate targets for the same country-specific eligible pools; original four countries retain high-rate rows, extension excludes them."
+ },
+ {
+  "destination": "data/processed/paper2_country_wave_capped_sensitivity_targets.csv",
+  "source": " LSMS-ISA data/Plot_dataset.dta",
+  "source_sha256": "32fbfc2925e1388ff944b4fed9808e1a4dc861c6832c1280f9d46e2db5f428a1",
+  "data_role": "aggregate_population_source",
+  "note": "All seven-country eligibility pools retain >300 rates and clip at 300. Figure 2/Table S8 capped sensitivity source."
+ }
+]

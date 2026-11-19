@@ -1,0 +1,46 @@
+{
+  "started_utc": "2026-10-19T10:26:12.692665+00:00",
+  "core_bootstrap_draws": 10000,
+  "completed": [
+    "release_integrity_and_response_manifest_checks",
+    "headline_point_estimates",
+    "seven_core_analysis_modules_and_archived_point_comparison",
+    "55_cell_weight_reconstruction_and_Table_S11_checks",
+    "rounded_input_national_statistics_audit_only",
+    "survey_and_ensemble_trait_models_500_and_2000_draws",
+    "all_main_and_supplementary_figure_exports",
+    "source_survey_design_recovery_independently_completed_after_full_workflow"
+  ],
+  "not_reproduced": [
+    {
+      "analysis": "exact_original_national_statistics_benchmark",
+      "reason": "Original full-precision annual series, survey-year mapping and conditional-bootstrap implementation were not retained. Reported Table S8 is an archived display snapshot; the rounded-input audit is approximate."
+    }
+  ],
+  "finished_utc": "2026-10-19T10:35:29.155508+00:00",
+  "status": "completed_with_reported_provenance_limits",
+  "tested_software": {
+    "python": "3.12.14",
+    "numpy": "2.4.2",
+    "pandas": "3.0.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0",
+    "matplotlib": "3.10.8"
+  },
+  "verification_scope": "Full 10000-draw core workflow; survey and ensemble trait models with published 500/2000 draws; all9figure exports; independent raw-source reconstruction and main-text/table checks. The S5 Codex/Niger AUC snapshot was corrected after identifying discarded valid constant-score draws. This is not an exact reproduction of the historical S8 external-statistics pipeline.",
+  "matched_model_comparison": "Small fitted correlations/interval differences preserve all reported three-decimal values. Core point estimates and other inspected core interval endpoints agree to numerical tolerance.",
+  "auc_interval_correction": "data/provenance/auc_interval_correction_20261019.json",
+  "source_survey_verification": {
+    "official_doi": "10.5281/zenodo.15774761",
+    "all_four_dta_md5_match_official_record": true,
+    "reconstructed_trait_rows": 64917,
+    "poststrata": 55,
+    "frozen_profiles_matched": 490,
+    "maximum_profile_weight_absolute_difference": 4.656612873077393e-10
+  },
+  "figure_visual_check": {
+    "scope": "All9current manuscript-embedded main and supplementary figures",
+    "each_opened_and_inspected": true
+  },
+  "note_20261107": "Archived run of 2026-10-19. The prompt-version step was removed from the release on 2026-11-07 and the supplementary price comparison on 2026-11-08; see docs/VALIDATION_REPORT_20261108.json for the current check run."
+}

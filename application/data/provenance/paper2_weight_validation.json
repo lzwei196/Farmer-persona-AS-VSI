@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "target_poststrata": 55,
+  "profile_n": 490,
+  "all_population_cells_covered": true,
+  "max_relative_weight_delta": 4.258348949441698e-16,
+  "Table_S11_checks": [
+    {
+      "country": "Ethiopia",
+      "all_display_cells_match": true
+    },
+    {
+      "country": "Malawi",
+      "all_display_cells_match": true
+    },
+    {
+      "country": "Mali",
+      "all_display_cells_match": true
+    },
+    {
+      "country": "Niger",
+      "all_display_cells_match": true
+    },
+    {
+      "country": "Nigeria",
+      "all_display_cells_match": true
+    },
+    {
+      "country": "Tanzania",
+      "all_display_cells_match": true
+    },
+    {
+      "country": "Uganda",
+      "all_display_cells_match": true
+    }
+  ]
+}

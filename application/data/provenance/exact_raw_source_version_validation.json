@@ -1,0 +1,33 @@
+{
+  "actual_source_doi": "10.5281/zenodo.15774761",
+  "version_title": "lsms-worldbank/LSMS-ISA-harmonised-dataset-on-agricultural-productivity-and-welfare: LSMS-ISA harmonised panel v.2.0.",
+  "license": {
+    "id": "cc-zero"
+  },
+  "files": [
+    {
+      "file": "Individual_dataset.dta",
+      "local_md5": "786ab58de7253e0f28c508777b6d6624",
+      "official_md5": "md5:786ab58de7253e0f28c508777b6d6624",
+      "matches": true
+    },
+    {
+      "file": "Plot_dataset.dta",
+      "local_md5": "af14a1b4a949554ab9cb01fb28f51fbe",
+      "official_md5": "md5:af14a1b4a949554ab9cb01fb28f51fbe",
+      "matches": true
+    },
+    {
+      "file": "Plotcrop_dataset.dta",
+      "local_md5": "fcd18d08110e76f033a9948e02f2d942",
+      "official_md5": "md5:fcd18d08110e76f033a9948e02f2d942",
+      "matches": true
+    },
+    {
+      "file": "Household_dataset.dta",
+      "local_md5": "7fe19862e81b514c78e70aa36dd38053",
+      "official_md5": "md5:7fe19862e81b514c78e70aa36dd38053",
+      "matches": true
+    }
+  ]
+}

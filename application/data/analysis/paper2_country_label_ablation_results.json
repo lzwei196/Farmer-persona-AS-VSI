@@ -1,0 +1,505 @@
+{
+  "method": {
+    "n_bootstrap": 10000,
+    "seed": 20260826,
+    "profile_level_n": 70,
+    "bonferroni_alpha": 0.016666666666666666
+  },
+  "coverage": {
+    "valid": 630,
+    "expected": 630,
+    "invalid": []
+  },
+  "analysis": {
+    "providers": {
+      "claude": {
+        "n_complete_profiles": 70,
+        "arms": {
+          "true_country": {
+            "mean_nitrogen_kg_per_ha": 2.1,
+            "median_nitrogen_kg_per_ha": 0.0,
+            "sd_nitrogen_kg_per_ha": 6.631392185570128,
+            "adoption_rate": 0.1,
+            "observed_nitrogen_r": -0.09603222991895827
+          },
+          "region_only": {
+            "mean_nitrogen_kg_per_ha": 14.757142857142858,
+            "median_nitrogen_kg_per_ha": 0.0,
+            "sd_nitrogen_kg_per_ha": 15.81911860558473,
+            "adoption_rate": 0.4857142857142857,
+            "observed_nitrogen_r": -0.026766726314732505
+          },
+          "swapped_country": {
+            "mean_nitrogen_kg_per_ha": 30.114285714285714,
+            "median_nitrogen_kg_per_ha": 35.0,
+            "sd_nitrogen_kg_per_ha": 19.718705058713834,
+            "adoption_rate": 0.7571428571428571,
+            "observed_nitrogen_r": 0.18386299173833665
+          }
+        },
+        "contrasts": {
+          "primary_swapped_minus_true": {
+            "nitrogen_rate": {
+              "n_profiles": 70,
+              "high_mean": 30.114285714285714,
+              "low_mean": 2.1,
+              "mean_difference": {
+                "estimate": 28.014285714285716,
+                "ci_low": 23.556785714285713,
+                "ci_high": 32.41428571428571,
+                "n_boot_valid": 10000
+              },
+              "median_difference": {
+                "estimate": 32.0,
+                "ci_low": 25.0,
+                "ci_high": 35.0,
+                "n_boot_valid": 10000
+              },
+              "cohens_dz": 1.4718389036601784,
+              "paired_t": {
+                "statistic": 12.314287761902097,
+                "p_two_sided": 4.392460786641757e-19
+              },
+              "wilcoxon": {
+                "statistic": 0.0,
+                "p_two_sided": 2.25860468451582e-10
+              },
+              "observed_rate_correlation": {
+                "high_arm_r": 0.18386299173833665,
+                "low_arm_r": -0.09603222991895827,
+                "high_minus_low_r": {
+                  "estimate": 0.2798952216572949,
+                  "ci_low": 0.10024482686749614,
+                  "ci_high": 0.419940542831581,
+                  "n_boot_valid": 9990
+                }
+              },
+              "profile_rank_spearman": 0.28877378070952014
+            },
+            "adoption": {
+              "n_profiles": 70,
+              "high_adoption_rate": 0.7571428571428571,
+              "low_adoption_rate": 0.1,
+              "adoption_rate_difference": {
+                "estimate": 0.6571428571428571,
+                "ci_low": 0.5428571428571428,
+                "ci_high": 0.7714285714285715,
+                "n_boot_valid": 10000
+              },
+              "discordance": {
+                "low_0_to_high_1": 46,
+                "low_1_to_high_0": 0,
+                "total": 46
+              },
+              "mcnemar_exact_p_two_sided": 2.842170943040401e-14,
+              "agreement_rate": 0.34285714285714286
+            },
+            "high_arm": "swapped_country",
+            "low_arm": "true_country"
+          },
+          "secondary_region_minus_true": {
+            "nitrogen_rate": {
+              "n_profiles": 70,
+              "high_mean": 14.757142857142858,
+              "low_mean": 2.1,
+              "mean_difference": {
+                "estimate": 12.657142857142857,
+                "ci_low": 9.471428571428572,
+                "ci_high": 15.971428571428572,
+                "n_boot_valid": 10000
+              },
+              "median_difference": {
+                "estimate": 0.0,
+                "ci_low": 0.0,
+                "ci_high": 22.0,
+                "n_boot_valid": 10000
+              },
+              "cohens_dz": 0.8978699663604517,
+              "paired_t": {
+                "statistic": 7.51211909879285,
+                "p_two_sided": 1.5574249259526831e-10
+              },
+              "wilcoxon": {
+                "statistic": 0.0,
+                "p_two_sided": 3.4214533462277324e-07
+              },
+              "observed_rate_correlation": {
+                "high_arm_r": -0.026766726314732505,
+                "low_arm_r": -0.09603222991895827,
+                "high_minus_low_r": {
+                  "estimate": 0.06926550360422576,
+                  "ci_low": -0.13955947150868694,
+                  "ci_high": 0.2972461732936052,
+                  "n_boot_valid": 9990
+                }
+              },
+              "profile_rank_spearman": 0.4809900386171751
+            },
+            "adoption": {
+              "n_profiles": 70,
+              "high_adoption_rate": 0.4857142857142857,
+              "low_adoption_rate": 0.1,
+              "adoption_rate_difference": {
+                "estimate": 0.38571428571428573,
+                "ci_low": 0.2714285714285714,
+                "ci_high": 0.5,
+                "n_boot_valid": 10000
+              },
+              "discordance": {
+                "low_0_to_high_1": 27,
+                "low_1_to_high_0": 0,
+                "total": 27
+              },
+              "mcnemar_exact_p_two_sided": 1.4901161193847656e-08,
+              "agreement_rate": 0.6142857142857143
+            },
+            "high_arm": "region_only",
+            "low_arm": "true_country"
+          }
+        }
+      },
+      "codex": {
+        "n_complete_profiles": 70,
+        "arms": {
+          "true_country": {
+            "mean_nitrogen_kg_per_ha": 10.357142857142858,
+            "median_nitrogen_kg_per_ha": 0.0,
+            "sd_nitrogen_kg_per_ha": 15.841639969896358,
+            "adoption_rate": 0.3142857142857143,
+            "observed_nitrogen_r": -0.09775433937022719
+          },
+          "region_only": {
+            "mean_nitrogen_kg_per_ha": 18.214285714285715,
+            "median_nitrogen_kg_per_ha": 25.0,
+            "sd_nitrogen_kg_per_ha": 18.53386470185723,
+            "adoption_rate": 0.5142857142857142,
+            "observed_nitrogen_r": -0.09803533564920919
+          },
+          "swapped_country": {
+            "mean_nitrogen_kg_per_ha": 27.571428571428573,
+            "median_nitrogen_kg_per_ha": 35.0,
+            "sd_nitrogen_kg_per_ha": 23.30862341421815,
+            "adoption_rate": 0.6142857142857143,
+            "observed_nitrogen_r": -0.09518290896051566
+          }
+        },
+        "contrasts": {
+          "primary_swapped_minus_true": {
+            "nitrogen_rate": {
+              "n_profiles": 70,
+              "high_mean": 27.571428571428573,
+              "low_mean": 10.357142857142858,
+              "mean_difference": {
+                "estimate": 17.214285714285715,
+                "ci_low": 13.285714285714286,
+                "ci_high": 21.214285714285715,
+                "n_boot_valid": 10000
+              },
+              "median_difference": {
+                "estimate": 15.0,
+                "ci_low": 0.0,
+                "ci_high": 25.0,
+                "n_boot_valid": 10000
+              },
+              "cohens_dz": 0.9991475854695291,
+              "paired_t": {
+                "statistic": 8.359468453703936,
+                "p_two_sided": 4.399288714123622e-12
+              },
+              "wilcoxon": {
+                "statistic": 0.0,
+                "p_two_sided": 3.3210831280543e-08
+              },
+              "observed_rate_correlation": {
+                "high_arm_r": -0.09518290896051566,
+                "low_arm_r": -0.09775433937022719,
+                "high_minus_low_r": {
+                  "estimate": 0.002571430409711528,
+                  "ci_low": -0.1778840897940966,
+                  "ci_high": 0.18756717831880082,
+                  "n_boot_valid": 10000
+                }
+              },
+              "profile_rank_spearman": 0.722899631250392
+            },
+            "adoption": {
+              "n_profiles": 70,
+              "high_adoption_rate": 0.6142857142857143,
+              "low_adoption_rate": 0.3142857142857143,
+              "adoption_rate_difference": {
+                "estimate": 0.3,
+                "ci_low": 0.2,
+                "ci_high": 0.4142857142857143,
+                "n_boot_valid": 10000
+              },
+              "discordance": {
+                "low_0_to_high_1": 21,
+                "low_1_to_high_0": 0,
+                "total": 21
+              },
+              "mcnemar_exact_p_two_sided": 9.5367431640625e-07,
+              "agreement_rate": 0.7
+            },
+            "high_arm": "swapped_country",
+            "low_arm": "true_country"
+          },
+          "secondary_region_minus_true": {
+            "nitrogen_rate": {
+              "n_profiles": 70,
+              "high_mean": 18.214285714285715,
+              "low_mean": 10.357142857142858,
+              "mean_difference": {
+                "estimate": 7.857142857142857,
+                "ci_low": 5.142857142857143,
+                "ci_high": 10.785714285714286,
+                "n_boot_valid": 10000
+              },
+              "median_difference": {
+                "estimate": 0.0,
+                "ci_low": 0.0,
+                "ci_high": 5.0,
+                "n_boot_valid": 10000
+              },
+              "cohens_dz": 0.6533637114827885,
+              "paired_t": {
+                "statistic": 5.466433001855918,
+                "p_two_sided": 6.861340134332051e-07
+              },
+              "wilcoxon": {
+                "statistic": 0.0,
+                "p_two_sided": 3.477710611553242e-06
+              },
+              "observed_rate_correlation": {
+                "high_arm_r": -0.09803533564920919,
+                "low_arm_r": -0.09775433937022719,
+                "high_minus_low_r": {
+                  "estimate": -0.00028099627898199586,
+                  "ci_low": -0.155836115651045,
+                  "ci_high": 0.17563691329178605,
+                  "n_boot_valid": 10000
+                }
+              },
+              "profile_rank_spearman": 0.8006799593149995
+            },
+            "adoption": {
+              "n_profiles": 70,
+              "high_adoption_rate": 0.5142857142857142,
+              "low_adoption_rate": 0.3142857142857143,
+              "adoption_rate_difference": {
+                "estimate": 0.2,
+                "ci_low": 0.11428571428571428,
+                "ci_high": 0.3,
+                "n_boot_valid": 10000
+              },
+              "discordance": {
+                "low_0_to_high_1": 14,
+                "low_1_to_high_0": 0,
+                "total": 14
+              },
+              "mcnemar_exact_p_two_sided": 0.0001220703125,
+              "agreement_rate": 0.8
+            },
+            "high_arm": "region_only",
+            "low_arm": "true_country"
+          }
+        }
+      },
+      "kimi": {
+        "n_complete_profiles": 70,
+        "arms": {
+          "true_country": {
+            "mean_nitrogen_kg_per_ha": 22.571428571428573,
+            "median_nitrogen_kg_per_ha": 30.0,
+            "sd_nitrogen_kg_per_ha": 20.478742197400155,
+            "adoption_rate": 0.5857142857142857,
+            "observed_nitrogen_r": -0.019500476683297633
+          },
+          "region_only": {
+            "mean_nitrogen_kg_per_ha": 21.571428571428573,
+            "median_nitrogen_kg_per_ha": 27.5,
+            "sd_nitrogen_kg_per_ha": 19.625900831219262,
+            "adoption_rate": 0.5714285714285714,
+            "observed_nitrogen_r": 0.09742436160972542
+          },
+          "swapped_country": {
+            "mean_nitrogen_kg_per_ha": 28.0,
+            "median_nitrogen_kg_per_ha": 30.0,
+            "sd_nitrogen_kg_per_ha": 23.178575814997657,
+            "adoption_rate": 0.6571428571428571,
+            "observed_nitrogen_r": -0.1630447348155057
+          }
+        },
+        "contrasts": {
+          "primary_swapped_minus_true": {
+            "nitrogen_rate": {
+              "n_profiles": 70,
+              "high_mean": 28.0,
+              "low_mean": 22.571428571428573,
+              "mean_difference": {
+                "estimate": 5.428571428571429,
+                "ci_low": 1.7857142857142858,
+                "ci_high": 9.142857142857142,
+                "n_boot_valid": 10000
+              },
+              "median_difference": {
+                "estimate": 0.0,
+                "ci_low": 0.0,
+                "ci_high": 2.5,
+                "n_boot_valid": 10000
+              },
+              "cohens_dz": 0.34346102486089153,
+              "paired_t": {
+                "statistic": 2.873601101735343,
+                "p_two_sided": 0.005389485599905136
+              },
+              "wilcoxon": {
+                "statistic": 177.5,
+                "p_two_sided": 0.004948342667145464
+              },
+              "observed_rate_correlation": {
+                "high_arm_r": -0.1630447348155057,
+                "low_arm_r": -0.019500476683297633,
+                "high_minus_low_r": {
+                  "estimate": -0.14354425813220806,
+                  "ci_low": -0.2942438270250839,
+                  "ci_high": 0.04000008731653534,
+                  "n_boot_valid": 10000
+                }
+              },
+              "profile_rank_spearman": 0.7557694763557178
+            },
+            "adoption": {
+              "n_profiles": 70,
+              "high_adoption_rate": 0.6571428571428571,
+              "low_adoption_rate": 0.5857142857142857,
+              "adoption_rate_difference": {
+                "estimate": 0.07142857142857142,
+                "ci_low": -0.014285714285714285,
+                "ci_high": 0.15714285714285714,
+                "n_boot_valid": 10000
+              },
+              "discordance": {
+                "low_0_to_high_1": 8,
+                "low_1_to_high_0": 3,
+                "total": 11
+              },
+              "mcnemar_exact_p_two_sided": 0.2265625,
+              "agreement_rate": 0.8428571428571429
+            },
+            "high_arm": "swapped_country",
+            "low_arm": "true_country"
+          },
+          "secondary_region_minus_true": {
+            "nitrogen_rate": {
+              "n_profiles": 70,
+              "high_mean": 21.571428571428573,
+              "low_mean": 22.571428571428573,
+              "mean_difference": {
+                "estimate": -1.0,
+                "ci_low": -4.6446428571428555,
+                "ci_high": 2.7142857142857144,
+                "n_boot_valid": 10000
+              },
+              "median_difference": {
+                "estimate": 0.0,
+                "ci_low": 0.0,
+                "ci_high": 0.0,
+                "n_boot_valid": 10000
+              },
+              "cohens_dz": -0.06300857522876575,
+              "paired_t": {
+                "statistic": -0.5271675622277344,
+                "p_two_sided": 0.5997681446667377
+              },
+              "wilcoxon": {
+                "statistic": 315.0,
+                "p_two_sided": 0.5801665726317067
+              },
+              "observed_rate_correlation": {
+                "high_arm_r": 0.09742436160972542,
+                "low_arm_r": -0.019500476683297633,
+                "high_minus_low_r": {
+                  "estimate": 0.11692483829302305,
+                  "ci_low": -0.0749397527534494,
+                  "ci_high": 0.2931106713407065,
+                  "n_boot_valid": 10000
+                }
+              },
+              "profile_rank_spearman": 0.6941262405547866
+            },
+            "adoption": {
+              "n_profiles": 70,
+              "high_adoption_rate": 0.5714285714285714,
+              "low_adoption_rate": 0.5857142857142857,
+              "adoption_rate_difference": {
+                "estimate": -0.014285714285714285,
+                "ci_low": -0.11428571428571428,
+                "ci_high": 0.08571428571428572,
+                "n_boot_valid": 10000
+              },
+              "discordance": {
+                "low_0_to_high_1": 6,
+                "low_1_to_high_0": 7,
+                "total": 13
+              },
+              "mcnemar_exact_p_two_sided": 1.0,
+              "agreement_rate": 0.8142857142857143
+            },
+            "high_arm": "region_only",
+            "low_arm": "true_country"
+          }
+        }
+      }
+    },
+    "ensemble_secondary": {
+      "primary_swapped_minus_true": {
+        "n_profiles": 70,
+        "mean_nitrogen_difference": {
+          "estimate": 16.885714285714286,
+          "ci_low": 13.847619047619048,
+          "ci_high": 19.96690476190476,
+          "n_boot_valid": 10000
+        },
+        "mean_adoption_probability_difference": {
+          "estimate": 0.3428571428571429,
+          "ci_low": 0.2666666666666667,
+          "ci_high": 0.41904761904761906,
+          "n_boot_valid": 10000
+        },
+        "observed_nitrogen_r_difference": {
+          "estimate": 0.031515201882109996,
+          "ci_low": -0.07259392752937585,
+          "ci_high": 0.13507157894103328,
+          "n_boot_valid": 10000
+        }
+      },
+      "secondary_region_minus_true": {
+        "n_profiles": 70,
+        "mean_nitrogen_difference": {
+          "estimate": 6.504761904761905,
+          "ci_low": 4.538095238095238,
+          "ci_high": 8.638214285714286,
+          "n_boot_valid": 10000
+        },
+        "mean_adoption_probability_difference": {
+          "estimate": 0.1904761904761905,
+          "ci_low": 0.12857142857142856,
+          "ci_high": 0.2571428571428572,
+          "n_boot_valid": 10000
+        },
+        "observed_nitrogen_r_difference": {
+          "estimate": 0.06325511793511372,
+          "ci_low": -0.04366110872372704,
+          "ci_high": 0.16832665014235756,
+          "n_boot_valid": 10000
+        }
+      }
+    },
+    "replication_summary": {
+      "all_provider_mean_differences_positive": true,
+      "all_provider_bonferroni_t_tests_significant": true,
+      "n_provider_bootstrap_intervals_excluding_zero_positive": 3,
+      "bonferroni_alpha": 0.016666666666666666
+    }
+  }
+}

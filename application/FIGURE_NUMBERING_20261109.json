@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-09",
+  "source_archive": "data_package_v5.zip",
+  "source_archive_sha256": "6fff80f6f6f24b6e66b52f0d43c780762820958528be7542dfc2e8a7f476cba2",
+  "display_numbering_only": true,
+  "current_to_original": {
+    "Fig1": "Fig1",
+    "Fig2": "Fig3",
+    "Fig3": "Fig2",
+    "Fig4": "Fig4",
+    "Fig5": "Fig5",
+    "Fig6": "Fig6",
+    "Fig7": "Fig7",
+    "Fig8": "Fig8"
+  },
+  "supplementary_figures_unchanged": [
+    "SuppFigS1"
+  ],
+  "national_statistics_current_id": "Fig2",
+  "individual_transfer_current_id": "Fig3",
+  "source_history": "CHANGELOG.md and retained historical analysis and drawing code use their original figure labels.",
+  "scientific_data_unchanged": true,
+  "statistical_algorithm_unchanged": true,
+  "new_model_calls": 0,
+  "new_plotting_or_resampling": false,
+  "submission_image_map": "figures/SUBMISSION_IMAGE_MAP.json"
+}

@@ -1,0 +1,55 @@
+{
+  "doi": "10.5281/zenodo.15774761",
+  "version": "v2.0",
+  "title": "lsms-worldbank/LSMS-ISA-harmonised-dataset-on-agricultural-productivity-and-welfare: LSMS-ISA harmonised panel v.2.0.",
+  "source_url": "https://zenodo.org/records/15774761",
+  "access_right": "open",
+  "license": {
+    "id": "cc-zero"
+  },
+  "retrieved_on": "2026-10-17",
+  "files": [
+    {
+      "file": "Household_dataset.dta",
+      "size_bytes": 48268826,
+      "sha256": "3932257c12b1f4caee127d4f086089d4e33f8ee765be3f97ab1f53163e15d9b3",
+      "checksum": "md5:7fe19862e81b514c78e70aa36dd38053",
+      "url": "https://zenodo.org/api/records/15774761/files/Household_dataset.dta/content",
+      "official_size_bytes": 48268826,
+      "matches_official_md5": true
+    },
+    {
+      "file": "Individual_dataset.dta",
+      "size_bytes": 439653965,
+      "sha256": "8dd6ca62926244b19c730a899d68d25dba035520ba77ea2b8873a58d8fce6b61",
+      "checksum": "md5:786ab58de7253e0f28c508777b6d6624",
+      "url": "https://zenodo.org/api/records/15774761/files/Individual_dataset.dta/content",
+      "official_size_bytes": 439653965,
+      "matches_official_md5": true
+    },
+    {
+      "file": "Plot_dataset.dta",
+      "size_bytes": 261060848,
+      "sha256": "32fbfc2925e1388ff944b4fed9808e1a4dc861c6832c1280f9d46e2db5f428a1",
+      "checksum": "md5:af14a1b4a949554ab9cb01fb28f51fbe",
+      "url": "https://zenodo.org/api/records/15774761/files/Plot_dataset.dta/content",
+      "official_size_bytes": 261060848,
+      "matches_official_md5": true
+    },
+    {
+      "file": "Plotcrop_dataset.dta",
+      "size_bytes": 257512145,
+      "sha256": "26bc395d8e25d1011fea103ef10e631895fb7bfd29d49f9f0ddff162e4f10a2b",
+      "checksum": "md5:fcd18d08110e76f033a9948e02f2d942",
+      "url": "https://zenodo.org/api/records/15774761/files/Plotcrop_dataset.dta/content",
+      "official_size_bytes": 257512145,
+      "matches_official_md5": true
+    }
+  ],
+  "provenance_correction": {
+    "previous_link": "10.5281/zenodo.14016696",
+    "previous_link_version": "v1.1",
+    "finding": "All four local study files exactly match the official v2.0 record (file sizes and MD5). They do not match the older v1.1 Data.zip members. Use the fixed v2.0 DOI and file checksums for reproduction. The selected country-waves remain unchanged."
+  },
+  "note": "Official harmonized data are open under CC0. Files are obtained directly from the fixed official record rather than duplicated as nearly 1 GB uncompressed Stata files in GitHub. Compact deidentified trait input and population aggregates support offline analyses."
+}

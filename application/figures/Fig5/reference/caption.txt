@@ -1,0 +1,1 @@
+Fig. 5. Predicted nitrogen rates and individual agreement under each country label. (a) Unweighted fertilizer-use prevalence in the countries named by the labels (top) and mean predicted nitrogen rates for 70 Tanzanian profiles (heatmap). (b) Pearson correlations with observed Tanzanian nitrogen rates. Ensemble predictions are the mean of the three interfaces’ predictions.

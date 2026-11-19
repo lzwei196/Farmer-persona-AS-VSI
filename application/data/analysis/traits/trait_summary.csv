@@ -1,0 +1,4 @@
+outcome,survey_n,survey_clusters,survey_cv_r2,ensemble_n,ensemble_cv_r2,absolute_coefficient_ratio,predicted_coefficients_outside_survey_ci,country_trait_survey_clearly_nonzero,country_trait_same_sign_among_survey_nonzero,country_trait_all_same_sign,stress_test_cv_r2
+adoption,64917,3805,0.03334999061974242,488,0.39191815440723354,3.0136656843683407,6,26,20,37,0.03430502506250366
+rate_excl,63099,3794,0.030442571489713632,488,0.3917438759143991,1.1722076971822226,2,25,18,33,0.027262422673166253
+rate_cap,64045,3800,0.0423745051049107,488,0.3917438759143991,0.8089122619612678,3,23,17,32,0.04256077011758308

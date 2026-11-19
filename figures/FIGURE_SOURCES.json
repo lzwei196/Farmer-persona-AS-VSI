@@ -1,0 +1,199 @@
+[
+  {
+    "merged_figure": "1",
+    "source": "integrated study design",
+    "source_paths": [
+      "figures/main_integration/draw_main_figures.py",
+      "figures/main_integration/draw_study_design.py"
+    ],
+    "image": "figures/main_integration/Fig_1.png",
+    "matching_pdf": "figures/main_integration/Fig_1.pdf",
+    "matching_svg": "figures/main_integration/Fig_1.svg",
+    "image_sha256": "9e91d708ab899f2e0bcb0353628e72ac283c00eb428997c7e91078a45a9f662e",
+    "merged_word_image_sha256": "9e91d708ab899f2e0bcb0353628e72ac283c00eb428997c7e91078a45a9f662e"
+  },
+  {
+    "merged_figure": "2",
+    "source": "summary of African prompt assessment",
+    "source_paths": [
+      "figures/main_integration/draw_main_figures.py",
+      "figures/main_integration/data"
+    ],
+    "image": "figures/main_integration/Fig_2.png",
+    "matching_pdf": "figures/main_integration/Fig_2.pdf",
+    "matching_svg": "figures/main_integration/Fig_2.svg",
+    "image_sha256": "3fe11c14f2cc1a70c30dd84a7821034587800d946cea639886e42caa7bfe484c",
+    "merged_word_image_sha256": "3fe11c14f2cc1a70c30dd84a7821034587800d946cea639886e42caa7bfe484c"
+  },
+  {
+    "merged_figure": "3",
+    "source": "AS",
+    "source_number": 2,
+    "source_paths": [
+      "application/figures/Fig2"
+    ],
+    "image": "application/figures/Fig2/word_image.png",
+    "matching_pdf": null,
+    "note": "Accepted PNG; the legacy outputs directory contains a different documented redraw.",
+    "image_sha256": "0b3e9c38f3cb58ea9635a6b7b39317a51a5dd48f1f5d2b83151499fe99f0a223",
+    "merged_word_image_sha256": "0b3e9c38f3cb58ea9635a6b7b39317a51a5dd48f1f5d2b83151499fe99f0a223",
+    "previous_merged_figure": "6"
+  },
+  {
+    "merged_figure": "4",
+    "source": "AS",
+    "source_number": 3,
+    "source_paths": [
+      "application/figures/Fig3"
+    ],
+    "image": "application/figures/Fig3/word_image.png",
+    "matching_pdf": "application/figures/Fig3/outputs/Fig3.pdf",
+    "image_sha256": "3bb614629ee3fe296e16665dd9edceb222449a5f8117c4d34d14ece9650dc7dc",
+    "merged_word_image_sha256": "3bb614629ee3fe296e16665dd9edceb222449a5f8117c4d34d14ece9650dc7dc",
+    "previous_merged_figure": "7"
+  },
+  {
+    "merged_figure": "5",
+    "source": "AS",
+    "source_number": 4,
+    "source_paths": [
+      "application/figures/Fig4"
+    ],
+    "image": "application/figures/Fig4/outputs/Fig4.png",
+    "matching_pdf": "application/figures/Fig4/outputs/Fig4.pdf",
+    "image_sha256": "dfea958b3ba203500234bd2512b280abfe1e59ed227aa082989258255f7daa95",
+    "merged_word_image_sha256": "dfea958b3ba203500234bd2512b280abfe1e59ed227aa082989258255f7daa95",
+    "previous_merged_figure": "8"
+  },
+  {
+    "merged_figure": "6",
+    "source": "AS",
+    "source_number": 5,
+    "source_paths": [
+      "application/figures/Fig5"
+    ],
+    "image": "application/figures/Fig5/outputs/Fig5.png",
+    "matching_pdf": "application/figures/Fig5/outputs/Fig5.pdf",
+    "image_sha256": "7279359a118705b105306e67c78abf70b23981efe590af86062626884f4171db",
+    "merged_word_image_sha256": "7279359a118705b105306e67c78abf70b23981efe590af86062626884f4171db",
+    "previous_merged_figure": "S5"
+  },
+  {
+    "merged_figure": "7",
+    "source": "AS",
+    "source_number": 6,
+    "source_paths": [
+      "application/figures/Fig6"
+    ],
+    "image": "application/figures/Fig6/outputs/Fig6.png",
+    "matching_pdf": "application/figures/Fig6/outputs/Fig6.pdf",
+    "image_sha256": "26fb83e8e6c78da31cec89b1d5c6f41eeb24abde1030a0a643ae02189ed5de16",
+    "merged_word_image_sha256": "26fb83e8e6c78da31cec89b1d5c6f41eeb24abde1030a0a643ae02189ed5de16",
+    "previous_merged_figure": "9"
+  },
+  {
+    "merged_figure": "8",
+    "source": "AS",
+    "source_number": 7,
+    "source_paths": [
+      "application/figures/Fig7"
+    ],
+    "image": "application/figures/Fig7/outputs/Fig7.png",
+    "matching_pdf": "application/figures/Fig7/outputs/Fig7.pdf",
+    "image_sha256": "816de36138acd78c8ea6c82acc820e15e90bcc31346c8a4aca70920747d286f4",
+    "merged_word_image_sha256": "816de36138acd78c8ea6c82acc820e15e90bcc31346c8a4aca70920747d286f4",
+    "previous_merged_figure": "S6"
+  },
+  {
+    "merged_figure": "9",
+    "source": "AS",
+    "source_number": 8,
+    "source_paths": [
+      "application/figures/Fig8"
+    ],
+    "image": "application/figures/Fig8/outputs/Fig8.png",
+    "matching_pdf": "application/figures/Fig8/outputs/Fig8.pdf",
+    "image_sha256": "102edd90ee0723806642678f1dc5246ff04d8391476e1025b69d6a17e8e69475",
+    "merged_word_image_sha256": "102edd90ee0723806642678f1dc5246ff04d8391476e1025b69d6a17e8e69475",
+    "previous_merged_figure": "10"
+  },
+  {
+    "merged_figure": "S1",
+    "source": "detailed persona assessment",
+    "source_paths": [
+      "figures/persona_supplement/draw_supplementary_persona.py",
+      "figures/persona_supplement/data"
+    ],
+    "image": "figures/persona_supplement/Fig_S1.png",
+    "matching_pdf": "figures/persona_supplement/Fig_S1.pdf",
+    "matching_svg": "figures/persona_supplement/Fig_S1.svg",
+    "image_sha256": "ecda37c952e18de208a061b54f733fbf22bbaa2b11474fe02528dfe51df1a4e3",
+    "merged_word_image_sha256": "ecda37c952e18de208a061b54f733fbf22bbaa2b11474fe02528dfe51df1a4e3"
+  },
+  {
+    "merged_figure": "S2",
+    "source": "detailed persona assessment",
+    "source_paths": [
+      "figures/persona_supplement/draw_supplementary_persona.py",
+      "figures/persona_supplement/data"
+    ],
+    "image": "figures/persona_supplement/Fig_S2.png",
+    "matching_pdf": "figures/persona_supplement/Fig_S2.pdf",
+    "matching_svg": "figures/persona_supplement/Fig_S2.svg",
+    "image_sha256": "9ba92aa5d33c3023a9c2ad9108da171e08d5583b1331c5eb7f41ae5459b9c029",
+    "merged_word_image_sha256": "9ba92aa5d33c3023a9c2ad9108da171e08d5583b1331c5eb7f41ae5459b9c029"
+  },
+  {
+    "merged_figure": "S3",
+    "source": "detailed persona assessment",
+    "source_paths": [
+      "figures/persona_supplement/draw_supplementary_persona.py",
+      "figures/persona_supplement/data"
+    ],
+    "image": "figures/persona_supplement/Fig_S3.png",
+    "matching_pdf": "figures/persona_supplement/Fig_S3.pdf",
+    "matching_svg": "figures/persona_supplement/Fig_S3.svg",
+    "image_sha256": "cfe371bd675e9f19ee5ebe941e9cb881665bae5f44050ba25cd24c5a4ebed23d",
+    "merged_word_image_sha256": "cfe371bd675e9f19ee5ebe941e9cb881665bae5f44050ba25cd24c5a4ebed23d"
+  },
+  {
+    "merged_figure": "S4",
+    "source": "detailed persona assessment",
+    "source_paths": [
+      "figures/persona_supplement/draw_supplementary_persona.py",
+      "figures/persona_supplement/data"
+    ],
+    "image": "figures/persona_supplement/Fig_S4.png",
+    "matching_pdf": "figures/persona_supplement/Fig_S4.pdf",
+    "matching_svg": "figures/persona_supplement/Fig_S4.svg",
+    "image_sha256": "0d4c28baf9c6a187fd783a88f72abc70b8c787de737eb8c0e9a664525653d8c5",
+    "merged_word_image_sha256": "0d4c28baf9c6a187fd783a88f72abc70b8c787de737eb8c0e9a664525653d8c5"
+  },
+  {
+    "merged_figure": "S5",
+    "source": "detailed persona assessment",
+    "source_paths": [
+      "figures/persona_supplement/draw_supplementary_persona.py",
+      "figures/persona_supplement/data"
+    ],
+    "image": "figures/persona_supplement/Fig_S5.png",
+    "matching_pdf": "figures/persona_supplement/Fig_S5.pdf",
+    "matching_svg": "figures/persona_supplement/Fig_S5.svg",
+    "image_sha256": "5b4b74577515995aa234768fc400dae029ac4e6e11f92d1b0cc2826cb1feb275",
+    "merged_word_image_sha256": "5b4b74577515995aa234768fc400dae029ac4e6e11f92d1b0cc2826cb1feb275"
+  },
+  {
+    "merged_figure": "S6",
+    "source": "AS SI",
+    "source_number": 1,
+    "source_paths": [
+      "application/figures/SuppFigS1"
+    ],
+    "image": "application/figures/SuppFigS1/outputs/SuppFigS1.png",
+    "matching_pdf": "application/figures/SuppFigS1/outputs/SuppFigS1.pdf",
+    "note": "High-resolution standalone reference; the source Word uses a downsampled copy.",
+    "image_sha256": "ee927bd1636c3bdf8c1209f714006988db7124c022a0043009b89bb803d539d7",
+    "merged_word_image_sha256": "f32c7113ca6fc1b7187b660d1ef898bc44790f1ff22796930fb193091d3c2b1f",
+    "previous_merged_figure": "S7"
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "release_version": "0.2.0",
+  "release_date": "2026-10-17",
+  "experiments": {
+    "benchmark_original": {
+      "design_version": "paper2-original-four-country-benchmark",
+      "profiles": 280,
+      "countries": [
+        "Ethiopia",
+        "Malawi",
+        "Nigeria",
+        "Tanzania"
+      ],
+      "providers": [
+        "claude",
+        "codex",
+        "kimi"
+      ],
+      "logical_calls": 840,
+      "collection_period": "April 2026",
+      "per_call_timestamps_available": false
+    },
+    "country_label_ablation": {
+      "design_version": "paper2-country-label-v1",
+      "seed": 20260826,
+      "collection_period_utc": "2026-08-26T12:52:04.208212+00:00 to 2026-08-26T14:24:38.490348+00:00",
+      "profiles": 70,
+      "conditions": [
+        "true_country",
+        "region_only",
+        "swapped_country"
+      ],
+      "providers": [
+        "claude",
+        "codex",
+        "kimi"
+      ],
+      "logical_calls": 630,
+      "randomization": "Profile-block order and three-arm order within profile were randomized with the recorded seed.",
+      "recorded_cli_versions": {
+        "claude": "2.1.246",
+        "codex": "0.149.1",
+        "kimi": "0.30.0"
+      }
+    },
+    "country_prior_matrix": {
+      "design_version": "paper2-seven-country-prior-matrix-v1",
+      "seed": 20260827,
+      "new_response_collection_period_utc": "2026-08-27T06:53:36.854874+00:00 to 2026-08-27T08:40:28.776447+00:00",
+      "profiles": 70,
+      "labels": [
+        "Ethiopia",
+        "Malawi",
+        "Mali",
+        "Niger",
+        "Nigeria",
+        "Tanzania",
+        "Uganda"
+      ],
+      "providers": [
+        "claude",
+        "codex",
+        "kimi"
+      ],
+      "logical_calls": 1470,
+      "reused_ablation_calls": 420,
+      "new_calls": 1050,
+      "randomization": "A new seven-label manifest randomized profile blocks and label positions; only the five non-reused labels were queried in this phase.",
+      "reuse_note": "Tanzania and Nigeria cells were mapped from the 26 August ablation after prompt-hash verification and were not recollected or contemporaneously interleaved with the five new labels.",
+      "recorded_cli_versions_for_new_calls": {
+        "claude": "2.1.247",
+        "codex": "0.149.1",
+        "kimi": "0.30.0"
+      }
+    },
+    "extension_confirmatory": {
+      "design_version": "paper2-extension-confirmatory-v2",
+      "seed": 20260827,
+      "collection_period_utc": "2026-08-27T06:52:09.994704+00:00 to 2026-08-27T07:39:07.305931+00:00",
+      "profiles": 210,
+      "countries": [
+        "Mali",
+        "Niger",
+        "Uganda"
+      ],
+      "providers": [
+        "claude",
+        "codex",
+        "kimi"
+      ],
+      "logical_calls": 630,
+      "additional_system_prompt": null,
+      "recorded_cli_versions": {
+        "claude": "2.1.247",
+        "codex": "0.149.1",
+        "kimi": "0.30.0"
+      }
+    }
+  },
+  "response_accounting": {
+    "archived_analysis_records": 3570,
+    "distinct_accepted_responses": 3150,
+    "reused_matrix_records": 420,
+    "accepted_responses_with_retries": 4,
+    "additional_retry_attempts": 5,
+    "total_recorded_model_call_attempts": 3155,
+    "accepted_samples_per_condition": 1,
+    "repeated_sampling_experiment": false
+  },
+  "recorded_cli_versions": {
+    "claude": [
+      "2.1.246",
+      "2.1.247"
+    ],
+    "codex": [
+      "0.149.1"
+    ],
+    "kimi": [
+      "0.30.0"
+    ]
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux"
+  },
+  "correction_environment": {
+    "python": "3.12.14",
+    "numpy": "2.4.2",
+    "pandas": "3.0.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0"
+  },
+  "corrections": {
+    "ensemble_adoption": "All70 profiles per country; missing nitrogen does not remove a valid adoption record.",
+    "trait_inference": "Known country x enumeration area; missing identifiers use country x household; deterministic bootstrap and CV seed20260827; point coefficients unchanged.",
+    "current_figures": [
+      "Fig1",
+      "Fig2",
+      "Fig3",
+      "Fig4",
+      "Fig5",
+      "Fig6",
+      "Fig7",
+      "Fig8",
+      "SuppFigS1"
+    ]
+  },
+  "figure_numbering_amendment": {
+    "date": "2026-11-09",
+    "source_release": "v5 / 0.3.1",
+    "current_to_original": {
+      "Fig2": "Fig3",
+      "Fig3": "Fig2"
+    },
+    "no_scientific_data_or_algorithm_change": true,
+    "mapping_file": "FIGURE_NUMBERING_20261109.json"
+  }
+}

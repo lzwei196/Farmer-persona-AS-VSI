@@ -1,0 +1,26 @@
+[
+  {
+    "file": "trait_survey_analysis_input.csv.gz",
+    "rows": 64917,
+    "max_numeric_delta": 0.0,
+    "non_numeric_order_identical": true
+  },
+  {
+    "file": "paper2_population_poststrata.csv",
+    "rows": 55,
+    "max_numeric_delta": 0.0,
+    "non_numeric_order_identical": true
+  },
+  {
+    "file": "paper2_country_wave_capped_rate_targets.csv",
+    "rows": 7,
+    "max_numeric_delta": 0.0,
+    "non_numeric_order_identical": true
+  },
+  {
+    "file": "paper2_country_wave_capped_sensitivity_targets.csv",
+    "rows": 7,
+    "max_numeric_delta": 0.0,
+    "non_numeric_order_identical": true
+  }
+]

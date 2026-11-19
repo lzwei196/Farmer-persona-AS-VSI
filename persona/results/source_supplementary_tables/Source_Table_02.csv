@@ -1,0 +1,5 @@
+﻿Dataset,Design,"Information supplied, relative to the preceding design",JSON schema in user message,Released prompt or builder
+LSMS-ISA,T1,"Country, region, manager age, gender and education, plot area, total farm size, main crop, plot ownership and intercropping status.",Yes,prompts/lsms_4country_tier1_template.txt
+LSMS-ISA,T2,"Prepends country- and zone-level agronomic context: rainfall regime, growing season, dominant cropping systems, soils and input access.",Yes,prompts/lsms_tier2_template.txt
+LSMS-ISA,T3,"Adds a 929-word anchor-free cognitive scaffold covering education, cash constraint, social learning, market access, shocks, plot ownership and farm size. Supplies no adoption rates or practice ranges.",Yes,prompts/lsms_tier3_cognitive_grounding.txt
+LSMS-ISA,T4,"Adds population-informed diagnostic checks: country-specific adoption base rates, plot-scaled nitrogen and labour ranges, cross-consistency rules and an asset-index reading. Used as a population-information control.",Yes,code/runners/run_lsms_full.py

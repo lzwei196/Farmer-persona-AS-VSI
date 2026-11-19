@@ -1,0 +1,3142 @@
+{
+  "status": "Necessary deterministic correction; original manuscript CI/fold implementation not located. OLS points, samples and weights unchanged.",
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.4.2",
+    "pandas": "3.0.3",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0"
+  },
+  "inputs": [
+    {
+      "name": "Plot_dataset.dta",
+      "sha256": "32fbfc2925e1388ff944b4fed9808e1a4dc861c6832c1280f9d46e2db5f428a1"
+    },
+    {
+      "name": "frozen_profiles.csv",
+      "sha256": "4bf84dd1468f3bcc2a5426ef6cb24a7114c700e3b4a0a93b26a06b955ee2e83c"
+    },
+    {
+      "name": "benchmark_predictions.csv",
+      "sha256": "47238be169101c370e93460fca556f7974eed1defde04c8c108a60da08061293"
+    }
+  ],
+  "required_inputs_note": "The third-party harmonized Plot_dataset.dta is an author-supplied input and is not redistributed. Repository inputs are frozen_profiles.csv and benchmark_predictions.csv. No household identifier is written to outputs; CV assignments use only source row indices and country.",
+  "methods": {
+    "traits": [
+      "age10",
+      "female",
+      "education",
+      "log2plot",
+      "log2farm",
+      "owned",
+      "intercropped",
+      "maize"
+    ],
+    "survey_point_model": "Unpenalized weighted least squares with country fixed effects; eight traits; household pw applied to plot rows.",
+    "ensemble_point_model": "Same traits/country fixed effects, unweighted provider-ensemble predictions.",
+    "adoption": "Missing inorganic-fertilizer responses coded zero; Ethiopia requires inorganic_fertilizer=1 and positive nitrogen_kg, matching frozen definition.",
+    "survey_primary_cluster": "country x known EA; missing EA uses country x household, retaining all seasons/plots of each household.",
+    "bootstrap": "With replacement at cluster/profile level within each country; same supplied analysis weights unchanged; percentile 2.5/97.5 intervals; 500 survey/2000 ensemble draws.",
+    "cv": "Survey: 5-fold shuffled GroupKFold at cluster level. Ensemble: 10-fold shuffled KFold at profile level. R2=1 - heldout weighted full-model SSE / heldout weighted SSE of country-only model fit in each training fold.",
+    "country_models": "Same eight traits plus intercept, separately by country; primary cluster/profile bootstrap and seed as pooled models.",
+    "stress_test": "All rows with unknown EA in each country placed in one artificial cluster; diagnostic sensitivity only, neither a recovered EA nor a conservative uncertainty bound.",
+    "seed": 20260827,
+    "limitation": "Unknown-EA fallback covers dependence within households, not residual dependence between different households from the same unknown EA. Uganda missing-EA records comprise 61.3% of its analysis weight. Intervals do not represent complete survey-design uncertainty."
+  },
+  "ols_unchanged_assertions": [
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "n_unchanged": true,
+      "max_abs_point_delta": 0.0
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "unknown_country_bucket_stress_test",
+      "n_unchanged": true,
+      "max_abs_point_delta": 0.0
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "n_unchanged": true,
+      "max_abs_point_delta": 0.0
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "unknown_country_bucket_stress_test",
+      "n_unchanged": true,
+      "max_abs_point_delta": 0.0
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "n_unchanged": true,
+      "max_abs_point_delta": 0.0
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "unknown_country_bucket_stress_test",
+      "n_unchanged": true,
+      "max_abs_point_delta": 0.0
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "n_unchanged": true,
+      "max_abs_point_delta": 0.0
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "n_unchanged": true,
+      "max_abs_point_delta": 0.0
+    }
+  ],
+  "summary": [
+    {
+      "outcome": "adoption",
+      "survey_n": 64917,
+      "survey_clusters": 3805,
+      "survey_cv_r2": 0.03334999061974242,
+      "ensemble_n": 488,
+      "ensemble_cv_r2": 0.39191815440723354,
+      "absolute_coefficient_ratio": 3.0136656843683407,
+      "predicted_coefficients_outside_survey_ci": 6,
+      "country_trait_survey_clearly_nonzero": 26,
+      "country_trait_same_sign_among_survey_nonzero": 20,
+      "country_trait_all_same_sign": 37,
+      "stress_test_cv_r2": 0.03430502506250366
+    },
+    {
+      "outcome": "rate_excl",
+      "survey_n": 63099,
+      "survey_clusters": 3794,
+      "survey_cv_r2": 0.030442571489713632,
+      "ensemble_n": 488,
+      "ensemble_cv_r2": 0.3917438759143991,
+      "absolute_coefficient_ratio": 1.1722076971822226,
+      "predicted_coefficients_outside_survey_ci": 2,
+      "country_trait_survey_clearly_nonzero": 25,
+      "country_trait_same_sign_among_survey_nonzero": 18,
+      "country_trait_all_same_sign": 33,
+      "stress_test_cv_r2": 0.027262422673166253
+    },
+    {
+      "outcome": "rate_cap",
+      "survey_n": 64045,
+      "survey_clusters": 3800,
+      "survey_cv_r2": 0.0423745051049107,
+      "ensemble_n": 488,
+      "ensemble_cv_r2": 0.3917438759143991,
+      "absolute_coefficient_ratio": 0.8089122619612678,
+      "predicted_coefficients_outside_survey_ci": 3,
+      "country_trait_survey_clearly_nonzero": 23,
+      "country_trait_same_sign_among_survey_nonzero": 17,
+      "country_trait_all_same_sign": 32,
+      "stress_test_cv_r2": 0.04256077011758308
+    }
+  ],
+  "results": [
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "pooled",
+      "n": 64917,
+      "clusters": 3805,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.005286899740478202,
+          "ci_low": -0.01399922881086094,
+          "ci_high": 0.003672942349990858
+        },
+        "female": {
+          "point": -0.02691101058617043,
+          "ci_low": -0.05633108279418661,
+          "ci_high": 0.00045469603690900253
+        },
+        "education": {
+          "point": 0.024641319770313617,
+          "ci_low": -0.0189230158207378,
+          "ci_high": 0.06914321753250145
+        },
+        "log2plot": {
+          "point": 0.03617143451066543,
+          "ci_low": 0.026206851908826725,
+          "ci_high": 0.04677782876567638
+        },
+        "log2farm": {
+          "point": -0.0037048500769083035,
+          "ci_low": -0.015289903292643783,
+          "ci_high": 0.00823895094301354
+        },
+        "owned": {
+          "point": 0.020428593432717416,
+          "ci_low": -0.008701064556583182,
+          "ci_high": 0.04718144455212405
+        },
+        "intercropped": {
+          "point": -0.00021009903409943218,
+          "ci_low": -0.03026588060423409,
+          "ci_high": 0.034127039858683254
+        },
+        "maize": {
+          "point": 0.18288176063228576,
+          "ci_low": 0.14561775068945634,
+          "ci_high": 0.21701050962049045
+        }
+      },
+      "cv": {
+        "folds": 5,
+        "seed": 20260827,
+        "within_country_oos_r2": 0.03334999061974242,
+        "weighted_full_sse": 27302590.697195053,
+        "weighted_training_country_baseline_sse": 28244546.04278067,
+        "test_fold_counts": [
+          {
+            "fold": 0,
+            "test_rows": 12649,
+            "test_clusters": 761
+          },
+          {
+            "fold": 1,
+            "test_rows": 12831,
+            "test_clusters": 761
+          },
+          {
+            "fold": 2,
+            "test_rows": 13650,
+            "test_clusters": 761
+          },
+          {
+            "fold": 3,
+            "test_rows": 13001,
+            "test_clusters": 761
+          },
+          {
+            "fold": 4,
+            "test_rows": 12786,
+            "test_clusters": 761
+          }
+        ]
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "unknown_country_bucket_stress_test",
+      "scope": "pooled",
+      "n": 64917,
+      "clusters": 2372,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.005286899740478202,
+          "ci_low": -0.014419873135493606,
+          "ci_high": 0.004159948437161318
+        },
+        "female": {
+          "point": -0.02691101058617043,
+          "ci_low": -0.05531702707043372,
+          "ci_high": 0.0009670175108317144
+        },
+        "education": {
+          "point": 0.024641319770313617,
+          "ci_low": -0.020233427202904455,
+          "ci_high": 0.06567969797666923
+        },
+        "log2plot": {
+          "point": 0.03617143451066543,
+          "ci_low": 0.026325622905161626,
+          "ci_high": 0.04904385398008
+        },
+        "log2farm": {
+          "point": -0.0037048500769083035,
+          "ci_low": -0.014838979665560902,
+          "ci_high": 0.008141329534523118
+        },
+        "owned": {
+          "point": 0.020428593432717416,
+          "ci_low": -0.00727735466866206,
+          "ci_high": 0.052801114322631515
+        },
+        "intercropped": {
+          "point": -0.00021009903409943218,
+          "ci_low": -0.03457979611527212,
+          "ci_high": 0.03472224576700016
+        },
+        "maize": {
+          "point": 0.18288176063228576,
+          "ci_low": 0.14343880906934406,
+          "ci_high": 0.2215793577204667
+        }
+      },
+      "cv": {
+        "folds": 5,
+        "seed": 20260827,
+        "within_country_oos_r2": 0.03430502506250366,
+        "weighted_full_sse": 27443857.669825487,
+        "weighted_training_country_baseline_sse": 28418764.083971508,
+        "test_fold_counts": [
+          {
+            "fold": 0,
+            "test_rows": 17653,
+            "test_clusters": 475
+          },
+          {
+            "fold": 1,
+            "test_rows": 11824,
+            "test_clusters": 475
+          },
+          {
+            "fold": 2,
+            "test_rows": 12047,
+            "test_clusters": 474
+          },
+          {
+            "fold": 3,
+            "test_rows": 11944,
+            "test_clusters": 474
+          },
+          {
+            "fold": 4,
+            "test_rows": 11449,
+            "test_clusters": 474
+          }
+        ]
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Ethiopia",
+      "n": 11079,
+      "clusters": 305,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.0062034236375405815,
+          "ci_low": -0.02380050477878898,
+          "ci_high": 0.013700649459556739
+        },
+        "female": {
+          "point": 0.04638671919598498,
+          "ci_low": -0.013802018086292328,
+          "ci_high": 0.1064236918781513
+        },
+        "education": {
+          "point": -0.01646797559577292,
+          "ci_low": -0.09233435396943662,
+          "ci_high": 0.05652319327686164
+        },
+        "log2plot": {
+          "point": 0.05883879701369241,
+          "ci_low": 0.03382519305021425,
+          "ci_high": 0.08266053267397001
+        },
+        "log2farm": {
+          "point": 0.0003441591545647287,
+          "ci_low": -0.02362914161182582,
+          "ci_high": 0.02761082721215748
+        },
+        "owned": {
+          "point": 0.012805454403446128,
+          "ci_low": -0.03712347515929146,
+          "ci_high": 0.06046603610746504
+        },
+        "intercropped": {
+          "point": -0.11101941204931644,
+          "ci_low": -0.2010428686110634,
+          "ci_high": -0.015849172247621467
+        },
+        "maize": {
+          "point": 0.13680350740555308,
+          "ci_low": 0.06877355144197134,
+          "ci_high": 0.2075015225190902
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Malawi",
+      "n": 4608,
+      "clusters": 102,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.0018086751008244977,
+          "ci_low": -0.00928855197237318,
+          "ci_high": 0.01282237949128367
+        },
+        "female": {
+          "point": -0.02285355955230249,
+          "ci_low": -0.06647259876378031,
+          "ci_high": 0.02249151833716538
+        },
+        "education": {
+          "point": 0.10770498754339734,
+          "ci_low": 0.032510202035860136,
+          "ci_high": 0.17341132162719566
+        },
+        "log2plot": {
+          "point": 0.05347816423292082,
+          "ci_low": 0.02860688921906064,
+          "ci_high": 0.07699199456143815
+        },
+        "log2farm": {
+          "point": -0.011388791439451379,
+          "ci_low": -0.03402443303071404,
+          "ci_high": 0.011900633734743891
+        },
+        "owned": {
+          "point": -0.06806687844110833,
+          "ci_low": -0.1258214756753178,
+          "ci_high": -0.018734659116835105
+        },
+        "intercropped": {
+          "point": 0.15625886774581144,
+          "ci_low": 0.08895457119701058,
+          "ci_high": 0.20855691029491638
+        },
+        "maize": {
+          "point": 0.40854843396772356,
+          "ci_low": 0.32999774012516614,
+          "ci_high": 0.490238362750507
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Mali",
+      "n": 23303,
+      "clusters": 783,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.0021843572678264716,
+          "ci_low": -0.006779774547016538,
+          "ci_high": 0.01155772733808483
+        },
+        "female": {
+          "point": -0.09530997013899317,
+          "ci_low": -0.13648884811594944,
+          "ci_high": -0.05100315073093874
+        },
+        "education": {
+          "point": 0.06663071802438346,
+          "ci_low": 0.02522929049995462,
+          "ci_high": 0.10442899983895756
+        },
+        "log2plot": {
+          "point": 0.03521317700545533,
+          "ci_low": 0.02550931397008616,
+          "ci_high": 0.04625341146425112
+        },
+        "log2farm": {
+          "point": 0.010425483664632331,
+          "ci_low": -0.004686628234619808,
+          "ci_high": 0.025499936661095943
+        },
+        "owned": {
+          "point": -0.03961274515743665,
+          "ci_low": -0.14826140352256317,
+          "ci_high": 0.042822976491055896
+        },
+        "intercropped": {
+          "point": 0.06191744499775539,
+          "ci_low": -0.04979084269117642,
+          "ci_high": 0.17875819212096083
+        },
+        "maize": {
+          "point": 0.3162336066116738,
+          "ci_low": 0.2621119267405826,
+          "ci_high": 0.36533992526809056
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Niger",
+      "n": 5456,
+      "clusters": 188,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.006208003743535234,
+          "ci_low": -0.0006492989599224197,
+          "ci_high": 0.014473421426469919
+        },
+        "female": {
+          "point": -0.030207712761885375,
+          "ci_low": -0.08610650772301892,
+          "ci_high": 0.019683546443016085
+        },
+        "education": {
+          "point": 0.019076061888636357,
+          "ci_low": -0.027662985160988012,
+          "ci_high": 0.06747601875961756
+        },
+        "log2plot": {
+          "point": 0.006797646839249718,
+          "ci_low": -0.002615046020680894,
+          "ci_high": 0.015801584469781384
+        },
+        "log2farm": {
+          "point": -0.00843389508560145,
+          "ci_low": -0.019441161875440746,
+          "ci_high": 0.001658740966823006
+        },
+        "owned": {
+          "point": -0.04896314809542362,
+          "ci_low": -0.09288243653524157,
+          "ci_high": 0.0005331599155172033
+        },
+        "intercropped": {
+          "point": 0.037764778530726115,
+          "ci_low": -0.0010466750144297384,
+          "ci_high": 0.07533698668443516
+        },
+        "maize": {
+          "point": 0.3538132264097139,
+          "ci_low": 0.16605221157940186,
+          "ci_high": 0.4838191310600803
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Nigeria",
+      "n": 6631,
+      "clusters": 443,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.007271215969624555,
+          "ci_low": -0.027080054538627947,
+          "ci_high": 0.010134801154819587
+        },
+        "female": {
+          "point": -0.13885050473465033,
+          "ci_low": -0.200630642350009,
+          "ci_high": -0.06513198468258863
+        },
+        "education": {
+          "point": 0.09547340201769254,
+          "ci_low": 0.01877339251320897,
+          "ci_high": 0.1692721359555487
+        },
+        "log2plot": {
+          "point": 0.02147523172714651,
+          "ci_low": -0.004089381460379962,
+          "ci_high": 0.04518910765842923
+        },
+        "log2farm": {
+          "point": 0.00402942392368135,
+          "ci_low": -0.01833755148180484,
+          "ci_high": 0.02900941701790772
+        },
+        "owned": {
+          "point": 0.09602391259494064,
+          "ci_low": 0.034914416291243464,
+          "ci_high": 0.15433664473900527
+        },
+        "intercropped": {
+          "point": 0.0668761145525286,
+          "ci_low": 0.008226392238249872,
+          "ci_high": 0.11115290033625826
+        },
+        "maize": {
+          "point": 0.26457403290407133,
+          "ci_low": 0.1791926000053562,
+          "ci_high": 0.34367348542513526
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Tanzania",
+      "n": 5749,
+      "clusters": 403,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.0045799205300999,
+          "ci_low": -0.005488568154493599,
+          "ci_high": 0.015217208789689799
+        },
+        "female": {
+          "point": -0.0022851199254685416,
+          "ci_low": -0.029784584419153496,
+          "ci_high": 0.02853599152795365
+        },
+        "education": {
+          "point": 0.08503783225695827,
+          "ci_low": 0.05885027020172942,
+          "ci_high": 0.11363014691688053
+        },
+        "log2plot": {
+          "point": 0.0024238000321268453,
+          "ci_low": -0.009360624593103046,
+          "ci_high": 0.01351253734295332
+        },
+        "log2farm": {
+          "point": -0.0038853817299929288,
+          "ci_low": -0.01288562844894274,
+          "ci_high": 0.0061344383645605014
+        },
+        "owned": {
+          "point": -0.03924233361912527,
+          "ci_low": -0.08183530949706085,
+          "ci_high": 0.001320303231392862
+        },
+        "intercropped": {
+          "point": 0.005188794967323984,
+          "ci_low": -0.02009922874065977,
+          "ci_high": 0.030404737538130507
+        },
+        "maize": {
+          "point": 0.10358675104238452,
+          "ci_low": 0.06541486125966799,
+          "ci_high": 0.14353848517977605
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Uganda",
+      "n": 8091,
+      "clusters": 1581,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.00038903905135131435,
+          "ci_low": -0.003714679923683312,
+          "ci_high": 0.004959068243457662
+        },
+        "female": {
+          "point": -0.018381841819392068,
+          "ci_low": -0.032393477915575765,
+          "ci_high": -0.0033950675535128635
+        },
+        "education": {
+          "point": 0.021534383080189103,
+          "ci_low": 0.008560531391387348,
+          "ci_high": 0.034573783691990656
+        },
+        "log2plot": {
+          "point": 0.006532962326829692,
+          "ci_low": 0.0011305651137842225,
+          "ci_high": 0.012845642889828568
+        },
+        "log2farm": {
+          "point": -0.0038829812718431576,
+          "ci_low": -0.010573052652997695,
+          "ci_high": 0.0018047975661454885
+        },
+        "owned": {
+          "point": -0.02153145375630509,
+          "ci_low": -0.03662060836907285,
+          "ci_high": -0.003323796240796321
+        },
+        "intercropped": {
+          "point": 0.013757981677654787,
+          "ci_low": 0.0013964150087877637,
+          "ci_high": 0.024927766317703832
+        },
+        "maize": {
+          "point": 0.036000161031988345,
+          "ci_low": 0.017886122213413347,
+          "ci_high": 0.05723231875310268
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "pooled",
+      "n": 63099,
+      "clusters": 3794,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.9269762620581454,
+          "ci_low": -1.734894307782551,
+          "ci_high": -0.1150595775236882
+        },
+        "female": {
+          "point": -4.90058658754845,
+          "ci_low": -7.18301311555969,
+          "ci_high": -2.5214413545109906
+        },
+        "education": {
+          "point": -0.5506419935631383,
+          "ci_low": -4.9024330280871045,
+          "ci_high": 3.6094741928617773
+        },
+        "log2plot": {
+          "point": -0.5747529419452837,
+          "ci_low": -1.4574687810126483,
+          "ci_high": 0.6680564684138556
+        },
+        "log2farm": {
+          "point": -0.24850144232558619,
+          "ci_low": -1.3061720116992355,
+          "ci_high": 0.6545963696767516
+        },
+        "owned": {
+          "point": 2.0919693286645646,
+          "ci_low": -0.7477604514238243,
+          "ci_high": 4.935014879363183
+        },
+        "intercropped": {
+          "point": -4.06025380791466,
+          "ci_low": -6.331577213512497,
+          "ci_high": -1.5431541600362726
+        },
+        "maize": {
+          "point": 20.299719102807817,
+          "ci_low": 15.29330399306846,
+          "ci_high": 24.72687879384533
+        }
+      },
+      "cv": {
+        "folds": 5,
+        "seed": 20260827,
+        "within_country_oos_r2": 0.030442571489713632,
+        "weighted_full_sse": 232878388087.69385,
+        "weighted_training_country_baseline_sse": 240190401558.27466,
+        "test_fold_counts": [
+          {
+            "fold": 0,
+            "test_rows": 11887,
+            "test_clusters": 759
+          },
+          {
+            "fold": 1,
+            "test_rows": 12815,
+            "test_clusters": 759
+          },
+          {
+            "fold": 2,
+            "test_rows": 13007,
+            "test_clusters": 759
+          },
+          {
+            "fold": 3,
+            "test_rows": 12764,
+            "test_clusters": 759
+          },
+          {
+            "fold": 4,
+            "test_rows": 12626,
+            "test_clusters": 758
+          }
+        ]
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "unknown_country_bucket_stress_test",
+      "scope": "pooled",
+      "n": 63099,
+      "clusters": 2362,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.9269762620581454,
+          "ci_low": -1.7850788313063206,
+          "ci_high": -0.10220652537600695
+        },
+        "female": {
+          "point": -4.90058658754845,
+          "ci_low": -7.434732148337144,
+          "ci_high": -2.5043526574299824
+        },
+        "education": {
+          "point": -0.5506419935631383,
+          "ci_low": -4.977754278967392,
+          "ci_high": 3.6915728936971606
+        },
+        "log2plot": {
+          "point": -0.5747529419452837,
+          "ci_low": -1.5601751446785896,
+          "ci_high": 0.6498313691282793
+        },
+        "log2farm": {
+          "point": -0.24850144232558619,
+          "ci_low": -1.3336900967610028,
+          "ci_high": 0.6603931218829987
+        },
+        "owned": {
+          "point": 2.0919693286645646,
+          "ci_low": -0.6924167756113371,
+          "ci_high": 5.080001530262129
+        },
+        "intercropped": {
+          "point": -4.06025380791466,
+          "ci_low": -6.710711595819743,
+          "ci_high": -1.569592008332768
+        },
+        "maize": {
+          "point": 20.299719102807817,
+          "ci_low": 15.019412736058117,
+          "ci_high": 25.85543634557999
+        }
+      },
+      "cv": {
+        "folds": 5,
+        "seed": 20260827,
+        "within_country_oos_r2": 0.027262422673166253,
+        "weighted_full_sse": 234967329540.20844,
+        "weighted_training_country_baseline_sse": 241552639701.57172,
+        "test_fold_counts": [
+          {
+            "fold": 0,
+            "test_rows": 16783,
+            "test_clusters": 473
+          },
+          {
+            "fold": 1,
+            "test_rows": 11068,
+            "test_clusters": 473
+          },
+          {
+            "fold": 2,
+            "test_rows": 11220,
+            "test_clusters": 472
+          },
+          {
+            "fold": 3,
+            "test_rows": 12247,
+            "test_clusters": 472
+          },
+          {
+            "fold": 4,
+            "test_rows": 11781,
+            "test_clusters": 472
+          }
+        ]
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Ethiopia",
+      "n": 10959,
+      "clusters": 305,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -1.7610428296262473,
+          "ci_low": -3.1161519356870278,
+          "ci_high": -0.32460166994630596
+        },
+        "female": {
+          "point": -2.221780114374021,
+          "ci_low": -7.48992217393123,
+          "ci_high": 3.057386811847344
+        },
+        "education": {
+          "point": -4.887372120657904,
+          "ci_low": -12.166938112209621,
+          "ci_high": 2.1937549078201535
+        },
+        "log2plot": {
+          "point": 0.8361798451157478,
+          "ci_low": -0.9936003547392461,
+          "ci_high": 2.8911534305100006
+        },
+        "log2farm": {
+          "point": -0.563702030266444,
+          "ci_low": -2.3134529426377246,
+          "ci_high": 1.2385049654392561
+        },
+        "owned": {
+          "point": -0.004990145009957253,
+          "ci_low": -3.871075137503404,
+          "ci_high": 4.083571855985512
+        },
+        "intercropped": {
+          "point": -11.75843978802565,
+          "ci_low": -16.42914761652735,
+          "ci_high": -7.424835741335349
+        },
+        "maize": {
+          "point": 18.752005892196824,
+          "ci_low": 10.277630038114133,
+          "ci_high": 28.34597841974375
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Malawi",
+      "n": 4554,
+      "clusters": 102,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.7013404440631678,
+          "ci_low": -0.9758660462880676,
+          "ci_high": 2.577147133358314
+        },
+        "female": {
+          "point": -1.9571350344182454,
+          "ci_low": -7.654909300721585,
+          "ci_high": 3.777715345196034
+        },
+        "education": {
+          "point": 6.408562464801245,
+          "ci_low": -2.969171854214356,
+          "ci_high": 14.981344313862731
+        },
+        "log2plot": {
+          "point": -1.2564592497123916,
+          "ci_low": -3.8873506640587228,
+          "ci_high": 1.7377164315331295
+        },
+        "log2farm": {
+          "point": -2.4547957716630986,
+          "ci_low": -5.934292429526616,
+          "ci_high": 0.6442620990458707
+        },
+        "owned": {
+          "point": -10.730329005173651,
+          "ci_low": -17.62526812629418,
+          "ci_high": -4.488546556670847
+        },
+        "intercropped": {
+          "point": 4.8707891621189585,
+          "ci_low": -0.7398614824432515,
+          "ci_high": 10.623835046988635
+        },
+        "maize": {
+          "point": 26.989778201691518,
+          "ci_low": 19.2412550636473,
+          "ci_high": 34.29975985852598
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Mali",
+      "n": 22453,
+      "clusters": 778,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.938803278797025,
+          "ci_low": 0.14196212153794383,
+          "ci_high": 1.7727990756226455
+        },
+        "female": {
+          "point": -10.319678655537926,
+          "ci_low": -13.467233505041612,
+          "ci_high": -7.193210117381785
+        },
+        "education": {
+          "point": 3.2002522424930993,
+          "ci_low": -0.1240102864728319,
+          "ci_high": 7.4240123185446265
+        },
+        "log2plot": {
+          "point": -0.17418404677655308,
+          "ci_low": -0.9400961548715009,
+          "ci_high": 0.5879006925682151
+        },
+        "log2farm": {
+          "point": 0.08891240888061322,
+          "ci_low": -1.2354619552961246,
+          "ci_high": 1.3139342443385398
+        },
+        "owned": {
+          "point": -6.142067581687587,
+          "ci_low": -19.68129848742073,
+          "ci_high": 3.928823764776938
+        },
+        "intercropped": {
+          "point": -7.853756081283034,
+          "ci_low": -10.679199730200535,
+          "ci_high": -4.505020730640142
+        },
+        "maize": {
+          "point": 27.487575948514785,
+          "ci_low": 21.81327300156118,
+          "ci_high": 33.59192988109969
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Niger",
+      "n": 5013,
+      "clusters": 188,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.1298012239144146,
+          "ci_low": -0.062291219727180464,
+          "ci_high": 0.33242886241444347
+        },
+        "female": {
+          "point": -0.8824865024201676,
+          "ci_low": -1.7329330183691734,
+          "ci_high": -0.13883288446156483
+        },
+        "education": {
+          "point": 0.392056844977076,
+          "ci_low": -0.40039279062679767,
+          "ci_high": 1.3794734903421473
+        },
+        "log2plot": {
+          "point": -0.5179147469929799,
+          "ci_low": -1.053017523700281,
+          "ci_high": -0.1449736071944101
+        },
+        "log2farm": {
+          "point": -0.040919014125688706,
+          "ci_low": -0.2988666486766592,
+          "ci_high": 0.23845818203942737
+        },
+        "owned": {
+          "point": 0.2673672817133773,
+          "ci_low": -0.5144114056818482,
+          "ci_high": 1.1338556833465592
+        },
+        "intercropped": {
+          "point": -1.1217265253909492,
+          "ci_low": -2.2625710185342918,
+          "ci_high": -0.2179456041584238
+        },
+        "maize": {
+          "point": 10.221617331435091,
+          "ci_low": 3.4955839526068457,
+          "ci_high": 20.742658539629467
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Nigeria",
+      "n": 6346,
+      "clusters": 440,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.8008821328249486,
+          "ci_low": -3.0491751014211523,
+          "ci_high": 1.4241098667248115
+        },
+        "female": {
+          "point": -14.819999959026111,
+          "ci_low": -21.23196321414452,
+          "ci_high": -6.885767693535645
+        },
+        "education": {
+          "point": 5.514566307355088,
+          "ci_low": -1.7838526605880227,
+          "ci_high": 13.701389738993068
+        },
+        "log2plot": {
+          "point": -4.285483781647968,
+          "ci_low": -6.947863526302014,
+          "ci_high": -1.5510121612989922
+        },
+        "log2farm": {
+          "point": 1.2919362167513155,
+          "ci_low": -1.2393037035625711,
+          "ci_high": 3.8815683947140704
+        },
+        "owned": {
+          "point": 8.245142905619005,
+          "ci_low": 1.1035958622008846,
+          "ci_high": 14.422730957594787
+        },
+        "intercropped": {
+          "point": -0.5422347580985487,
+          "ci_low": -6.001190541555883,
+          "ci_high": 4.748749753662951
+        },
+        "maize": {
+          "point": 37.48466335531761,
+          "ci_low": 26.367944280577426,
+          "ci_high": 50.194724679085546
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Tanzania",
+      "n": 5685,
+      "clusters": 400,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.3420172902241797,
+          "ci_low": -0.3442627413013139,
+          "ci_high": 0.9763951954417904
+        },
+        "female": {
+          "point": -1.0302651789368833,
+          "ci_low": -2.6704269318511664,
+          "ci_high": 0.9354740248712914
+        },
+        "education": {
+          "point": 4.175269618102812,
+          "ci_low": 2.394605655582951,
+          "ci_high": 5.98881694037717
+        },
+        "log2plot": {
+          "point": -1.7317964881801162,
+          "ci_low": -2.5457560812082742,
+          "ci_high": -0.8347814008905994
+        },
+        "log2farm": {
+          "point": 0.13864735377510665,
+          "ci_low": -0.6152625737117867,
+          "ci_high": 1.063945414136317
+        },
+        "owned": {
+          "point": -3.4164091348553405,
+          "ci_low": -6.787499459443743,
+          "ci_high": -0.20172533756169697
+        },
+        "intercropped": {
+          "point": -0.5673271897816594,
+          "ci_low": -2.1373715698506195,
+          "ci_high": 1.1557381589359998
+        },
+        "maize": {
+          "point": 5.430814640707606,
+          "ci_low": 3.00362167102665,
+          "ci_high": 8.115604352577714
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Uganda",
+      "n": 8089,
+      "clusters": 1581,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.007445162213933432,
+          "ci_low": -0.08982239677493106,
+          "ci_high": 0.1085545598999871
+        },
+        "female": {
+          "point": -0.6026563151974872,
+          "ci_low": -1.0581820724288495,
+          "ci_high": -0.11968905101815652
+        },
+        "education": {
+          "point": 0.49989722948636206,
+          "ci_low": 0.1709516112512871,
+          "ci_high": 0.9061657361903909
+        },
+        "log2plot": {
+          "point": -0.20195937532243327,
+          "ci_low": -0.3767803889642644,
+          "ci_high": -0.03257087731321163
+        },
+        "log2farm": {
+          "point": 0.06718618492249508,
+          "ci_low": -0.12106130627575645,
+          "ci_high": 0.2887415875460512
+        },
+        "owned": {
+          "point": 0.025667877913088423,
+          "ci_low": -0.3772453810039345,
+          "ci_high": 0.43060224918523093
+        },
+        "intercropped": {
+          "point": 0.02933587033329061,
+          "ci_low": -0.39247249087045777,
+          "ci_high": 0.5030656603732216
+        },
+        "maize": {
+          "point": 0.7336471870596308,
+          "ci_low": 0.08101925100481425,
+          "ci_high": 1.4917906553083784
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "pooled",
+      "n": 64045,
+      "clusters": 3800,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.5731545953285063,
+          "ci_low": -1.8154990824524189,
+          "ci_high": 0.6772762382303192
+        },
+        "female": {
+          "point": -6.631723183448864,
+          "ci_low": -9.648408467598436,
+          "ci_high": -3.4038603107701704
+        },
+        "education": {
+          "point": 1.8801296314117262,
+          "ci_low": -3.50413671578293,
+          "ci_high": 6.550413683238513
+        },
+        "log2plot": {
+          "point": -2.712229331571532,
+          "ci_low": -3.9213708347119045,
+          "ci_high": -1.479150791603109
+        },
+        "log2farm": {
+          "point": 0.019702978034615733,
+          "ci_low": -1.3264303936953348,
+          "ci_high": 1.3913040463670663
+        },
+        "owned": {
+          "point": 1.589314732244969,
+          "ci_low": -2.2697886720529494,
+          "ci_high": 5.734219264063082
+        },
+        "intercropped": {
+          "point": -5.505886480102596,
+          "ci_low": -9.19058888210341,
+          "ci_high": -1.6835329648952948
+        },
+        "maize": {
+          "point": 29.855541412209817,
+          "ci_low": 22.631939958399773,
+          "ci_high": 37.29068520924325
+        }
+      },
+      "cv": {
+        "folds": 5,
+        "seed": 20260827,
+        "within_country_oos_r2": 0.0423745051049107,
+        "weighted_full_sse": 423549792958.9995,
+        "weighted_training_country_baseline_sse": 442291684188.5049,
+        "test_fold_counts": [
+          {
+            "fold": 0,
+            "test_rows": 12413,
+            "test_clusters": 760
+          },
+          {
+            "fold": 1,
+            "test_rows": 12451,
+            "test_clusters": 760
+          },
+          {
+            "fold": 2,
+            "test_rows": 13333,
+            "test_clusters": 760
+          },
+          {
+            "fold": 3,
+            "test_rows": 13105,
+            "test_clusters": 760
+          },
+          {
+            "fold": 4,
+            "test_rows": 12743,
+            "test_clusters": 760
+          }
+        ]
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "unknown_country_bucket_stress_test",
+      "scope": "pooled",
+      "n": 64045,
+      "clusters": 2367,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.5731545953285063,
+          "ci_low": -1.8126326910271304,
+          "ci_high": 0.693482791639286
+        },
+        "female": {
+          "point": -6.631723183448864,
+          "ci_low": -10.101011122288561,
+          "ci_high": -3.2768899356215253
+        },
+        "education": {
+          "point": 1.8801296314117262,
+          "ci_low": -3.585402470372692,
+          "ci_high": 6.778785756543564
+        },
+        "log2plot": {
+          "point": -2.712229331571532,
+          "ci_low": -4.062938748702128,
+          "ci_high": -1.5211252441865397
+        },
+        "log2farm": {
+          "point": 0.019702978034615733,
+          "ci_low": -1.3436661575386974,
+          "ci_high": 1.3462051760258933
+        },
+        "owned": {
+          "point": 1.589314732244969,
+          "ci_low": -2.651259536500457,
+          "ci_high": 5.613389965935899
+        },
+        "intercropped": {
+          "point": -5.505886480102596,
+          "ci_low": -9.364826455586009,
+          "ci_high": -1.8369010129578747
+        },
+        "maize": {
+          "point": 29.855541412209817,
+          "ci_low": 22.5829313723239,
+          "ci_high": 39.012536425902574
+        }
+      },
+      "cv": {
+        "folds": 5,
+        "seed": 20260827,
+        "within_country_oos_r2": 0.04256077011758308,
+        "weighted_full_sse": 424419684271.2488,
+        "weighted_training_country_baseline_sse": 443286290163.15924,
+        "test_fold_counts": [
+          {
+            "fold": 0,
+            "test_rows": 17086,
+            "test_clusters": 474
+          },
+          {
+            "fold": 1,
+            "test_rows": 11513,
+            "test_clusters": 474
+          },
+          {
+            "fold": 2,
+            "test_rows": 11813,
+            "test_clusters": 473
+          },
+          {
+            "fold": 3,
+            "test_rows": 12104,
+            "test_clusters": 473
+          },
+          {
+            "fold": 4,
+            "test_rows": 11529,
+            "test_clusters": 473
+          }
+        ]
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Ethiopia",
+      "n": 11072,
+      "clusters": 305,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -1.5035028813260225,
+          "ci_low": -3.235492009225788,
+          "ci_high": -0.008425574228338574
+        },
+        "female": {
+          "point": -0.20583571961131508,
+          "ci_low": -6.806573158096022,
+          "ci_high": 5.185727130978387
+        },
+        "education": {
+          "point": -1.2987331501135089,
+          "ci_low": -8.683187504713583,
+          "ci_high": 5.482158499011208
+        },
+        "log2plot": {
+          "point": 0.3268497218653892,
+          "ci_low": -2.0148833883213473,
+          "ci_high": 2.963237090432008
+        },
+        "log2farm": {
+          "point": 0.6601024758724183,
+          "ci_low": -1.4383689143650713,
+          "ci_high": 2.4727470810029204
+        },
+        "owned": {
+          "point": -2.010773458959715,
+          "ci_low": -7.181395520816593,
+          "ci_high": 2.9685687649593016
+        },
+        "intercropped": {
+          "point": -7.06615156666796,
+          "ci_low": -14.203482801412553,
+          "ci_high": 0.5916511582860302
+        },
+        "maize": {
+          "point": 29.862852377678927,
+          "ci_low": 17.369982244520482,
+          "ci_high": 43.63168665855625
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Malawi",
+      "n": 4600,
+      "clusters": 102,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.45207530030364645,
+          "ci_low": -1.2648197257054437,
+          "ci_high": 2.399193520109769
+        },
+        "female": {
+          "point": -2.7041013042780744,
+          "ci_low": -8.997798825093973,
+          "ci_high": 3.516823914835962
+        },
+        "education": {
+          "point": 8.142684913180776,
+          "ci_low": -1.1781866145961024,
+          "ci_high": 16.64093268922329
+        },
+        "log2plot": {
+          "point": -3.2616466443859666,
+          "ci_low": -6.526722004854568,
+          "ci_high": 0.18337492803196365
+        },
+        "log2farm": {
+          "point": -2.873818440659484,
+          "ci_low": -6.725196066102723,
+          "ci_high": 0.6443548191253794
+        },
+        "owned": {
+          "point": -14.676325735893704,
+          "ci_low": -22.257149750304873,
+          "ci_high": -8.421028083890457
+        },
+        "intercropped": {
+          "point": 3.343323938277951,
+          "ci_low": -2.336244459140427,
+          "ci_high": 8.534783527545486
+        },
+        "maize": {
+          "point": 29.551619101893593,
+          "ci_low": 21.372581159570124,
+          "ci_high": 37.00119176964477
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Mali",
+      "n": 22969,
+      "clusters": 780,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 1.0079708018482934,
+          "ci_low": -0.03230875790976257,
+          "ci_high": 2.0821502051139924
+        },
+        "female": {
+          "point": -18.079737313097862,
+          "ci_low": -22.523197574329892,
+          "ci_high": -14.248344109978714
+        },
+        "education": {
+          "point": 4.566584190148151,
+          "ci_low": -0.18831235678878705,
+          "ci_high": 9.542709097280296
+        },
+        "log2plot": {
+          "point": -2.1171012223608727,
+          "ci_low": -3.233909218885985,
+          "ci_high": -1.172341407325468
+        },
+        "log2farm": {
+          "point": -1.1224909134110537,
+          "ci_low": -3.1451452180609496,
+          "ci_high": 0.7778299629411386
+        },
+        "owned": {
+          "point": -13.444328554612959,
+          "ci_low": -29.83433019361023,
+          "ci_high": 1.6726119378723054
+        },
+        "intercropped": {
+          "point": -9.355829464660774,
+          "ci_low": -14.159535521983114,
+          "ci_high": -5.050064934654022
+        },
+        "maize": {
+          "point": 34.51482392501939,
+          "ci_low": 26.636476836138716,
+          "ci_high": 43.36473508280285
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Niger",
+      "n": 5015,
+      "clusters": 188,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.16618510841628759,
+          "ci_low": -0.03791687347575745,
+          "ci_high": 0.38092817080565095
+        },
+        "female": {
+          "point": -1.029592253057199,
+          "ci_low": -2.0476346945514314,
+          "ci_high": -0.28454291527188186
+        },
+        "education": {
+          "point": 1.212136514083578,
+          "ci_low": -0.01624735914268146,
+          "ci_high": 2.9877726033833896
+        },
+        "log2plot": {
+          "point": -0.5332131293364227,
+          "ci_low": -1.0605817321390079,
+          "ci_high": -0.15085710256897047
+        },
+        "log2farm": {
+          "point": -0.2589454346360748,
+          "ci_low": -0.8362834680666653,
+          "ci_high": 0.1701441478884139
+        },
+        "owned": {
+          "point": 0.44197338109600226,
+          "ci_low": -0.49973731912433556,
+          "ci_high": 1.409330263884076
+        },
+        "intercropped": {
+          "point": -1.6517572549897042,
+          "ci_low": -2.9288589179067785,
+          "ci_high": -0.5088308141646375
+        },
+        "maize": {
+          "point": 9.878866742384488,
+          "ci_low": 3.1361972553120756,
+          "ci_high": 20.43054022222655
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Nigeria",
+      "n": 6609,
+      "clusters": 443,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.06588951766107451,
+          "ci_low": -3.6152368916284843,
+          "ci_high": 3.0861530983203536
+        },
+        "female": {
+          "point": -24.85403319292985,
+          "ci_low": -33.1341536295298,
+          "ci_high": -15.815971989551011
+        },
+        "education": {
+          "point": 6.060685917470386,
+          "ci_low": -4.9205280406423615,
+          "ci_high": 16.483149149493087
+        },
+        "log2plot": {
+          "point": -10.43564469746023,
+          "ci_low": -14.345799629339,
+          "ci_high": -6.686300888256855
+        },
+        "log2farm": {
+          "point": 1.8166021930624066,
+          "ci_low": -1.8860311369440934,
+          "ci_high": 5.96870411199645
+        },
+        "owned": {
+          "point": 8.295719852178117,
+          "ci_low": -1.8226980438236828,
+          "ci_high": 17.377797524782327
+        },
+        "intercropped": {
+          "point": -5.542817918838444,
+          "ci_low": -14.210037039343248,
+          "ci_high": 1.5206850647201002
+        },
+        "maize": {
+          "point": 54.30455463506372,
+          "ci_low": 36.88896643769449,
+          "ci_high": 71.47786153992763
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Tanzania",
+      "n": 5689,
+      "clusters": 401,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.40543678807059325,
+          "ci_low": -0.3372490346251874,
+          "ci_high": 1.072162757281189
+        },
+        "female": {
+          "point": -1.2658968983658887,
+          "ci_low": -3.1814410183107316,
+          "ci_high": 0.5902365457916813
+        },
+        "education": {
+          "point": 4.3705563525447095,
+          "ci_low": 2.585091786232137,
+          "ci_high": 6.339531601466106
+        },
+        "log2plot": {
+          "point": -1.936203675818048,
+          "ci_low": -3.050892418338462,
+          "ci_high": -0.9746473450780162
+        },
+        "log2farm": {
+          "point": 0.31120737156894906,
+          "ci_low": -0.605295704539761,
+          "ci_high": 1.2964914597441572
+        },
+        "owned": {
+          "point": -4.1648199033150854,
+          "ci_low": -7.881156206558023,
+          "ci_high": -1.0748398193759845
+        },
+        "intercropped": {
+          "point": -0.8491104364949484,
+          "ci_low": -2.978516852914325,
+          "ci_high": 1.1222447714096682
+        },
+        "maize": {
+          "point": 5.839568208176712,
+          "ci_low": 3.253543298305385,
+          "ci_high": 8.758627621741445
+        }
+      }
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Uganda",
+      "n": 8091,
+      "clusters": 1581,
+      "bootstrap_repetitions": 500,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.0023588448364328302,
+          "ci_low": -0.10186032289367027,
+          "ci_high": 0.10795298272011396
+        },
+        "female": {
+          "point": -0.6575958661395642,
+          "ci_low": -1.1390983598250863,
+          "ci_high": -0.14415754501362224
+        },
+        "education": {
+          "point": 0.5034398538490004,
+          "ci_low": 0.16923553411064834,
+          "ci_high": 0.9091919638920878
+        },
+        "log2plot": {
+          "point": -0.24563226666104132,
+          "ci_low": -0.45728407535257787,
+          "ci_high": -0.049942321045865906
+        },
+        "log2farm": {
+          "point": 0.09165852241101231,
+          "ci_low": -0.10633936627445842,
+          "ci_high": 0.3353236999734333
+        },
+        "owned": {
+          "point": 0.07799555314973189,
+          "ci_low": -0.36007667871909105,
+          "ci_high": 0.48997893042724855
+        },
+        "intercropped": {
+          "point": 0.038138248292849744,
+          "ci_low": -0.3843547009098842,
+          "ci_high": 0.5410995394447822
+        },
+        "maize": {
+          "point": 0.8199175805955548,
+          "ci_low": 0.15163512403529433,
+          "ci_high": 1.6763731693196324
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "pooled",
+      "n": 488,
+      "clusters": 488,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.02101049959681719,
+          "ci_low": -0.0386918371157541,
+          "ci_high": -0.002780349273618757
+        },
+        "female": {
+          "point": -0.0860658857046103,
+          "ci_low": -0.13874884178095975,
+          "ci_high": -0.03243988487934558
+        },
+        "education": {
+          "point": 0.15844106770176153,
+          "ci_low": 0.10260986701706232,
+          "ci_high": 0.21424826969998115
+        },
+        "log2plot": {
+          "point": 0.05076799595712421,
+          "ci_low": 0.02963608989818373,
+          "ci_high": 0.07113311899452816
+        },
+        "log2farm": {
+          "point": 0.0001659885322820668,
+          "ci_low": -0.024958723607355432,
+          "ci_high": 0.024645491905137113
+        },
+        "owned": {
+          "point": 0.024483566355159362,
+          "ci_low": -0.03947219366213303,
+          "ci_high": 0.08932315473262886
+        },
+        "intercropped": {
+          "point": -0.098807613180432,
+          "ci_low": -0.15526252758407016,
+          "ci_high": -0.040060867203372943
+        },
+        "maize": {
+          "point": 0.4650682162944835,
+          "ci_low": 0.41031559544538226,
+          "ci_high": 0.5222817767555344
+        }
+      },
+      "cv": {
+        "folds": 10,
+        "seed": 20260827,
+        "within_country_oos_r2": 0.39191815440723354,
+        "weighted_full_sse": 42.8496120935534,
+        "weighted_training_country_baseline_sse": 70.46684982312375,
+        "test_fold_counts": [
+          {
+            "fold": 0,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 1,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 2,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 3,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 4,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 5,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 6,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 7,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 8,
+            "test_rows": 48,
+            "test_clusters": 48
+          },
+          {
+            "fold": 9,
+            "test_rows": 48,
+            "test_clusters": 48
+          }
+        ]
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Ethiopia",
+      "n": 68,
+      "clusters": 68,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.034546624623157565,
+          "ci_low": -0.10263572914398486,
+          "ci_high": 0.04126953040023578
+        },
+        "female": {
+          "point": -0.09115342487940883,
+          "ci_low": -0.2547927125427228,
+          "ci_high": 0.08635667643204206
+        },
+        "education": {
+          "point": 0.18230363388673781,
+          "ci_low": -0.0007879915717650794,
+          "ci_high": 0.34920018652006835
+        },
+        "log2plot": {
+          "point": 0.13431193172382555,
+          "ci_low": 0.05365036901977867,
+          "ci_high": 0.22330210012615367
+        },
+        "log2farm": {
+          "point": 0.06664465030521925,
+          "ci_low": -0.009756999300541684,
+          "ci_high": 0.14837143374009354
+        },
+        "owned": {
+          "point": 0.18955811054228283,
+          "ci_low": -0.039357161167084945,
+          "ci_high": 0.4247087929231318
+        },
+        "intercropped": {
+          "point": -0.2422994319854138,
+          "ci_low": -0.49939037302125383,
+          "ci_high": 0.018195888228732044
+        },
+        "maize": {
+          "point": 0.3201049434890619,
+          "ci_low": 0.1270950575635967,
+          "ci_high": 0.5204791155525377
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Malawi",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.029697475201778505,
+          "ci_low": -0.06618576825422631,
+          "ci_high": 0.0012564588151196198
+        },
+        "female": {
+          "point": -0.04347617805642728,
+          "ci_low": -0.11922485879261316,
+          "ci_high": 0.024565988865685347
+        },
+        "education": {
+          "point": 0.08269831619550279,
+          "ci_low": 0.01628424788396923,
+          "ci_high": 0.15128472912498436
+        },
+        "log2plot": {
+          "point": 0.006276451886887585,
+          "ci_low": -0.03226771111194881,
+          "ci_high": 0.04428083545020841
+        },
+        "log2farm": {
+          "point": 0.02273591588314853,
+          "ci_low": -0.023553001514817016,
+          "ci_high": 0.06975475144673604
+        },
+        "owned": {
+          "point": 0.04583598614936256,
+          "ci_low": -0.0558214447056206,
+          "ci_high": 0.14286804992012636
+        },
+        "intercropped": {
+          "point": -0.023678159655064132,
+          "ci_low": -0.11988889086407988,
+          "ci_high": 0.05432716702229086
+        },
+        "maize": {
+          "point": 0.8638191306135886,
+          "ci_low": 0.770953665689876,
+          "ci_high": 0.9488673984291195
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Mali",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.004805481861831663,
+          "ci_low": -0.05461360624794461,
+          "ci_high": 0.06384330590384418
+        },
+        "female": {
+          "point": -0.046002120259303454,
+          "ci_low": -0.2585044304997706,
+          "ci_high": 0.16423062628718138
+        },
+        "education": {
+          "point": 0.22850336524110185,
+          "ci_low": 0.04855509893297468,
+          "ci_high": 0.4009053696644699
+        },
+        "log2plot": {
+          "point": 0.022303748568097997,
+          "ci_low": -0.05237224046425976,
+          "ci_high": 0.08898219618364125
+        },
+        "log2farm": {
+          "point": 0.09144838568863382,
+          "ci_low": 0.003480108225982053,
+          "ci_high": 0.20573167196563763
+        },
+        "owned": {
+          "point": 0.31539866573376885,
+          "ci_low": -0.15046960292829606,
+          "ci_high": 0.46864496878635226
+        },
+        "intercropped": {
+          "point": -0.272588078056606,
+          "ci_low": -0.6212982356560933,
+          "ci_high": 0.12157590746391377
+        },
+        "maize": {
+          "point": 0.48329346270037254,
+          "ci_low": 0.3241269954545862,
+          "ci_high": 0.6592874770891034
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Niger",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.022690934133282093,
+          "ci_low": -0.06716791159806208,
+          "ci_high": 0.015163700537450031
+        },
+        "female": {
+          "point": -0.09555114802679522,
+          "ci_low": -0.21600533342348807,
+          "ci_high": 0.02373500146465869
+        },
+        "education": {
+          "point": 0.08556048048633545,
+          "ci_low": -0.04483124238994137,
+          "ci_high": 0.19348097033931755
+        },
+        "log2plot": {
+          "point": 0.020881030832994283,
+          "ci_low": -0.01169061091279557,
+          "ci_high": 0.05870450396519151
+        },
+        "log2farm": {
+          "point": -0.022779793733301475,
+          "ci_low": -0.06915680709616094,
+          "ci_high": 0.01157154535935111
+        },
+        "owned": {
+          "point": 0.18938991103390967,
+          "ci_low": 0.08134457762427426,
+          "ci_high": 0.3189234454060637
+        },
+        "intercropped": {
+          "point": -0.0867083436637962,
+          "ci_low": -0.23465728350101922,
+          "ci_high": 0.053866454462696396
+        },
+        "maize": {
+          "point": 0.13051794633171654,
+          "ci_low": 0.0,
+          "ci_high": 0.24457639371914164
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Nigeria",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.019615896747866696,
+          "ci_low": -0.10877153500261941,
+          "ci_high": 0.05650348603006007
+        },
+        "female": {
+          "point": -0.27970942442238017,
+          "ci_low": -0.46190816330224443,
+          "ci_high": -0.12750166452537762
+        },
+        "education": {
+          "point": 0.20103195775903193,
+          "ci_low": 0.05643664922587451,
+          "ci_high": 0.34070923068695974
+        },
+        "log2plot": {
+          "point": 0.0768814096347746,
+          "ci_low": 0.0029506856457528793,
+          "ci_high": 0.14244181283534313
+        },
+        "log2farm": {
+          "point": -0.024313517304869872,
+          "ci_low": -0.09783291093044567,
+          "ci_high": 0.04355614582064997
+        },
+        "owned": {
+          "point": -0.08583050001557413,
+          "ci_low": -0.286503232525009,
+          "ci_high": 0.08205674862360388
+        },
+        "intercropped": {
+          "point": -0.1085892998821916,
+          "ci_low": -0.2689076507498077,
+          "ci_high": 0.049595113243016874
+        },
+        "maize": {
+          "point": 0.370452673663714,
+          "ci_low": 0.23116034787935988,
+          "ci_high": 0.5033747385561687
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Tanzania",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.011235475981641095,
+          "ci_low": -0.06605413435006169,
+          "ci_high": 0.04075089182560395
+        },
+        "female": {
+          "point": -0.00032065370413652324,
+          "ci_low": -0.1750928563579209,
+          "ci_high": 0.1791563401714197
+        },
+        "education": {
+          "point": 0.2057193806563099,
+          "ci_low": 0.03198167296495842,
+          "ci_high": 0.3604511683852004
+        },
+        "log2plot": {
+          "point": 0.06477268330388239,
+          "ci_low": 0.011452394036520501,
+          "ci_high": 0.11624835436753422
+        },
+        "log2farm": {
+          "point": -0.011606388341403864,
+          "ci_low": -0.07388435291849615,
+          "ci_high": 0.046269606311681644
+        },
+        "owned": {
+          "point": -0.19095081533966352,
+          "ci_low": -0.48108453820793445,
+          "ci_high": 0.04892214835863943
+        },
+        "intercropped": {
+          "point": -0.1916711059248163,
+          "ci_low": -0.37471515151440893,
+          "ci_high": -0.007527106509806879
+        },
+        "maize": {
+          "point": 0.411881138038441,
+          "ci_low": 0.2355225694401639,
+          "ci_high": 0.5883823285222328
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Uganda",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.011097838683056803,
+          "ci_low": -0.016676452998489105,
+          "ci_high": 0.03451056013293989
+        },
+        "female": {
+          "point": -0.02568088141203323,
+          "ci_low": -0.10491117120198826,
+          "ci_high": 0.041964837496454514
+        },
+        "education": {
+          "point": 0.09201308028560459,
+          "ci_low": 0.021567281904158686,
+          "ci_high": 0.16161617400414102
+        },
+        "log2plot": {
+          "point": -0.000578512622224943,
+          "ci_low": -0.028544350547262422,
+          "ci_high": 0.023504908013815502
+        },
+        "log2farm": {
+          "point": 0.034850928488697794,
+          "ci_low": -0.010939723382491617,
+          "ci_high": 0.07050031508571564
+        },
+        "owned": {
+          "point": -0.07074896728147342,
+          "ci_low": -0.14223002974702584,
+          "ci_high": 0.023397378715284876
+        },
+        "intercropped": {
+          "point": -0.023876845350258663,
+          "ci_low": -0.10627334814034832,
+          "ci_high": 0.047298879444696046
+        },
+        "maize": {
+          "point": 0.2538726350708573,
+          "ci_low": 0.14815731010058442,
+          "ci_high": 0.36501005349371735
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "pooled",
+      "n": 488,
+      "clusters": 488,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -1.1762292210314536,
+          "ci_low": -1.9529647247000057,
+          "ci_high": -0.35077419988277964
+        },
+        "female": {
+          "point": -2.7812137545566524,
+          "ci_low": -5.1421823607453625,
+          "ci_high": -0.5143809995184255
+        },
+        "education": {
+          "point": 5.904804360012656,
+          "ci_low": 3.391026660074083,
+          "ci_high": 8.318398694222752
+        },
+        "log2plot": {
+          "point": 1.4992224529168778,
+          "ci_low": 0.6062687082820973,
+          "ci_high": 2.3628038345253772
+        },
+        "log2farm": {
+          "point": 0.3492000194257809,
+          "ci_low": -0.7808506689467425,
+          "ci_high": 1.504786828735849
+        },
+        "owned": {
+          "point": 0.7516361560166465,
+          "ci_low": -1.902377900963002,
+          "ci_high": 3.525248614672254
+        },
+        "intercropped": {
+          "point": -5.745014661451432,
+          "ci_low": -8.230010722284465,
+          "ci_high": -3.200942461328756
+        },
+        "maize": {
+          "point": 21.241455610367364,
+          "ci_low": 18.734329668844477,
+          "ci_high": 23.7979333069113
+        }
+      },
+      "cv": {
+        "folds": 10,
+        "seed": 20260827,
+        "within_country_oos_r2": 0.3917438759143991,
+        "weighted_full_sse": 81687.91357381763,
+        "weighted_training_country_baseline_sse": 134298.54684425922,
+        "test_fold_counts": [
+          {
+            "fold": 0,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 1,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 2,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 3,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 4,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 5,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 6,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 7,
+            "test_rows": 49,
+            "test_clusters": 49
+          },
+          {
+            "fold": 8,
+            "test_rows": 48,
+            "test_clusters": 48
+          },
+          {
+            "fold": 9,
+            "test_rows": 48,
+            "test_clusters": 48
+          }
+        ]
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Ethiopia",
+      "n": 68,
+      "clusters": 68,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -2.4045319387467528,
+          "ci_low": -5.095152588070662,
+          "ci_high": 0.6033568161142825
+        },
+        "female": {
+          "point": -1.616265604656338,
+          "ci_low": -8.373415821215747,
+          "ci_high": 5.629690833768072
+        },
+        "education": {
+          "point": 7.562126855723116,
+          "ci_low": -0.30992596876179535,
+          "ci_high": 14.331524558203617
+        },
+        "log2plot": {
+          "point": 5.356711418763473,
+          "ci_low": 2.0679758092818306,
+          "ci_high": 9.072945983685928
+        },
+        "log2farm": {
+          "point": 3.2693362582918732,
+          "ci_low": 0.09259814608626345,
+          "ci_high": 6.5465370070349636
+        },
+        "owned": {
+          "point": 7.52802083356956,
+          "ci_low": -2.009578443119249,
+          "ci_high": 16.751212340612618
+        },
+        "intercropped": {
+          "point": -8.653997473002471,
+          "ci_low": -18.667350433215198,
+          "ci_high": 2.305189865988989
+        },
+        "maize": {
+          "point": 21.092886143683355,
+          "ci_low": 11.846443059924857,
+          "ci_high": 30.590746107710768
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Malawi",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -1.4271624084637007,
+          "ci_low": -2.9555325031605033,
+          "ci_high": -0.006474153004104023
+        },
+        "female": {
+          "point": -2.9316597339107604,
+          "ci_low": -6.487235289102011,
+          "ci_high": 0.41040660965551207
+        },
+        "education": {
+          "point": 5.4547154421091815,
+          "ci_low": 2.540534442598165,
+          "ci_high": 8.399350960285728
+        },
+        "log2plot": {
+          "point": 0.1362630701718885,
+          "ci_low": -1.5675494195712059,
+          "ci_high": 1.6706198246931734
+        },
+        "log2farm": {
+          "point": 1.7218410850623902,
+          "ci_low": -0.1013784568995116,
+          "ci_high": 3.629616640971154
+        },
+        "owned": {
+          "point": 3.7076868901986586,
+          "ci_low": -1.345060219124545,
+          "ci_high": 8.207982704447176
+        },
+        "intercropped": {
+          "point": -0.9584929333526652,
+          "ci_low": -5.117107526351306,
+          "ci_high": 2.8470031435387213
+        },
+        "maize": {
+          "point": 36.25869401880717,
+          "ci_low": 32.04539327558248,
+          "ci_high": 40.38458299368098
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Mali",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.3884447551635413,
+          "ci_low": -3.4263865593936518,
+          "ci_high": 2.790183275878108
+        },
+        "female": {
+          "point": 2.7098036516423414,
+          "ci_low": -8.302447453795923,
+          "ci_high": 13.640018134764887
+        },
+        "education": {
+          "point": 12.573452262501982,
+          "ci_low": 3.773003926732487,
+          "ci_high": 20.761926656708308
+        },
+        "log2plot": {
+          "point": 1.2381508985957812,
+          "ci_low": -2.346448569137893,
+          "ci_high": 4.391053010564668
+        },
+        "log2farm": {
+          "point": 3.3129341190085926,
+          "ci_low": -1.6032099106570672,
+          "ci_high": 9.492288771860776
+        },
+        "owned": {
+          "point": 12.444801959831398,
+          "ci_low": -11.297671673549596,
+          "ci_high": 20.307307665827874
+        },
+        "intercropped": {
+          "point": -11.658546444457254,
+          "ci_low": -24.605099418217584,
+          "ci_high": 3.2515349387582853
+        },
+        "maize": {
+          "point": 25.01866185059001,
+          "ci_low": 16.80655548620969,
+          "ci_high": 34.31403222466269
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Niger",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.92166263670865,
+          "ci_low": -2.463025943632302,
+          "ci_high": 0.19393170266727242
+        },
+        "female": {
+          "point": -4.7094547925317825,
+          "ci_low": -9.203098469854782,
+          "ci_high": -1.1845586351235662
+        },
+        "education": {
+          "point": -0.9430154585851671,
+          "ci_low": -5.785789688602373,
+          "ci_high": 2.4901607053521944
+        },
+        "log2plot": {
+          "point": 0.5882840131549892,
+          "ci_low": -0.40090297166035666,
+          "ci_high": 1.9497027236923006
+        },
+        "log2farm": {
+          "point": -0.4361518830872947,
+          "ci_low": -1.394374163492676,
+          "ci_high": 0.5896786440302724
+        },
+        "owned": {
+          "point": 4.281961246041782,
+          "ci_low": 1.4096140197892941,
+          "ci_high": 8.385294333749336
+        },
+        "intercropped": {
+          "point": -4.630891882305274,
+          "ci_low": -10.483014882392522,
+          "ci_high": -0.05792408515005696
+        },
+        "maize": {
+          "point": 2.5935684095746825,
+          "ci_low": -1.562175111088488,
+          "ci_high": 6.376403130734478
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Nigeria",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.9762872831488646,
+          "ci_low": -4.545721185286561,
+          "ci_high": 1.8437471500410734
+        },
+        "female": {
+          "point": -11.764127355513917,
+          "ci_low": -20.03254940050092,
+          "ci_high": -4.620676599067778
+        },
+        "education": {
+          "point": 6.57139250903009,
+          "ci_low": -0.9475429705572709,
+          "ci_high": 13.472915287787304
+        },
+        "log2plot": {
+          "point": 1.8261408018666958,
+          "ci_low": -1.4999048349773856,
+          "ci_high": 5.099704223079166
+        },
+        "log2farm": {
+          "point": -0.27532463002288143,
+          "ci_low": -3.2727349967339796,
+          "ci_high": 2.8435973597358193
+        },
+        "owned": {
+          "point": -2.4152732013320066,
+          "ci_low": -11.675463151588298,
+          "ci_high": 6.299824227251619
+        },
+        "intercropped": {
+          "point": -11.885853926430903,
+          "ci_low": -19.11764994894685,
+          "ci_high": -4.910725852679734
+        },
+        "maize": {
+          "point": 22.766907149986984,
+          "ci_low": 15.789169532490142,
+          "ci_high": 28.980642926579424
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Tanzania",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": -0.39170567713230087,
+          "ci_low": -2.2755341412186754,
+          "ci_high": 1.36324914702662
+        },
+        "female": {
+          "point": -0.6179642368227145,
+          "ci_low": -6.4832767798078335,
+          "ci_high": 5.190470377370437
+        },
+        "education": {
+          "point": 7.846045548253725,
+          "ci_low": 2.0574863897936178,
+          "ci_high": 13.016185109703745
+        },
+        "log2plot": {
+          "point": 1.8675801256160913,
+          "ci_low": 0.04838753882970038,
+          "ci_high": 3.6287617717636187
+        },
+        "log2farm": {
+          "point": -0.44989674864249246,
+          "ci_low": -2.582954784088377,
+          "ci_high": 1.6449815385418367
+        },
+        "owned": {
+          "point": -8.952502331262618,
+          "ci_low": -19.732534960093147,
+          "ci_high": 0.3799785281827036
+        },
+        "intercropped": {
+          "point": -7.431622981398491,
+          "ci_low": -13.653649974862914,
+          "ci_high": -1.0370169866148016
+        },
+        "maize": {
+          "point": 14.29967790520166,
+          "ci_low": 8.269696823979489,
+          "ci_high": 20.276370765625845
+        }
+      }
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Uganda",
+      "n": 70,
+      "clusters": 70,
+      "bootstrap_repetitions": 2000,
+      "seed": 20260827,
+      "coefficients": {
+        "age10": {
+          "point": 0.247593241605056,
+          "ci_low": -0.8016468709686504,
+          "ci_high": 1.0422019919265517
+        },
+        "female": {
+          "point": -0.9893433829081881,
+          "ci_low": -3.7018887829790237,
+          "ci_high": 1.1348542492738973
+        },
+        "education": {
+          "point": 2.7817899844347034,
+          "ci_low": 0.5510143334885074,
+          "ci_high": 4.940232037020175
+        },
+        "log2plot": {
+          "point": -0.03294780752429438,
+          "ci_low": -1.0033043325426203,
+          "ci_high": 0.7650493971154182
+        },
+        "log2farm": {
+          "point": 1.0795563695996881,
+          "ci_low": -0.42270109262268507,
+          "ci_high": 2.175698038164653
+        },
+        "owned": {
+          "point": -2.3210702609947638,
+          "ci_low": -5.037554799729576,
+          "ci_high": 1.5377357224121608
+        },
+        "intercropped": {
+          "point": -1.0174306353693305,
+          "ci_low": -4.178367997601391,
+          "ci_high": 1.3761601959435281
+        },
+        "maize": {
+          "point": 7.348955254054301,
+          "ci_low": 4.082324530816131,
+          "ci_high": 10.434911342576727
+        }
+      }
+    }
+  ],
+  "rank_checks": [
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "pooled",
+      "n": 64917,
+      "rank": 15,
+      "p": 15,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "unknown_country_bucket_stress_test",
+      "scope": "pooled",
+      "n": 64917,
+      "rank": 15,
+      "p": 15,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Ethiopia",
+      "n": 11079,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Malawi",
+      "n": 4608,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Mali",
+      "n": 23303,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Niger",
+      "n": 5456,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Nigeria",
+      "n": 6631,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Tanzania",
+      "n": 5749,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "adoption",
+      "scheme": "hybrid",
+      "scope": "Uganda",
+      "n": 8091,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "pooled",
+      "n": 63099,
+      "rank": 15,
+      "p": 15,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "unknown_country_bucket_stress_test",
+      "scope": "pooled",
+      "n": 63099,
+      "rank": 15,
+      "p": 15,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Ethiopia",
+      "n": 10959,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Malawi",
+      "n": 4554,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Mali",
+      "n": 22453,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Niger",
+      "n": 5013,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Nigeria",
+      "n": 6346,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Tanzania",
+      "n": 5685,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_excl",
+      "scheme": "hybrid",
+      "scope": "Uganda",
+      "n": 8089,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "pooled",
+      "n": 64045,
+      "rank": 15,
+      "p": 15,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "unknown_country_bucket_stress_test",
+      "scope": "pooled",
+      "n": 64045,
+      "rank": 15,
+      "p": 15,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Ethiopia",
+      "n": 11072,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Malawi",
+      "n": 4600,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Mali",
+      "n": 22969,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Niger",
+      "n": 5015,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Nigeria",
+      "n": 6609,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Tanzania",
+      "n": 5689,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "survey",
+      "outcome": "rate_cap",
+      "scheme": "hybrid",
+      "scope": "Uganda",
+      "n": 8091,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "pooled",
+      "n": 488,
+      "rank": 15,
+      "p": 15,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Ethiopia",
+      "n": 68,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Malawi",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Mali",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Niger",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Nigeria",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Tanzania",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "adoption",
+      "scheme": "profile",
+      "scope": "Uganda",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "pooled",
+      "n": 488,
+      "rank": 15,
+      "p": 15,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Ethiopia",
+      "n": 68,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Malawi",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Mali",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Niger",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Nigeria",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Tanzania",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    },
+    {
+      "source": "ensemble",
+      "outcome": "rate",
+      "scheme": "profile",
+      "scope": "Uganda",
+      "n": 70,
+      "rank": 9,
+      "p": 9,
+      "constant_traits": []
+    }
+  ],
+  "elapsed_seconds": 12.952452182769775
+}

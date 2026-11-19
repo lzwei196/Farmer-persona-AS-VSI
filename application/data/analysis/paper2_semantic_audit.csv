@@ -1,0 +1,17 @@
+scope,experiment,provider,responses,valid_structured_decision,nonfinite_or_missing_rate,negative_rate,rate_above_300,adoption_false_with_positive_rate,adoption_true_with_zero_rate,multiple_attempts
+experiment_provider,benchmark_extension,claude,210,210,0,0,0,0,0,0
+experiment_provider,benchmark_extension,codex,210,210,0,0,0,0,0,0
+experiment_provider,benchmark_extension,kimi,210,210,0,0,0,0,0,0
+experiment_provider,benchmark_original,claude,280,280,0,0,0,0,0,0
+experiment_provider,benchmark_original,codex,280,280,0,0,0,0,0,2
+experiment_provider,benchmark_original,kimi,280,280,0,0,0,0,0,0
+experiment_provider,country_label_ablation,claude,210,210,0,0,0,0,0,1
+experiment_provider,country_label_ablation,codex,210,210,0,0,0,0,0,1
+experiment_provider,country_label_ablation,kimi,210,210,0,0,0,0,0,0
+experiment_provider,country_prior_matrix,claude,490,490,0,0,0,0,0,1
+experiment_provider,country_prior_matrix,codex,490,490,0,0,0,0,0,0
+experiment_provider,country_prior_matrix,kimi,490,490,0,0,0,0,0,0
+provider_total,all,claude,1190,1190,0,0,0,0,0,2
+provider_total,all,codex,1190,1190,0,0,0,0,0,3
+provider_total,all,kimi,1190,1190,0,0,0,0,0,0
+overall,all,all,3570,3570,0,0,0,0,0,5

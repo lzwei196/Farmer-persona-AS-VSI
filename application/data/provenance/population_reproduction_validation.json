@@ -1,0 +1,7 @@
+{
+  "population_weight_max_absolute_delta": 9.313225746154785e-10,
+  "population_weight_max_relative_delta": 3.9936313823518274e-16,
+  "eligible_pool_counts_match": true,
+  "adoption_target_max_abs_delta": 0.0,
+  "excluded_rate_target_max_abs_delta": 0.0
+}
