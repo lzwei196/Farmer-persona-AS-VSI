@@ -7,6 +7,8 @@ Qi Wei, Yirong Zhang, Junzeng Xu, Ruiqi Wu, Huijun Qi, Man Liu, Wenbo Xue, Yuche
 
 Repository: https://github.com/lzwei196/Farmer-persona-AS-VSI
 
+Repository contributor and maintainer: **Ziwei Li** ([@lzwei196](https://github.com/lzwei196)).
+
 The study combines a four-country assessment of farmer-persona prompts with the seven-country fertilizer benchmark and paired country-label experiment. The archived four-country T1 responses are shared between the two components and counted once. Current manuscript figure and table numbers are mapped in `DISPLAY_NUMBERING.json` and `figures/FIGURE_MAP.md`; the historical application release retains its original local numbering.
 
 ## Contents
